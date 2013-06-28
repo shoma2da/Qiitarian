@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian;
+package com.tech_tec.qiitarian.activity;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.api.ApiAccessor;
 import com.tech_tec.qiitarian.async.AuthAsyncTask;
 import com.tech_tec.qiitarian.async.AuthAsyncTask.OnAuthListener;

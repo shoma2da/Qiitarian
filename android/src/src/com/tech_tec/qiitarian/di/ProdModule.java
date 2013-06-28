@@ -5,7 +5,7 @@ import javax.inject.Singleton;
 import android.content.Context;
 import android.webkit.WebView;
 
-import com.tech_tec.qiitarian.MainActivity;
+import com.tech_tec.qiitarian.activity.MainActivity;
 import com.tech_tec.qiitarian.api.ApiAccessor;
 import com.tech_tec.qiitarian.async.AuthAsyncTask;
 
