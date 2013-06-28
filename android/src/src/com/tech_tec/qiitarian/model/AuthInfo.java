@@ -1,19 +1,15 @@
 package com.tech_tec.qiitarian.model;
 
 public class AuthInfo {
-    public static enum Service {
-        TWITTER, GITHUB;
-    }
-    
-    private Service mService;
+    private LoginService mService;
     private String mUsername;
     private String mToken;
     
-    public Service getService() {
+    public LoginService getService() {
         return mService;
     }
 
-    public void setService(Service mService) {
+    public void setService(LoginService mService) {
         this.mService = mService;
     }
 
