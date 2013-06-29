@@ -27,3 +27,4 @@ rm local.properties
 pushd ${TARGET_PROJECT}
 rm build.xml
 rm local.properties
+ant clean
