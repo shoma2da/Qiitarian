@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.inject.Singleton;
 
 import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,7 +16,6 @@ import android.webkit.WebView;
 
 import com.tech_tec.qiitarian.activity.MainActivity;
 import com.tech_tec.qiitarian.api.ApiAccessor;
-import com.tech_tec.qiitarian.api.ApiAccessor.AndroidHttpClientFactory;
 import com.tech_tec.qiitarian.api.ApiAccessor.JSONObjectFactory;
 import com.tech_tec.qiitarian.async.AuthAsyncTask;
 
@@ -36,24 +36,25 @@ public class ProdModule {
     @Provides @Singleton
     ApiAccessor provideApiAccessor() {
         final String userAgent = new WebView(mContext).getSettings().getUserAgentString();
-        AndroidHttpClientFactory httpClientFactory = new AndroidHttpClientFactory() {
-            @Override
-            public AndroidHttpClient create() {
-                return AndroidHttpClient.newInstance(userAgent);
-            }
-        };
         JSONObjectFactory jsonObjectFactory = new JSONObjectFactory() {
             @Override
-            public JSONObject create(HttpResponse response) throws IOException, JSONException {
-                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                response.getEntity().writeTo(outputStream);
-                String rawJson = outputStream.toString();
-                outputStream.close();
-                
-                return new JSONObject(rawJson);
+            public JSONObject create(String url) throws IOException, JSONException {
+                AndroidHttpClient client = AndroidHttpClient.newInstance(userAgent);
+                try {
+                    HttpResponse response = client.execute(new HttpPost(url));
+                    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                    response.getEntity().writeTo(outputStream);
+                    String rawJson = outputStream.toString();
+                    outputStream.close();
+                    
+                    return new JSONObject(rawJson);
+                } finally {
+                    client.close();
+                }
             }
         };
-        return new ApiAccessor(httpClientFactory, jsonObjectFactory);
+        
+        return new ApiAccessor(jsonObjectFactory);
     }
     
     @Provides
