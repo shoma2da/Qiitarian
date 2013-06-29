@@ -3,6 +3,8 @@ package com.tech_tec.qiitarian.api;
 import java.io.IOException;
 
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,9 +21,13 @@ public class ApiAccessor {
         mJsonObjectFactory = jsonObjectFactory;
     }
     
+    public interface JSONObjectFactory {
+        JSONObject create(HttpRequestBase request) throws IOException, JSONException;
+    }
+    
     public AuthInfo auth(String username, String password, LoginService service) throws ClientProtocolException, IOException, JSONException {
         String url = String.format("%s/auth?url_name=%s&password=%s", API_BASE, service.convert(username), password);
-        return createAuthInfo(mJsonObjectFactory.create(url), username, service);
+        return createAuthInfo(mJsonObjectFactory.create(new HttpPost(url)), username, service);
     }
     
     private AuthInfo createAuthInfo(JSONObject json, String username, LoginService service) throws JSONException {
@@ -40,9 +46,5 @@ public class ApiAccessor {
             authInfo.setService(service);
             return authInfo;
         }
-    }
-    
-    public interface JSONObjectFactory {
-        JSONObject create(String url) throws IOException, JSONException;
     }
 }

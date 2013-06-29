@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.inject.Singleton;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -38,10 +38,10 @@ public class ProdModule {
         final String userAgent = new WebView(mContext).getSettings().getUserAgentString();
         JSONObjectFactory jsonObjectFactory = new JSONObjectFactory() {
             @Override
-            public JSONObject create(String url) throws IOException, JSONException {
+            public JSONObject create(HttpRequestBase request) throws IOException, JSONException {
                 AndroidHttpClient client = AndroidHttpClient.newInstance(userAgent);
                 try {
-                    HttpResponse response = client.execute(new HttpPost(url));
+                    HttpResponse response = client.execute(request);
                     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                     response.getEntity().writeTo(outputStream);
                     String rawJson = outputStream.toString();
