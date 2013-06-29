@@ -4,6 +4,7 @@ import javax.inject.Inject;
 import javax.inject.Provider;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -61,7 +62,8 @@ public class MainActivity extends Activity {
                         }
                         
                         if (isAuthed) {
-                            Toast.makeText(getApplicationContext(), authInfo.getToken(), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), "ユーザ名かパスワードが間違っています", Toast.LENGTH_SHORT).show();
                         }
