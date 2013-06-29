@@ -8,6 +8,8 @@ import java.io.IOException;
 import junit.framework.TestCase;
 
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,12 +25,19 @@ public class ApiAccessorTest extends TestCase {
         String password = "hogehoge";
         String token = "abcde";
         
-        String url = String.format("https://qiita.com/api/v1/auth?url_name=%s&password=%s", username, password);
+        final String url = String.format("https://qiita.com/api/v1/auth?url_name=%s&password=%s", username, password);
         JSONObject json = new JSONObject(String.format("{ \"token\" : \"%s\" }", token));
         
         JSONObjectFactory jsonObjectFactory = mock(JSONObjectFactory.class);
-        when(jsonObjectFactory.create(url)).thenReturn(json);
-        ApiAccessor accessor = new ApiAccessor(jsonObjectFactory);
+        final HttpRequestBase request = new HttpPost(url);
+        when(jsonObjectFactory.create(request)).thenReturn(json);
+        ApiAccessor accessor = new ApiAccessor(jsonObjectFactory) {
+            @Override
+            protected HttpRequestBase createAuthRequest(String argurl) {
+                assertEquals(argurl, url);
+                return request;
+            }
+        };
         
         AuthInfo info = accessor.auth(username, password, LoginService.TWITTER);
         assertEquals(info.getUsername(), username);
@@ -40,16 +49,24 @@ public class ApiAccessorTest extends TestCase {
         String username = "shoma2da";
         String password = "hogehoge";
         
-        String url = String.format("https://qiita.com/api/v1/auth?url_name=%s&password=%s", username, password);
+        final String url = String.format("https://qiita.com/api/v1/auth?url_name=%s&password=%s", username, password);
         JSONObject json = new JSONObject("{}");
         
         JSONObjectFactory jsonObjectFactory = mock(JSONObjectFactory.class);
-        when(jsonObjectFactory.create(url)).thenReturn(json);
-        ApiAccessor accessor = new ApiAccessor(jsonObjectFactory);
+        final HttpRequestBase request = new HttpPost(url);
+        when(jsonObjectFactory.create(request)).thenReturn(json);
+        ApiAccessor accessor = new ApiAccessor(jsonObjectFactory) {
+            @Override
+            protected HttpRequestBase createAuthRequest(String argurl) {
+                assertEquals(url, argurl);
+                return request;
+            }
+        };
         
         AuthInfo info = accessor.auth(username, password, LoginService.TWITTER);
         assertEquals(info.getUsername(), username);
         assertNull(info.getToken());
         assertEquals(info.getService(), LoginService.TWITTER);
     }
+    
 }

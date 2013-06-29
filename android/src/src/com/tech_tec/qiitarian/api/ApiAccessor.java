@@ -27,7 +27,12 @@ public class ApiAccessor {
     
     public AuthInfo auth(String username, String password, LoginService service) throws ClientProtocolException, IOException, JSONException {
         String url = String.format("%s/auth?url_name=%s&password=%s", API_BASE, service.convert(username), password);
-        return createAuthInfo(mJsonObjectFactory.create(new HttpPost(url)), username, service);
+        JSONObject jsonObject = mJsonObjectFactory.create(createAuthRequest(url));
+        return createAuthInfo(jsonObject, username, service);
+    }
+    
+    protected HttpRequestBase createAuthRequest(String url) {
+        return new HttpPost(url);
     }
     
     private AuthInfo createAuthInfo(JSONObject json, String username, LoginService service) throws JSONException {
