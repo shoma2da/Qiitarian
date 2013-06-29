@@ -34,6 +34,7 @@ public class ApiAccessorTest extends TestCase {
         ApiAccessor accessor = new ApiAccessor(jsonObjectFactory) {
             @Override
             protected HttpRequestBase createAuthRequest(String argurl) {
+                super.createAuthRequest(url);
                 assertEquals(argurl, url);
                 return request;
             }
@@ -58,6 +59,7 @@ public class ApiAccessorTest extends TestCase {
         ApiAccessor accessor = new ApiAccessor(jsonObjectFactory) {
             @Override
             protected HttpRequestBase createAuthRequest(String argurl) {
+                super.createAuthRequest(url);
                 assertEquals(url, argurl);
                 return request;
             }
