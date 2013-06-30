@@ -5,15 +5,22 @@
     android:orientation="vertical" >
     
     <fragment
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:name="com.tech_tec.qiitarian.fragment.HeaderFragment"
         />
     
     <fragment
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
         android:name="com.tech_tec.qiitarian.fragment.ListFragment"
+        />
+    
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.tech_tec.qiitarian.fragment.TabFragment"
         />
     
 </LinearLayout>
