@@ -10,7 +10,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.content.Context;
+import android.app.Application;
 import android.net.http.AndroidHttpClient;
 import android.webkit.WebView;
 
@@ -25,17 +25,17 @@ import dagger.Provides;
 @Module(
     injects = LoginActivity.class
 )
-public class ProdModule {
+public class ProdApplicationModule {
     
-    private Context mContext;
+    private Application mApplication;
     
-    public ProdModule(Context context) {
-        mContext = context;
+    public ProdApplicationModule(Application application) {
+        mApplication = application;
     }
     
     @Provides @Singleton
     ApiAccessor provideApiAccessor() {
-        final String userAgent = new WebView(mContext).getSettings().getUserAgentString();
+        final String userAgent = new WebView(mApplication).getSettings().getUserAgentString();
         JSONObjectFactory jsonObjectFactory = new JSONObjectFactory() {
             @Override
             public JSONObject create(HttpRequestBase request) throws IOException, JSONException {
@@ -58,12 +58,7 @@ public class ProdModule {
     }
     
     @Provides
-    Context provideContext() {
-        return mContext;
-    }
-    
-    @Provides
-    AuthAsyncTask provideAuthAsyncTask(ApiAccessor apiAccessor, Context context) {
-        return new AuthAsyncTask(context, apiAccessor);
+    AuthAsyncTask provideAuthAsyncTask(ApiAccessor apiAccessor) {
+        return new AuthAsyncTask(mApplication, apiAccessor);
     }
 }

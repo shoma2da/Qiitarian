@@ -13,15 +13,13 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.api.ApiAccessor;
 import com.tech_tec.qiitarian.async.AuthAsyncTask;
 import com.tech_tec.qiitarian.async.AuthAsyncTask.OnAuthListener;
-import com.tech_tec.qiitarian.di.ProdModule;
 import com.tech_tec.qiitarian.model.AuthInfo;
 import com.tech_tec.qiitarian.model.LoginService;
-
-import dagger.ObjectGraph;
 
 public class LoginActivity extends Activity {
     
@@ -31,8 +29,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ObjectGraph objectGraph = ObjectGraph.create(new ProdModule(this));
-        objectGraph.inject(this);
+        ((QiitarianApplication)getApplication()).getObjectGraph().inject(this);
         
         setContentView(R.layout.activity_main);
         
