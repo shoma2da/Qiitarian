@@ -8,8 +8,8 @@ import com.tech_tec.qiitarian.R;
 public class HomeActivity extends FragmentActivity {
     
     @Override
-    protected void onCreate(Bundle arg0) {
-        super.onCreate(arg0);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
     
