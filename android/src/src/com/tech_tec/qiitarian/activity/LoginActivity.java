@@ -1,11 +1,11 @@
 package com.tech_tec.qiitarian.activity;
 
 import javax.inject.Inject;
-import javax.inject.Provider;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -15,16 +15,15 @@ import android.widget.Toast;
 
 import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.api.ApiAccessor;
-import com.tech_tec.qiitarian.async.AuthAsyncTask;
-import com.tech_tec.qiitarian.async.AuthAsyncTask.OnAuthListener;
 import com.tech_tec.qiitarian.model.AuthInfo;
+import com.tech_tec.qiitarian.model.AuthInfo.OnUpdateCallback;
 import com.tech_tec.qiitarian.model.LoginService;
+import com.tech_tec.qiitarian.model.ResponseType;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends Activity implements OnUpdateCallback {
     
-    @Inject ApiAccessor mApiAccessor;
-    @Inject Provider<AuthAsyncTask> mAuthAsyncTask;
+    @Inject AuthInfo mAuthInfo;
+    private Handler mHandler = new Handler();
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,39 +44,46 @@ public class LoginActivity extends Activity {
         loginButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = usernameEditText.getText().toString();
-                String password = passwordEditText.getText().toString();
-                String service  = getServiceString();
+                final String username = usernameEditText.getText().toString();
+                final String password = passwordEditText.getText().toString();
+                final LoginService service  = getService();
                 
-                AuthAsyncTask asyncTask = mAuthAsyncTask.get();
-                asyncTask.addOnAuthListener(new OnAuthListener() {
+                new Thread(new Runnable() {
+                    
                     @Override
-                    public void onAuth(boolean hasError, AuthInfo authInfo, boolean isAuthed) {
-                        if (hasError) {
-                            Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
-                        
-                        if (isAuthed) {
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                        } else {
-                            Toast.makeText(getApplicationContext(), "ユーザ名かパスワードが間違っています", Toast.LENGTH_SHORT).show();
-                        }
+                    public void run() {
+                        mAuthInfo.updateAuthInfo(username, password, service, LoginActivity.this);
                     }
-                });
-                asyncTask.execute(username, password, service);
+                }).start();
             }
-            private String getServiceString() {
+            private LoginService getService() {
                 int checkedId = loginServiceGroup.getCheckedRadioButtonId();
                 if (R.id.radio_login_by_github == checkedId) {
-                    return LoginService.GITHUB.toString();
+                    return LoginService.GITHUB;
                 } else if (R.id.radio_login_by_twitter == checkedId) {
-                    return LoginService.TWITTER.toString();
+                    return LoginService.TWITTER;
                 }
                 return null;
             }
         });
         
+    }
+
+    @Override
+    public void onUpdate(final ResponseType type) {
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                if (type == ResponseType.SUCCESS) {
+                    Toast.makeText(getApplicationContext(), "token : " + mAuthInfo.getToken(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                } else if (type == ResponseType.FAILED) {
+                    Toast.makeText(getApplicationContext(), "ユーザ名かパスワードが違います", Toast.LENGTH_SHORT).show();
+                } else if (type == ResponseType.ERROR) {
+                    Toast.makeText(getApplicationContext(), "通信エラーが発生しています", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }

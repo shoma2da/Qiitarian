@@ -2,6 +2,7 @@ package com.tech_tec.qiitarian.activity;
 
 import javax.inject.Inject;
 
+import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.model.AuthInfo;
 
@@ -17,6 +18,8 @@ public class LaunchActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
+        
+        ((QiitarianApplication)getApplication()).getObjectGraph().inject(this);
         
         if (hasAuthInfo()) {
             Intent intent = new Intent(this, HomeActivity.class);
