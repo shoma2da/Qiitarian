@@ -5,6 +5,7 @@
     >
     
     <RadioGroup
+        android:id="@+id/radio_group_tabs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -12,18 +13,22 @@
         >
         
         <RadioButton
+            android:checked="true"
+            android:id="@+id/radio_latest"
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="最新情報"
             />
         <RadioButton
+            android:id="@+id/radio_tags"
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="タグ"
             />
         <RadioButton
+            android:id="@+id/radio_user"
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="match_parent"

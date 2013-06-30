@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 
 import com.tech_tec.qiitarian.R;
 
-public class TabFragment extends Fragment{
+public class TagsFragment extends Fragment {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tab, null);
+        View view = inflater.inflate(R.layout.fragment_tags, null);
         return view;
     }
     

@@ -10,14 +10,15 @@
         android:name="com.tech_tec.qiitarian.fragment.HeaderFragment"
         />
     
-    <fragment
+    <FrameLayout
+        android:id="@+id/content_container"
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:name="com.tech_tec.qiitarian.fragment.ListFragment"
         />
     
     <fragment
+        android:id="@+id/fragment_tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:name="com.tech_tec.qiitarian.fragment.TabFragment"

@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="最新情報" />
+        android:text="タグ一覧"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>
