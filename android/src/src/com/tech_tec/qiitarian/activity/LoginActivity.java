@@ -23,7 +23,7 @@ import com.tech_tec.qiitarian.model.LoginService;
 
 import dagger.ObjectGraph;
 
-public class MainActivity extends Activity {
+public class LoginActivity extends Activity {
     
     @Inject ApiAccessor mApiAccessor;
     @Inject Provider<AuthAsyncTask> mAuthAsyncTask;
@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
                         }
                         
                         if (isAuthed) {
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), "ユーザ名かパスワードが間違っています", Toast.LENGTH_SHORT).show();

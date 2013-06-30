@@ -14,7 +14,7 @@ import android.content.Context;
 import android.net.http.AndroidHttpClient;
 import android.webkit.WebView;
 
-import com.tech_tec.qiitarian.activity.MainActivity;
+import com.tech_tec.qiitarian.activity.LoginActivity;
 import com.tech_tec.qiitarian.api.ApiAccessor;
 import com.tech_tec.qiitarian.api.ApiAccessor.JSONObjectFactory;
 import com.tech_tec.qiitarian.async.AuthAsyncTask;
@@ -23,7 +23,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module(
-    injects = MainActivity.class
+    injects = LoginActivity.class
 )
 public class ProdModule {
     
