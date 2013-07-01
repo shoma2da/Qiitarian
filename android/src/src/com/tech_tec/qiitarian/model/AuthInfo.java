@@ -19,16 +19,9 @@ public class AuthInfo {
     private SharedPreferences mPreferences;
     private HttpClientFactory mClientFactory;
     
-    private static AuthInfo INSTANCE;
-    private AuthInfo(Context context, HttpClientFactory clientFactory) {
+    public AuthInfo(Context context, HttpClientFactory clientFactory) {
         mPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         mClientFactory = clientFactory;
-    }
-    public static AuthInfo getInstance(Context context, HttpClientFactory clientFactory) {
-        if (INSTANCE == null) {
-            INSTANCE = new AuthInfo(context, clientFactory);
-        }
-        return INSTANCE;
     }
     
     public interface HttpClientFactory {
@@ -41,7 +34,7 @@ public class AuthInfo {
     }
 
     public void setService(LoginService service) {
-        mPreferences.edit().putString(KEY_USERNAME, service.toString()).commit();
+        mPreferences.edit().putString(KEY_SERVICE, service.toString()).commit();
     }
 
     public String getUsername() {

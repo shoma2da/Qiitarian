@@ -30,7 +30,7 @@ public class ProdApplicationModule {
     
     @Provides @Singleton
     AuthInfo provideAuthInfo(HttpClientFactory factory) {
-        AuthInfo authInfo = AuthInfo.getInstance(mApplication, factory);
+        AuthInfo authInfo = new AuthInfo(mApplication, factory);
         return authInfo;
     }
     
