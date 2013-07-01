@@ -3,12 +3,12 @@ package com.tech_tec.qiitarian.model;
 import java.io.ByteArrayOutputStream;
 
 import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.json.JSONObject;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.net.http.AndroidHttpClient;
 
 public class AuthInfo {
     private static final String PREF_NAME = "authinfo.xml";
@@ -17,18 +17,22 @@ public class AuthInfo {
     private static final String KEY_TOKEN = "token";
     
     private SharedPreferences mPreferences;
-    private String mUserAgent;
+    private HttpClientFactory mClientFactory;
     
     private static AuthInfo INSTANCE;
-    private AuthInfo(Context context, String useragent) {
+    private AuthInfo(Context context, HttpClientFactory clientFactory) {
         mPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        mUserAgent = useragent;
+        mClientFactory = clientFactory;
     }
-    public static AuthInfo getInstance(Context context, String userAgent) {
+    public static AuthInfo getInstance(Context context, HttpClientFactory clientFactory) {
         if (INSTANCE == null) {
-            INSTANCE = new AuthInfo(context, userAgent);
+            INSTANCE = new AuthInfo(context, clientFactory);
         }
         return INSTANCE;
+    }
+    
+    public interface HttpClientFactory {
+        HttpClient create();
     }
     
     public LoginService getService() {
@@ -63,7 +67,7 @@ public class AuthInfo {
     public void updateAuthInfo(String username, String password, LoginService service, OnUpdateCallback callback) {
         String url = String.format("https://qiita.com/api/v1/auth?url_name=%s&password=%s", service.convert(username), password);
         
-        AndroidHttpClient client = AndroidHttpClient.newInstance(mUserAgent);
+        HttpClient client = mClientFactory.create();
         try {
             HttpResponse response = client.execute(new HttpPost(url));
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -92,7 +96,7 @@ public class AuthInfo {
             e.printStackTrace();
             callback.onUpdate(ResponseType.ERROR);
         } finally {
-            client.close();
+            client.getConnectionManager().shutdown();
         }
     }
 }

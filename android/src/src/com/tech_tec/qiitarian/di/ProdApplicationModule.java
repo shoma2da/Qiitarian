@@ -2,13 +2,17 @@ package com.tech_tec.qiitarian.di;
 
 import javax.inject.Singleton;
 
+import org.apache.http.client.HttpClient;
+
 import android.app.Application;
+import android.net.http.AndroidHttpClient;
 import android.webkit.WebView;
 
 import com.tech_tec.qiitarian.activity.HomeActivity;
 import com.tech_tec.qiitarian.activity.LaunchActivity;
 import com.tech_tec.qiitarian.activity.LoginActivity;
 import com.tech_tec.qiitarian.model.AuthInfo;
+import com.tech_tec.qiitarian.model.AuthInfo.HttpClientFactory;
 
 import dagger.Module;
 import dagger.Provides;
@@ -25,9 +29,19 @@ public class ProdApplicationModule {
     }
     
     @Provides @Singleton
-    AuthInfo provideAuthInfo() {
-        String userAgent = new WebView(mApplication).getSettings().getUserAgentString();
-        AuthInfo authInfo = AuthInfo.getInstance(mApplication, userAgent);
+    AuthInfo provideAuthInfo(HttpClientFactory factory) {
+        AuthInfo authInfo = AuthInfo.getInstance(mApplication, factory);
         return authInfo;
+    }
+    
+    @Provides @Singleton
+    HttpClientFactory provideHttpClientFactory() {
+        final String userAgent = new WebView(mApplication).getSettings().getUserAgentString();
+        return new HttpClientFactory() {
+            @Override
+            public HttpClient create() {
+                return AndroidHttpClient.newInstance(userAgent);
+            }
+        };
     }
 }

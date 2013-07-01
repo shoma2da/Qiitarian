@@ -23,6 +23,7 @@ import com.tech_tec.qiitarian.model.ResponseType;
 public class LoginActivity extends Activity implements OnUpdateCallback {
     
     @Inject AuthInfo mAuthInfo;
+    
     private Handler mHandler = new Handler();
     
     @Override
