@@ -57,17 +57,6 @@ public class QiitaJsonHttpClientTest {
     }
     
     @Test
-    public void 通信後にきちんとfinishしていることを確認する() throws ClientProtocolException, IOException {
-        //Run!
-        mClient.execute(null);
-        
-        //確認
-        verify(mClient.mRealClieant, times(1)).getConnectionManager();
-        ClientConnectionManager manager = mClient.mRealClieant.getConnectionManager();
-        verify(manager, times(1)).shutdown();
-    }
-    
-    @Test
     public void メンバのクライアントオブジェクトでnullポインターが出ないようにする() throws ClientProtocolException, IOException {
         QiitaJsonHttpClient client = new QiitaJsonHttpClient();
         assertNotNull(client.mRealClieant);

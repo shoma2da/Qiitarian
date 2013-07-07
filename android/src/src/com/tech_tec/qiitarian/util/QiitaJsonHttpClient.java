@@ -20,9 +20,6 @@ public class QiitaJsonHttpClient {
     public InputStream execute(HttpUriRequest request) throws ClientProtocolException, IOException {
         HttpResponse response = mRealClieant.execute(request);
         InputStream input = response.getEntity().getContent();
-        
-        mRealClieant.getConnectionManager().shutdown();
-        
         return input;
     }
     
