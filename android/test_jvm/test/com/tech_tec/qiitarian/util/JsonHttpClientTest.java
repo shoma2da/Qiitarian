@@ -1,5 +1,6 @@
 package com.tech_tec.qiitarian.util;
 
+import static junit.framework.Assert.*;
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
@@ -53,5 +54,11 @@ public class JsonHttpClientTest {
         verify(mClient.mRealClieant, times(1)).getConnectionManager();
         ClientConnectionManager manager = mClient.mRealClieant.getConnectionManager();
         verify(manager, times(1)).shutdown();
+    }
+    
+    @Test
+    public void メンバのクライアントオブジェクトでnullポインターが出ないようにする() throws ClientProtocolException, IOException {
+        JsonHttpClient client = new JsonHttpClient();
+        assertNotNull(client.mRealClieant);
     }
 }
