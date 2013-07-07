@@ -14,13 +14,13 @@ import org.apache.http.conn.ClientConnectionManager;
 import org.junit.Before;
 import org.junit.Test;
 
-public class JsonHttpClientTest {
+public class QiitaJsonHttpClientTest {
     
-    private JsonHttpClient mClient;
+    private QiitaJsonHttpClient mClient;
     
     @Before
     public void setUp() {
-        mClient = new JsonHttpClient();
+        mClient = new QiitaJsonHttpClient();
         mClient.mRealClieant = mock(HttpClient.class);
         ClientConnectionManager mockConnectionManager = mock(ClientConnectionManager.class);
         when(mClient.mRealClieant.getConnectionManager()).thenReturn(mockConnectionManager);
@@ -58,7 +58,7 @@ public class JsonHttpClientTest {
     
     @Test
     public void メンバのクライアントオブジェクトでnullポインターが出ないようにする() throws ClientProtocolException, IOException {
-        JsonHttpClient client = new JsonHttpClient();
+        QiitaJsonHttpClient client = new QiitaJsonHttpClient();
         assertNotNull(client.mRealClieant);
     }
 }

@@ -7,11 +7,11 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-public class JsonHttpClient {
+public class QiitaJsonHttpClient {
     
     HttpClient mRealClieant;
     
-    public JsonHttpClient() {
+    public QiitaJsonHttpClient() {
         mRealClieant = new DefaultHttpClient();
     }
     
