@@ -4,6 +4,7 @@ import static junit.framework.Assert.*;
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -72,4 +73,14 @@ public class QiitaJsonHttpClientTest {
         InputStream realInput = mClient.execute(mockRequest);
         assertEquals(mockInput, realInput);
     }
+    
+    @Test
+    public void InputStreamからStringを読み出す() {
+        InputStream dummyInput = new ByteArrayInputStream("hello".getBytes());
+        assertEquals("hello", mClient.readContent(dummyInput));
+        
+        dummyInput = new ByteArrayInputStream("hello¥nhello".getBytes());
+        assertEquals("hello¥nhello", mClient.readContent(dummyInput));
+    }
+    
 }
