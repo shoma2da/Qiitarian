@@ -9,6 +9,8 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class QiitaJsonHttpClient {
     
@@ -32,4 +34,11 @@ public class QiitaJsonHttpClient {
         }
         return builder.toString();
     }
+    
+    public JSONObject fetchJson(HttpUriRequest request) throws JSONException, ClientProtocolException, IOException {
+        InputStream inputStream = execute(request);
+        String content = readContent(inputStream);
+        return new JSONObject(content);
+    }
+    
 }

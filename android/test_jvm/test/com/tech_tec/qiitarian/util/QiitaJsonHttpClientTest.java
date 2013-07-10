@@ -15,6 +15,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.conn.ClientConnectionManager;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -81,6 +83,31 @@ public class QiitaJsonHttpClientTest {
         
         dummyInput = new ByteArrayInputStream("hello¥nhello".getBytes());
         assertEquals("hello¥nhello", mClient.readContent(dummyInput));
+    }
+    
+    @Test
+    public void JsonObjectを返却する() throws JSONException, ClientProtocolException, IOException {
+        doTestReturnJsonObject("{\"query\":\"Pizza\",\"locations\":[94043,90210]}");
+        doTestReturnJsonObject("{}");
+        doTestReturnJsonObject("{ list:[ 1,2,3 ] }");
+        doTestReturnJsonObject("{ pi:3.14 }");
+    }
+    
+    private void doTestReturnJsonObject(String jsonText) throws ClientProtocolException, IOException, JSONException {
+        HttpUriRequest mockRequest = mock(HttpUriRequest.class);
+        HttpClient mockClient = mock(HttpClient.class);
+        HttpResponse mockResponse = mock(HttpResponse.class);
+        HttpEntity mockEntry = mock(HttpEntity.class);
+        InputStream mockInput = new ByteArrayInputStream(jsonText.getBytes());
+        
+        when(mockClient.execute(mockRequest)).thenReturn(mockResponse);
+        when(mockResponse.getEntity()).thenReturn(mockEntry);
+        when(mockEntry.getContent()).thenReturn(mockInput);
+        
+        mClient.mRealClieant = mockClient;
+        
+        JSONObject resultJson = mClient.fetchJson(mockRequest);
+        assertEquals(new JSONObject(jsonText).toString(), resultJson.toString());
     }
     
 }
