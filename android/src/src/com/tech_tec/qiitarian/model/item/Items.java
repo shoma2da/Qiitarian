@@ -5,16 +5,22 @@ import java.util.Iterator;
 
 public class Items {
     
+    private ArrayList<Item> mItemList = new ArrayList<Item>();
+    
     public Iterator<Item> getItemIterator() {
-        return new ArrayList<Item>().iterator();
+        return mItemList.iterator();
     }
     
     public boolean isEmpty() {
-        return true;
+        return mItemList.isEmpty();
     }
     
     public int size() {
-        return 0;
+        return mItemList.size();
+    }
+    
+    public void add(Item item) {
+        mItemList.add(item);
     }
     
 }
