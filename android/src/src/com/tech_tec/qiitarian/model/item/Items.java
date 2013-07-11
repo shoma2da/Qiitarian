@@ -9,4 +9,8 @@ public class Items {
         return new ArrayList<Item>().iterator();
     }
     
+    public boolean isEmpty() {
+        return true;
+    }
+    
 }

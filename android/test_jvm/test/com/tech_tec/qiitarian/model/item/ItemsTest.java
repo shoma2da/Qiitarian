@@ -16,6 +16,7 @@ public class ItemsTest {
         
         assertNotNull(itemIterator);
         assertFalse(itemIterator.hasNext());
+        assertTrue(items.isEmpty());
     }
     
 }

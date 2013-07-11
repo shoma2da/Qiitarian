@@ -14,7 +14,7 @@ public class ItemsParserTest {
         Items items = parser.parse(new JSONObject("{}"));
         
         assertNotNull(items);
-        //assertFalse(items.isEmpty());
+        assertTrue(items.isEmpty());
     }
     
 }
