@@ -17,6 +17,7 @@ public class ItemsTest {
         assertNotNull(itemIterator);
         assertFalse(itemIterator.hasNext());
         assertTrue(items.isEmpty());
+        assertEquals(0, items.size());
     }
     
 }
