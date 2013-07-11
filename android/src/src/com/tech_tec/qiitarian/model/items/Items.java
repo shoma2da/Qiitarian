@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.model.item;
+package com.tech_tec.qiitarian.model.items;
 
 import java.util.ArrayList;
 import java.util.Iterator;
