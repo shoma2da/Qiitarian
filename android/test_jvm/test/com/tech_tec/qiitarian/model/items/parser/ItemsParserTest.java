@@ -17,6 +17,7 @@ public class ItemsParserTest {
         
         assertNotNull(items);
         assertTrue(items.isEmpty());
+        assertEquals(0, items.size());
     }
     
 }
