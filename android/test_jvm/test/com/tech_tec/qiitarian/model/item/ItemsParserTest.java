@@ -1,13 +1,15 @@
 package com.tech_tec.qiitarian.model.item;
 
+import static org.junit.Assert.*;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.junit.Test;
 
-import junit.framework.TestCase;
-
-public class ItemsParserTest extends TestCase {
+public class ItemsParserTest {
     
-    public void test空のitemsオブジェクトを生成() throws JSONException {
+    @Test
+    public void 空のitemsオブジェクトを生成() throws JSONException {
         ItemsParser parser = new ItemsParser();
         Items items = parser.parse(new JSONObject("{}"));
         
