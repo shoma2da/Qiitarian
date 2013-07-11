@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.util;
+package com.tech_tec.qiitarian.util.http;
 
 import static junit.framework.Assert.*;
 import static org.mockito.Matchers.*;
@@ -19,6 +19,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.tech_tec.qiitarian.util.http.QiitaJsonHttpClient;
 
 public class QiitaJsonHttpClientTest {
     

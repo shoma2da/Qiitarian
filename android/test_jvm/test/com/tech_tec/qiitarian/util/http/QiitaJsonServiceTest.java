@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.util;
+package com.tech_tec.qiitarian.util.http;
 
 import static org.mockito.Mockito.*;
 
@@ -10,6 +10,9 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.tech_tec.qiitarian.util.http.QiitaJsonHttpClient;
+import com.tech_tec.qiitarian.util.http.QiitaJsonService;
 
 public class QiitaJsonServiceTest extends TestCase {
     
