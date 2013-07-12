@@ -11,9 +11,9 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.ListFragment;
-import com.tech_tec.qiitarian.fragment.TagsFragment;
-import com.tech_tec.qiitarian.fragment.UserFragment;
+import com.tech_tec.qiitarian.fragment.content.ListFragment;
+import com.tech_tec.qiitarian.fragment.content.TagsFragment;
+import com.tech_tec.qiitarian.fragment.content.UserFragment;
 import com.tech_tec.qiitarian.model.AuthInfo;
 
 public class HomeActivity extends FragmentActivity {

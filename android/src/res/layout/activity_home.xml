@@ -7,7 +7,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.tech_tec.qiitarian.fragment.HeaderFragment"
+        android:name="com.tech_tec.qiitarian.fragment.header.HeaderFragment"
         />
     
     <FrameLayout
@@ -21,7 +21,7 @@
         android:id="@+id/fragment_tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.tech_tec.qiitarian.fragment.TabFragment"
+        android:name="com.tech_tec.qiitarian.fragment.tab.TabFragment"
         />
     
 </LinearLayout>

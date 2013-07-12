@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment;
+package com.tech_tec.qiitarian.fragment.tab;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 
 import com.tech_tec.qiitarian.R;
 
-public class TagsFragment extends Fragment {
+public class TabFragment extends Fragment{
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tags, null);
+        View view = inflater.inflate(R.layout.fragment_tab, null);
         return view;
     }
     

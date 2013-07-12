@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment;
+package com.tech_tec.qiitarian.fragment.header;
 
 import com.tech_tec.qiitarian.R;
 
@@ -8,11 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class UserFragment extends Fragment {
+public class HeaderFragment extends Fragment {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_user, null);
+        View view = inflater.inflate(R.layout.fragment_header, null);
         return view;
     }
     
