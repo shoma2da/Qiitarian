@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.util.http;
+package com.tech_tec.qiitarian.model.items.http;
 
 import static junit.framework.Assert.*;
 import static org.mockito.Matchers.*;
@@ -12,6 +12,9 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.junit.Test;
+
+import com.tech_tec.qiitarian.model.items.http.ItemsClient;
+import com.tech_tec.qiitarian.model.items.http.ResponseData;
 
 public class ItemsClientTest {
     
