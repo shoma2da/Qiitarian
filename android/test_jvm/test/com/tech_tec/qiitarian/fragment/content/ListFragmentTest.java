@@ -13,7 +13,7 @@ import android.view.View;
 public class ListFragmentTest {
     
     @Test
-    public void 初期化処理のテスト() {
+    public void fragment_listをviewとして読み込んでいるか() {
         View mockView = mock(View.class);
         LayoutInflater mockInflater = mock(LayoutInflater.class);
         when(mockInflater.inflate(R.layout.fragment_list, null)).thenReturn(mockView);
