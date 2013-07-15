@@ -12,15 +12,10 @@ import com.tech_tec.qiitarian.model.items.meta.User;
 public class ItemParser {
     
     public Item parser(JSONObject object) throws JSONException, MalformedURLException {
-        Uuid uuid = parseUuid(object);
+        Uuid uuid = new UuidParser().parse(object);
         User user = new UserParser().parse(object.getJSONObject("user"));
         
         return new Item();
-    }
-    
-    Uuid parseUuid(JSONObject object) throws JSONException {
-        String uuidStr = object.getString("uuid");
-        return new Uuid(uuidStr);
     }
     
 }
