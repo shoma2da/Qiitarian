@@ -7,4 +7,9 @@ public class CreatedTime {
     private Date mCreatedAt;
     private String mCreatedAtInWords;
     
+    public CreatedTime(Date createdAt, String createdAtInWords) {
+        mCreatedAt = createdAt;
+        mCreatedAtInWords = createdAtInWords;
+    }
+    
 }
