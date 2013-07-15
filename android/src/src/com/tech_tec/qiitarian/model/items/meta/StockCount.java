@@ -4,4 +4,8 @@ public class StockCount {
     
     private int mCount;
     
+    public StockCount(int count) {
+        mCount = count;
+    }
+    
 }
