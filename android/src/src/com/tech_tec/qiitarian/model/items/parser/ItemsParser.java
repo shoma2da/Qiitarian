@@ -1,6 +1,7 @@
 package com.tech_tec.qiitarian.model.items.parser;
 
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.util.Scanner;
 
 import org.json.JSONArray;
@@ -18,7 +19,7 @@ public class ItemsParser {
         mItemParser = createItemParser();
     }
     
-    public Items parse(InputStream input) throws JSONException {
+    public Items parse(InputStream input) throws JSONException, MalformedURLException {
         String content = inputToString(input);
         JSONArray jsonArray = new JSONArray(content);
         return parse(jsonArray);
@@ -33,7 +34,7 @@ public class ItemsParser {
         return builder.toString();
     }
     
-    public Items parse(JSONArray jsonArray) throws JSONException {
+    public Items parse(JSONArray jsonArray) throws JSONException, MalformedURLException {
         Items items = new Items();
         
         int arrayLenght = jsonArray.length();
