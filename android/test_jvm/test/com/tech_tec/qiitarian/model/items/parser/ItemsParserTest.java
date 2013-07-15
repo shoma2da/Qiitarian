@@ -6,6 +6,7 @@ import static org.mockito.Mockito.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,14 +27,20 @@ public class ItemsParserTest {
             @Override
             ItemParser createItemParser() {
                 ItemParser mockParser = mock(ItemParser.class);
-                when(mockParser.parser((JSONObject)any())).thenReturn(mock(Item.class));
+                try {
+                    when(mockParser.parser((JSONObject)any())).thenReturn(mock(Item.class));
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 return mockParser;
             }
         };
     }
     
     @Test
-    public void 空のitemsオブジェクトを生成() throws JSONException {
+    public void 空のitemsオブジェクトを生成() throws JSONException, MalformedURLException {
         Items items = mParser.parse(new JSONArray("[]"));
         
         assertNotNull(items);
@@ -42,7 +49,7 @@ public class ItemsParserTest {
     }
     
     @Test
-    public void 要素のあるItemsを生成() throws JSONException {
+    public void 要素のあるItemsを生成() throws JSONException, MalformedURLException {
         Items items = mParser.parse(new JSONArray("[{}, {}, {}]")); //３要素
         
         assertFalse(items.isEmpty());
@@ -50,7 +57,7 @@ public class ItemsParserTest {
     }
     
     @Test
-    public void InputStreamから空のItemsを生成() throws JSONException {
+    public void InputStreamから空のItemsを生成() throws JSONException, MalformedURLException {
         InputStream input = new ByteArrayInputStream("[]".getBytes());
         Items items = mParser.parse(input);
         
