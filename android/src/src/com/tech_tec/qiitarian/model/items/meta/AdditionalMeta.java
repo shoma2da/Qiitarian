@@ -4,5 +4,5 @@ import com.tech_tec.qiitarian.model.items.tags.Tags;
 
 public class AdditionalMeta {
     private Tags mTags;
-    private StockCount mStockCount;
+    private Counts mCounts;
 }
