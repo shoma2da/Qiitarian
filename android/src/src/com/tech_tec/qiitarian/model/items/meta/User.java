@@ -7,4 +7,9 @@ public class User {
     private String mUrlName;
     private URL mProfileImgUrl;
     
+    public User(String urlName, URL profileImgUrl) {
+        mUrlName = urlName;
+        mProfileImgUrl = profileImgUrl;
+    }
+    
 }
