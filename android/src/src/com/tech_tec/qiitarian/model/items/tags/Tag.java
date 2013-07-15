@@ -4,7 +4,12 @@ import java.net.URL;
 
 public class Tag {
     
-    private String mName;
+    private String mUrlName;
     private URL mIconUrl;
+    
+    public Tag(String urlName, URL iconUrl) {
+        mUrlName = urlName;
+        mIconUrl = iconUrl;
+    }
     
 }
