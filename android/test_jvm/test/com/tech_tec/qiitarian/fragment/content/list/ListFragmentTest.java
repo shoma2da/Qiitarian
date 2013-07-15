@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content;
+package com.tech_tec.qiitarian.fragment.content.list;
 
 import static junit.framework.Assert.*;
 import static org.mockito.Mockito.*;
@@ -6,6 +6,7 @@ import static org.mockito.Mockito.*;
 import org.junit.Test;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.fragment.content.list.ListFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
