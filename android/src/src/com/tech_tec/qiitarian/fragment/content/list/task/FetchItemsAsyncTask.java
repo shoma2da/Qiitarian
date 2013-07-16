@@ -4,11 +4,11 @@ import android.os.AsyncTask;
 
 import com.tech_tec.qiitarian.model.items.Items;
 
-public class FetchItemsResponseAsyncTask extends AsyncTask<Void, Void, Items> {
+public class FetchItemsAsyncTask extends AsyncTask<Void, Void, Items> {
     
     private Callback mCallback;
     
-    public FetchItemsResponseAsyncTask(Callback callback) {
+    public FetchItemsAsyncTask(Callback callback) {
         mCallback = callback;
     }
     
