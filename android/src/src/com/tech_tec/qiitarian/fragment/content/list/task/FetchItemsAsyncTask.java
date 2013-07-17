@@ -35,17 +35,17 @@ public class FetchItemsAsyncTask extends AsyncTask<Void, Void, Items> {
             mCallback.onError();
             return;
         }
-        
         if (result.isEmpty()) {
-            mCallback.onFailure();
-        } else {
-            mCallback.onSuccess();
+            mCallback.onEmptySuccess();
+            return;
         }
+        
+        mCallback.onSuccess(result);
     }
     
     public interface Callback {
-        void onSuccess();
-        void onFailure();
+        void onSuccess(Items items);
+        void onEmptySuccess();
         void onError();
     }
 }
