@@ -13,7 +13,7 @@ import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.TagsFragment;
 import com.tech_tec.qiitarian.fragment.content.UserFragment;
-import com.tech_tec.qiitarian.fragment.content.list.ListFragment;
+import com.tech_tec.qiitarian.fragment.content.list.ItemsFragment;
 import com.tech_tec.qiitarian.model.AuthInfo;
 
 public class HomeActivity extends FragmentActivity {
@@ -47,7 +47,7 @@ public class HomeActivity extends FragmentActivity {
     
     private void showLatestFragment() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.content_container, new ListFragment());
+        transaction.replace(R.id.content_container, new ItemsFragment());
         transaction.commit();
     }
     

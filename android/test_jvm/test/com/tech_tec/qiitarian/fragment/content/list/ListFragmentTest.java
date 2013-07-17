@@ -6,7 +6,7 @@ import static org.mockito.Mockito.*;
 import org.junit.Test;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.list.ListFragment;
+import com.tech_tec.qiitarian.fragment.content.list.ItemsFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ public class ListFragmentTest {
         LayoutInflater mockInflater = mock(LayoutInflater.class);
         when(mockInflater.inflate(R.layout.fragment_list, null)).thenReturn(mockView);
         
-        ListFragment listFragment = new ListFragment();
+        ItemsFragment listFragment = new ItemsFragment();
         View result = listFragment.onCreateView(mockInflater, null, null);
         
         assertSame(mockView, result);
