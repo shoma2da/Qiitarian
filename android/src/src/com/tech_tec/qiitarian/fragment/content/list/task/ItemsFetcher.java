@@ -2,6 +2,7 @@ package com.tech_tec.qiitarian.fragment.content.list.task;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.ParseException;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
@@ -13,7 +14,7 @@ import com.tech_tec.qiitarian.model.items.parser.ItemsParser;
 
 public class ItemsFetcher {
     
-    public Items fetch() throws ClientProtocolException, IOException, IllegalStateException, JSONException {
+    public Items fetch() throws ClientProtocolException, IOException, IllegalStateException, JSONException, ParseException {
         ItemsClient client = createItemsClient();
         ResponseData response = client.execute();
         
@@ -24,7 +25,7 @@ public class ItemsFetcher {
         }
     }
     
-    private Items processResponse(ResponseData response) throws MalformedURLException, IllegalStateException, JSONException, IOException {
+    private Items processResponse(ResponseData response) throws MalformedURLException, IllegalStateException, JSONException, IOException, ParseException {
         if (response.isOK()) {
             return createItemsParser().parse(response.getInputStream());
         } else {
