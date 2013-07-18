@@ -7,6 +7,7 @@ import static org.mockito.Mockito.*;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.text.ParseException;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,6 +34,8 @@ public class ItemsParserTest {
                     e.printStackTrace();
                 } catch (JSONException e) {
                     e.printStackTrace();
+                } catch (ParseException e) {
+                    e.printStackTrace();
                 }
                 return mockParser;
             }
@@ -40,7 +43,7 @@ public class ItemsParserTest {
     }
     
     @Test
-    public void 空のitemsオブジェクトを生成() throws JSONException, MalformedURLException {
+    public void 空のitemsオブジェクトを生成() throws JSONException, MalformedURLException, ParseException {
         Items items = mParser.parse(new JSONArray("[]"));
         
         assertNotNull(items);
@@ -49,7 +52,7 @@ public class ItemsParserTest {
     }
     
     @Test
-    public void 要素のあるItemsを生成() throws JSONException, MalformedURLException {
+    public void 要素のあるItemsを生成() throws JSONException, MalformedURLException, ParseException {
         Items items = mParser.parse(new JSONArray("[{}, {}, {}]")); //３要素
         
         assertFalse(items.isEmpty());
@@ -57,7 +60,7 @@ public class ItemsParserTest {
     }
     
     @Test
-    public void InputStreamから空のItemsを生成() throws JSONException, MalformedURLException {
+    public void InputStreamから空のItemsを生成() throws JSONException, MalformedURLException, ParseException {
         InputStream input = new ByteArrayInputStream("[]".getBytes());
         Items items = mParser.parse(input);
         
