@@ -1,5 +1,6 @@
 package com.tech_tec.qiitarian.model.items;
 
+import com.tech_tec.qiitarian.model.items.ArticleContent.CommandWithArticleTitle;
 import com.tech_tec.qiitarian.model.items.meta.ArticleMeta;
 
 public class Article {
@@ -10,6 +11,10 @@ public class Article {
     public Article(ArticleMeta meta, ArticleContent content) {
         mMeta = meta;
         mContent = content;
+    }
+    
+    public void actWithArticleTitle(CommandWithArticleTitle command) {
+        mContent.actWithArticleTitle(command);
     }
     
 }

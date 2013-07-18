@@ -8,4 +8,9 @@ public class ArticleTitle {
         mTitle = title;
     }
     
+    @Override
+    public String toString() {
+        return mTitle;
+    }
+    
 }

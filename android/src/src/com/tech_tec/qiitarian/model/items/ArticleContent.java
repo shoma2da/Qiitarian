@@ -10,4 +10,11 @@ public class ArticleContent {
         mBody = body;
     }
     
+    public void actWithArticleTitle(CommandWithArticleTitle command) {
+        command.act(mTitle);
+    }
+    
+    public interface CommandWithArticleTitle {
+        void act(ArticleTitle articleTitle);
+    }
 }
