@@ -5,4 +5,9 @@ public class ArticleMeta {
     private DefaultMeta mDefaultMeta;
     private AdditionalMeta mAdditionalMeta;
     
+    public ArticleMeta(DefaultMeta defaultMeta, AdditionalMeta additionalMeta) {
+        mDefaultMeta = defaultMeta;
+        mAdditionalMeta = additionalMeta;
+    }
+    
 }

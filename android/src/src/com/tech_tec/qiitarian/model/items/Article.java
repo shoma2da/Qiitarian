@@ -7,4 +7,9 @@ public class Article {
     private ArticleMeta mMeta;
     private ArticleContent mContent;
     
+    public Article(ArticleMeta meta, ArticleContent content) {
+        mMeta = meta;
+        mContent = content;
+    }
+    
 }
