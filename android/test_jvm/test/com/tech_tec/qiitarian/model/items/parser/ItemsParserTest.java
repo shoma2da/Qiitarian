@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.text.ParseException;
 

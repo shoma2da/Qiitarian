@@ -1,9 +1,7 @@
 package com.tech_tec.qiitarian.model.items.parser;
 
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.text.ParseException;
-import java.util.Scanner;
 
 import org.json.JSONArray;
 import org.json.JSONException;
