@@ -59,13 +59,4 @@ public class ItemsParserTest {
         assertEquals(3, items.size());
     }
     
-    @Test
-    public void InputStreamから空のItemsを生成() throws JSONException, MalformedURLException, ParseException {
-        InputStream input = new ByteArrayInputStream("[]".getBytes());
-        Items items = mParser.parse(input);
-        
-        assertNotNull(items);
-        assertTrue(items.isEmpty());
-        assertEquals(0, items.size());
-    }
 }

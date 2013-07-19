@@ -20,21 +20,6 @@ public class ItemsParser {
         mItemParser = createItemParser();
     }
     
-    public Items parse(InputStream input) throws JSONException, MalformedURLException, ParseException {
-        String content = inputToString(input);
-        JSONArray jsonArray = new JSONArray(content);
-        return parse(jsonArray);
-    }
-    
-    String inputToString(InputStream input) {
-        StringBuilder builder = new StringBuilder();
-        Scanner scanner = new Scanner(input);
-        while(scanner.hasNextLine()) {
-            builder.append(scanner.nextLine());
-        }
-        return builder.toString();
-    }
-    
     public Items parse(JSONArray jsonArray) throws JSONException, MalformedURLException, ParseException {
         Items items = new Items();
         
