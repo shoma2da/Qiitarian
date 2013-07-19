@@ -11,11 +11,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 public class ItemsClient {
     
-    public ResponseData execute() throws ClientProtocolException, IOException {
+    public HttpResponseWrapper execute() throws ClientProtocolException, IOException {
         HttpClient client = createHttpClient();
         HttpResponse response = client.execute(createRequest());
         
-        return new ResponseData(response.getStatusLine(), response.getEntity());
+        return new HttpResponseWrapper(response.getStatusLine(), response.getEntity());
     }
     
     HttpClient createHttpClient() {

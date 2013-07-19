@@ -14,7 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.junit.Test;
 
 import com.tech_tec.qiitarian.model.items.http.ItemsClient;
-import com.tech_tec.qiitarian.model.items.http.ResponseData;
+import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 
 public class ItemsClientTest {
     
@@ -46,7 +46,7 @@ public class ItemsClientTest {
             }
         };
         
-        ResponseData data = client.execute();
+        HttpResponseWrapper data = client.execute();
         assertNotNull(data);
     }
 }

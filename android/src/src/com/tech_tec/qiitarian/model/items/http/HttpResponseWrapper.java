@@ -6,12 +6,12 @@ import java.io.InputStream;
 import org.apache.http.HttpEntity;
 import org.apache.http.StatusLine;
 
-public class ResponseData {
+public class HttpResponseWrapper {
     
     private StatusLine mStatusLine;
     private HttpEntity mEntity;
     
-    public ResponseData(StatusLine statusLine, HttpEntity entity) {
+    public HttpResponseWrapper(StatusLine statusLine, HttpEntity entity) {
         mStatusLine = statusLine;
         mEntity = entity;
     }

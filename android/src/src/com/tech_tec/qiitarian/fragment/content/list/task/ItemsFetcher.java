@@ -9,14 +9,14 @@ import org.json.JSONException;
 
 import com.tech_tec.qiitarian.model.items.Items;
 import com.tech_tec.qiitarian.model.items.http.ItemsClient;
-import com.tech_tec.qiitarian.model.items.http.ResponseData;
+import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.items.parser.ItemsParser;
 
 public class ItemsFetcher {
     
     public Items fetch() throws ClientProtocolException, IOException, IllegalStateException, JSONException, ParseException {
         ItemsClient client = createItemsClient();
-        ResponseData response = client.execute();
+        HttpResponseWrapper response = client.execute();
         
         try {
             return processResponse(response);
@@ -25,7 +25,7 @@ public class ItemsFetcher {
         }
     }
     
-    private Items processResponse(ResponseData response) throws MalformedURLException, IllegalStateException, JSONException, IOException, ParseException {
+    private Items processResponse(HttpResponseWrapper response) throws MalformedURLException, IllegalStateException, JSONException, IOException, ParseException {
         if (response.isOK()) {
             return createItemsParser().parse(response.getInputStream());
         } else {
