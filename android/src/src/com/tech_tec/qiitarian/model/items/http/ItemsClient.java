@@ -15,7 +15,7 @@ public class ItemsClient {
         HttpClient client = createHttpClient();
         HttpResponse response = client.execute(createRequest());
         
-        return new HttpResponseWrapper(response.getStatusLine(), response.getEntity());
+        return new HttpResponseWrapper(response);
     }
     
     HttpClient createHttpClient() {

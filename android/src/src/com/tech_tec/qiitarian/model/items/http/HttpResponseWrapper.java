@@ -4,24 +4,24 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
 
 public class HttpResponseWrapper {
     
-    private StatusLine mStatusLine;
-    private HttpEntity mEntity;
+    private HttpResponse mResponse;
     
-    public HttpResponseWrapper(StatusLine statusLine, HttpEntity entity) {
-        mStatusLine = statusLine;
-        mEntity = entity;
+    public HttpResponseWrapper(HttpResponse response) {
+        mResponse = response;
     }
     
     public InputStream getInputStream() throws IllegalStateException, IOException {
-        return mEntity.getContent();
+        return null;
+        //return mEntity.getContent();
     }
     
     public boolean isOK() {
-        return mStatusLine.getStatusCode() == 200;
+        return false;
     }
     
 }
