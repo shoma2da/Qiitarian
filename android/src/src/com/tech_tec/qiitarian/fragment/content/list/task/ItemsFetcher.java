@@ -18,16 +18,12 @@ public class ItemsFetcher {
         ItemsClient client = createItemsClient();
         HttpResponseWrapper response = client.execute();
         
-        try {
-            return processResponse(response);
-        } finally {
-            response.getInputStream().close();
-        }
+        return processResponse(response);
     }
     
     private Items processResponse(HttpResponseWrapper response) throws MalformedURLException, IllegalStateException, JSONException, IOException, ParseException {
         if (response.isOK()) {
-            return createItemsParser().parse(response.getInputStream());
+            return createItemsParser().parse(response.toJSONArray());
         } else {
             return new Items();
         }

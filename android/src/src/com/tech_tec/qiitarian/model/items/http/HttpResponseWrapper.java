@@ -1,11 +1,13 @@
 package com.tech_tec.qiitarian.model.items.http;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
+import org.apache.http.ParseException;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
 
 public class HttpResponseWrapper {
     
@@ -15,13 +17,14 @@ public class HttpResponseWrapper {
         mResponse = response;
     }
     
-    public InputStream getInputStream() throws IllegalStateException, IOException {
-        return null;
-        //return mEntity.getContent();
+    public JSONArray toJSONArray() throws ParseException, IOException, JSONException {
+        HttpEntity entity = mResponse.getEntity();
+        String responseContent = EntityUtils.toString(entity);
+        return new JSONArray(responseContent);
     }
     
     public boolean isOK() {
-        return false;
+        return new StatusLineWrapper(mResponse.getStatusLine()).isOK();
     }
     
 }
