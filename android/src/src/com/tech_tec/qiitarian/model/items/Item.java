@@ -18,20 +18,4 @@ public class Item {
         void act(ArticleTitle title);
     }
     
-    
-    
-    /*
-    private Identifier mIdentifier;
-    private Article mArticle;
-    
-    public Item(Identifier identifier, Article article) {
-        mIdentifier = identifier;
-        mArticle = article;
-    }
-    
-    public void actWithArticleTitle(CommandWithArticleTitle command) {
-        mArticle.actWithArticleTitle(command);
-    }
-    
-    */
 }
