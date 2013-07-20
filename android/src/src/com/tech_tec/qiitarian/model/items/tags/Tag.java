@@ -5,11 +5,9 @@ import java.net.URL;
 public class Tag {
     
     private String mUrlName;
-    private URL mIconUrl;
     
-    public Tag(String urlName, URL iconUrl) {
+    public Tag(String urlName) {
         mUrlName = urlName;
-        mIconUrl = iconUrl;
     }
     
 }
