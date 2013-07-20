@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.widget.ArrayAdapter;
 
-import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask;
 import com.tech_tec.qiitarian.fragment.content.list.task.SetItemsForListCallback;
+import com.tech_tec.qiitarian.model.items.Item;
 
 public class ItemsFragment extends ListFragment {
     
@@ -14,7 +14,7 @@ public class ItemsFragment extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.listraw_item, R.id.text_item_title);
+        ArrayAdapter<Item> adapter = new ItemArrayAdapter(getActivity());
         setListAdapter(adapter);
         
         new FetchItemsAsyncTask(new SetItemsForListCallback(getListView())).execute();

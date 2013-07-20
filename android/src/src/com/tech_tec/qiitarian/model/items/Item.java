@@ -10,12 +10,8 @@ public class Item {
         mUserName = userName;
     }
 
-    public void actWithArticleTitle(CommandWithArticleTitle command) {
-        command.act(mArticleTitle);
-    }
-    
-    public interface CommandWithArticleTitle {
-        void act(ArticleTitle title);
+    public ArticleTitle getArticleTitle() {
+        return mArticleTitle;
     }
     
     public UserName getUserName() {
