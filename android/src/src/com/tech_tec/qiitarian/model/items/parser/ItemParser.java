@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.items.ArticleTitle;
 import com.tech_tec.qiitarian.model.items.Item;
+import com.tech_tec.qiitarian.model.items.UserName;
 
 public class ItemParser {
     
@@ -12,7 +13,10 @@ public class ItemParser {
         String titleText = object.getString("title");
         ArticleTitle title = new ArticleTitle(titleText);
         
-        return new Item(title);
+        JSONObject userObject = object.getJSONObject("user");
+        UserName userName = new UserNameParser().parser(userObject);
+        
+        return new Item(title, userName);
     }
     
 }
