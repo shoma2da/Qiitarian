@@ -1,8 +1,26 @@
 package com.tech_tec.qiitarian.model.items;
 
-import com.tech_tec.qiitarian.model.items.ArticleContent.CommandWithArticleTitle;
+
 
 public class Item {
+    
+    private ArticleTitle mArticleTitle;
+    
+    public Item(ArticleTitle articleTitle) {
+        mArticleTitle = articleTitle;
+    }
+
+    public void actWithArticleTitle(CommandWithArticleTitle command) {
+        command.act(mArticleTitle);
+    }
+    
+    public interface CommandWithArticleTitle {
+        void act(ArticleTitle title);
+    }
+    
+    
+    
+    /*
     private Identifier mIdentifier;
     private Article mArticle;
     
@@ -15,4 +33,5 @@ public class Item {
         mArticle.actWithArticleTitle(command);
     }
     
+    */
 }
