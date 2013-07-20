@@ -12,7 +12,7 @@ import com.tech_tec.qiitarian.model.items.http.ItemsClient;
 import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.items.parser.ItemsParser;
 
-public class ItemsFetcher {
+class ItemsFetcher {
     
     public Items fetch() throws ClientProtocolException, IOException, IllegalStateException, JSONException, ParseException {
         ItemsClient client = createItemsClient();
