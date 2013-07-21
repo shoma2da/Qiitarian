@@ -6,15 +6,9 @@ public class Item {
     private ArticleInfo mArticleInfo;
     private UserName mUserName;
     
-    //TODO 位置がおかしい
-    private StockCount mStockCount;
-    private CommentCount mCommentCount;
-    
-    public Item(UserName userName, ArticleInfo articleInfo, StockCount stockCount, CommentCount commentCount) {
+    public Item(UserName userName, ArticleInfo articleInfo) {
         mUserName = userName;
         mArticleInfo = articleInfo;
-        mStockCount = stockCount;
-        mCommentCount = commentCount;
     }
 
     public String getArticleTitle() {
@@ -34,10 +28,10 @@ public class Item {
     }
     
     public int getStockCount() {
-        return mStockCount.toInt();
+        return mArticleInfo.getStockCount();
     }
     
     public int getCommentCount() {
-        return mCommentCount.toInt();
+        return mArticleInfo.getCommentCount();
     }
 }

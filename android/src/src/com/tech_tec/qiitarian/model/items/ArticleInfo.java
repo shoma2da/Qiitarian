@@ -21,4 +21,12 @@ public class ArticleInfo {
     public String getTagsText() {
         return mArticleMeta.getTagsText();
     }
+    
+    public int getCommentCount() {
+        return mArticleMeta.getCommentCount();
+    }
+    
+    public int getStockCount() {
+        return mArticleMeta.getStockCount();
+    }
 }

@@ -10,6 +10,7 @@ import com.tech_tec.qiitarian.model.items.ArticleTitle;
 import com.tech_tec.qiitarian.model.items.CommentCount;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Item;
+import com.tech_tec.qiitarian.model.items.ReactionCounts;
 import com.tech_tec.qiitarian.model.items.StockCount;
 import com.tech_tec.qiitarian.model.items.Tags;
 import com.tech_tec.qiitarian.model.items.UserName;
@@ -19,10 +20,8 @@ public class ItemParser {
     public Item parse(JSONObject object) throws JSONException {
         ArticleInfo articleInfo = parseArticleInfo(object);
         UserName userName = parseUserName(object);
-        StockCount stockCount = parseStockCount(object);
-        CommentCount commentCount = parseCommentCount(object);
         
-        return new Item(userName, articleInfo, stockCount, commentCount);
+        return new Item(userName, articleInfo);
     }
     
     private ArticleInfo parseArticleInfo(JSONObject object) throws JSONException {
@@ -37,8 +36,9 @@ public class ItemParser {
         String createdAtText = object.getString("created_at_in_words");
         CreatedAt createdAt = new CreatedAt(createdAtText);
         Tags tags = parseTags(object);
+        ReactionCounts reactionCounts = parseReactionCounts(object);
         
-        return new ArticleMeta(createdAt, tags);
+        return new ArticleMeta(createdAt, tags, reactionCounts);
     }
     
     private UserName parseUserName(JSONObject object) throws JSONException {
@@ -59,6 +59,13 @@ public class ItemParser {
     private CommentCount parseCommentCount(JSONObject object) throws JSONException {
         int commentCount = object.getInt("comment_count");
         return new CommentCount(commentCount);
+    }
+    
+    private ReactionCounts parseReactionCounts(JSONObject object) throws JSONException {
+        StockCount stockCount = parseStockCount(object);
+        CommentCount commentCount = parseCommentCount(object);
+        
+        return new ReactionCounts(commentCount, stockCount);
     }
     
 }
