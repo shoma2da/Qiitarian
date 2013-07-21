@@ -10,11 +10,11 @@ public class Item {
         mUserName = userName;
     }
 
-    public ArticleTitle getArticleTitle() {
-        return mArticleTitle;
+    public String getArticleTitle() {
+        return mArticleTitle.toString();
     }
     
-    public UserName getUserName() {
-        return mUserName;
+    public String getUserName() {
+        return mUserName.toString();
     }
 }

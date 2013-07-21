@@ -26,10 +26,10 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         Item item = getItem(position);
         
         TextView titleText = (TextView)view.findViewById(R.id.text_item_title);
-        titleText.setText(item.getArticleTitle().toString());
+        titleText.setText(item.getArticleTitle());
         
         TextView usernameText = (TextView)view.findViewById(R.id.text_item_username);
-        usernameText.setText(item.getUserName().toString());
+        usernameText.setText(item.getUserName());
         
         return view;
     }
