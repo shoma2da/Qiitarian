@@ -1,7 +1,5 @@
 package com.tech_tec.qiitarian.fragment.content.list;
 
-import java.util.Iterator;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
