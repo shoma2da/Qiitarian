@@ -40,9 +40,12 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         tagsText.setText(item.getTagsText());
         stockCountText.setText("ストック数：" + item.getStockCount());
         commentCountText.setText("コメント数：" + item.getCommentCount());
-        new IconFetchTask(iconImage, item).execute();
+        createIconFetchTask(iconImage, item).execute();
         
         return view;
     }
     
+    IconFetchTask createIconFetchTask(ImageView iconImage, Item item) {
+        return new IconFetchTask(iconImage, item);
+    }
 }
