@@ -5,10 +5,12 @@ public class Item {
     
     private ArticleInfo mArticleInfo;
     private UserName mUserName;
+    private StockCount mStockCount;
     
-    public Item(UserName userName, ArticleInfo articleInfo) {
+    public Item(UserName userName, ArticleInfo articleInfo, StockCount stockCount) {
         mUserName = userName;
         mArticleInfo = articleInfo;
+        mStockCount = stockCount;
     }
 
     public String getArticleTitle() {
@@ -25,5 +27,9 @@ public class Item {
     
     public String getTagsText() {
         return mArticleInfo.getTagsText();
+    }
+    
+    public int getStockCount() {
+        return mStockCount.toInt();
     }
 }
