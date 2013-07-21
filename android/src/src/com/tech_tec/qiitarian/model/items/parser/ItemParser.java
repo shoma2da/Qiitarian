@@ -12,16 +12,24 @@ import com.tech_tec.qiitarian.model.items.UserName;
 public class ItemParser {
     
     public Item parse(JSONObject object) throws JSONException {
+        ArticleInfo articleInfo = parseArticleInfo(object);
+        UserName userName = parseUserName(object);
+        
+        return new Item(userName, articleInfo);
+    }
+    
+    private ArticleInfo parseArticleInfo(JSONObject object) throws JSONException {
         String titleText = object.getString("title");
         ArticleTitle title = new ArticleTitle(titleText);
         String createdAtText = object.getString("created_at_in_words");
         CreatedAt createdAt = new CreatedAt(createdAtText);
-        ArticleInfo articleInfo = new ArticleInfo(title, createdAt);
         
+        return new ArticleInfo(title, createdAt);
+    }
+    
+    private UserName parseUserName(JSONObject object) throws JSONException {
         JSONObject userObject = object.getJSONObject("user");
-        UserName userName = new UserNameParser().parser(userObject);
-        
-        return new Item(userName, articleInfo);
+        return new UserNameParser().parser(userObject);
     }
     
 }
