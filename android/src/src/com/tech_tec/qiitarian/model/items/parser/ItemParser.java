@@ -5,6 +5,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.items.ArticleInfo;
+import com.tech_tec.qiitarian.model.items.ArticleMeta;
 import com.tech_tec.qiitarian.model.items.ArticleTitle;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Item;
@@ -22,11 +23,17 @@ public class ItemParser {
     private ArticleInfo parseArticleInfo(JSONObject object) throws JSONException {
         String titleText = object.getString("title");
         ArticleTitle title = new ArticleTitle(titleText);
+        ArticleMeta articleMeta = parseArticleMeta(object);
+        
+        return new ArticleInfo(title, articleMeta);
+    }
+    
+    private ArticleMeta parseArticleMeta(JSONObject object) throws JSONException {
         String createdAtText = object.getString("created_at_in_words");
         CreatedAt createdAt = new CreatedAt(createdAtText);
         Tags tags = parseTags(object);
         
-        return new ArticleInfo(title, createdAt, tags);
+        return new ArticleMeta(createdAt, tags);
     }
     
     private UserName parseUserName(JSONObject object) throws JSONException {

@@ -3,13 +3,11 @@ package com.tech_tec.qiitarian.model.items;
 public class ArticleInfo {
     
     private ArticleTitle mArticleTitle;
-    private CreatedAt mCreatedAt;
-    private Tags mTags;
+    private ArticleMeta mArticleMeta;
     
-    public ArticleInfo(ArticleTitle articleTitle, CreatedAt createdAt, Tags tags) {
+    public ArticleInfo(ArticleTitle articleTitle, ArticleMeta articleMeta) {
         mArticleTitle = articleTitle;
-        mCreatedAt = createdAt;
-        mTags = tags;
+        mArticleMeta = articleMeta;
     }
     
     public String getArticleTitle() {
@@ -17,10 +15,10 @@ public class ArticleInfo {
     }
     
     public String getCreatedAt() {
-        return mCreatedAt.toString();
+        return mArticleMeta.getCreatedAt();
     }
     
     public String getTagsText() {
-        return mTags.getTagsText();
+        return mArticleMeta.getTagsText();
     }
 }
