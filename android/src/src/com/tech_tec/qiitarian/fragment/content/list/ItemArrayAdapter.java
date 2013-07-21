@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.fragment.content.list;
 
+import java.util.Iterator;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,13 +28,14 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         Item item = getItem(position);
         
         TextView titleText = (TextView)view.findViewById(R.id.text_item_title);
-        titleText.setText(item.getArticleTitle());
-        
         TextView usernameText = (TextView)view.findViewById(R.id.text_item_username);
-        usernameText.setText(item.getUserName());
-        
         TextView createdAtText = (TextView)view.findViewById(R.id.text_item_created_at);
+        TextView tagsText = (TextView)view.findViewById(R.id.text_item_tags);
+        
+        titleText.setText(item.getArticleTitle());
+        usernameText.setText(item.getUserName());
         createdAtText.setText(item.getCreatedAt());
+        tagsText.setText(item.getTagsText());
         
         return view;
     }
