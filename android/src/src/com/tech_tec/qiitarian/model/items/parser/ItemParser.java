@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import com.tech_tec.qiitarian.model.items.ArticleInfo;
 import com.tech_tec.qiitarian.model.items.ArticleMeta;
 import com.tech_tec.qiitarian.model.items.ArticleTitle;
+import com.tech_tec.qiitarian.model.items.CommentCount;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.model.items.StockCount;
@@ -19,8 +20,9 @@ public class ItemParser {
         ArticleInfo articleInfo = parseArticleInfo(object);
         UserName userName = parseUserName(object);
         StockCount stockCount = parseStockCount(object);
+        CommentCount commentCount = parseCommentCount(object);
         
-        return new Item(userName, articleInfo, stockCount);
+        return new Item(userName, articleInfo, stockCount, commentCount);
     }
     
     private ArticleInfo parseArticleInfo(JSONObject object) throws JSONException {
@@ -52,6 +54,11 @@ public class ItemParser {
     private StockCount parseStockCount(JSONObject object) throws JSONException {
         int stockCount = object.getInt("stock_count");
         return new StockCount(stockCount);
+    }
+    
+    private CommentCount parseCommentCount(JSONObject object) throws JSONException {
+        int commentCount = object.getInt("comment_count");
+        return new CommentCount(commentCount);
     }
     
 }

@@ -30,12 +30,14 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         TextView createdAtText = (TextView)view.findViewById(R.id.text_item_created_at);
         TextView tagsText = (TextView)view.findViewById(R.id.text_item_tags);
         TextView stockCountText = (TextView)view.findViewById(R.id.text_item_stock_count);
+        TextView commentCountText = (TextView)view.findViewById(R.id.text_item_comment_count);
         
         titleText.setText(item.getArticleTitle());
         usernameText.setText(item.getUserName());
         createdAtText.setText(item.getCreatedAt());
         tagsText.setText(item.getTagsText());
         stockCountText.setText("ストック数：" + item.getStockCount());
+        commentCountText.setText("コメント数：" + item.getCommentCount());
         
         return view;
     }
