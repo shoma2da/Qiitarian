@@ -16,8 +16,7 @@ public class ItemParser {
     public Item parse(JSONObject object) throws JSONException {
         ArticleInfo articleInfo = parseArticleInfo(object);
         UserName userName = parseUserName(object);
-        Tags tags = parseTags(object);
-        return new Item(userName, articleInfo, tags);
+        return new Item(userName, articleInfo);
     }
     
     private ArticleInfo parseArticleInfo(JSONObject object) throws JSONException {
@@ -25,8 +24,9 @@ public class ItemParser {
         ArticleTitle title = new ArticleTitle(titleText);
         String createdAtText = object.getString("created_at_in_words");
         CreatedAt createdAt = new CreatedAt(createdAtText);
+        Tags tags = parseTags(object);
         
-        return new ArticleInfo(title, createdAt);
+        return new ArticleInfo(title, createdAt, tags);
     }
     
     private UserName parseUserName(JSONObject object) throws JSONException {

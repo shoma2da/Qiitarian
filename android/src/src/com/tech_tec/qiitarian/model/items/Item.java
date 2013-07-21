@@ -5,12 +5,10 @@ public class Item {
     
     private ArticleInfo mArticleInfo;
     private UserName mUserName;
-    private Tags mTags;
     
-    public Item(UserName userName, ArticleInfo articleInfo, Tags tags) {
+    public Item(UserName userName, ArticleInfo articleInfo) {
         mUserName = userName;
         mArticleInfo = articleInfo;
-        mTags = tags;
     }
 
     public String getArticleTitle() {
@@ -26,6 +24,6 @@ public class Item {
     }
     
     public String getTagsText() {
-        return mTags.getTagsText();
+        return mArticleInfo.getTagsText();
     }
 }
