@@ -11,7 +11,7 @@ import com.tech_tec.qiitarian.model.items.UserName;
 
 public class ItemParser {
     
-    public Item parser(JSONObject object) throws JSONException {
+    public Item parse(JSONObject object) throws JSONException {
         String titleText = object.getString("title");
         ArticleTitle title = new ArticleTitle(titleText);
         String createdAtText = object.getString("created_at_in_words");

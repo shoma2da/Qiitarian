@@ -24,7 +24,7 @@ public class ItemsParser {
         int arrayLenght = jsonArray.length();
         for (int i = 0; i < arrayLenght; i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
-            Item item = mItemParser.parser(jsonObject);
+            Item item = mItemParser.parse(jsonObject);
             items.add(item);
         }
         
