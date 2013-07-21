@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
@@ -31,6 +32,7 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         TextView tagsText = (TextView)view.findViewById(R.id.text_item_tags);
         TextView stockCountText = (TextView)view.findViewById(R.id.text_item_stock_count);
         TextView commentCountText = (TextView)view.findViewById(R.id.text_item_comment_count);
+        ImageView iconImage = (ImageView)view.findViewById(R.id.image_item_user_profile);
         
         titleText.setText(item.getArticleTitle());
         usernameText.setText(item.getUserName());
@@ -38,6 +40,7 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         tagsText.setText(item.getTagsText());
         stockCountText.setText("ストック数：" + item.getStockCount());
         commentCountText.setText("コメント数：" + item.getCommentCount());
+        new IconFetchTask(iconImage, item).execute();
         
         return view;
     }

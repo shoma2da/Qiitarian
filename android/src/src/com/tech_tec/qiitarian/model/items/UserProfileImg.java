@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.model.items.parser;
+package com.tech_tec.qiitarian.model.items;
 
 import java.io.IOException;
 import java.io.InputStream;

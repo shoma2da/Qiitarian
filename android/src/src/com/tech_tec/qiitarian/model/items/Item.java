@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import android.graphics.Bitmap;
 
-import com.tech_tec.qiitarian.model.items.parser.UserProfileImg;
 
 
 public class Item {

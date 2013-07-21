@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import com.tech_tec.qiitarian.model.items.ArticleInfo;
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.model.items.UserName;
+import com.tech_tec.qiitarian.model.items.UserProfileImg;
 
 public class ItemParser {
     
