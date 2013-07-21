@@ -4,11 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <fragment
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:name="com.tech_tec.qiitarian.fragment.header.HeaderFragment"
+        />
+    
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.tech_tec.qiitarian.fragment.detail.DetailFragment"
+        />
 
 </LinearLayout>
