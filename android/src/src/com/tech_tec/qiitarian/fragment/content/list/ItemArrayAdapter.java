@@ -22,7 +22,10 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
     
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = mInflater.inflate(R.layout.listraw_item, null);
+        View view = convertView;
+        if (view == null) {
+            view = mInflater.inflate(R.layout.listraw_item, null);
+        }
         
         final Item item = getItem(position);
         
@@ -40,12 +43,12 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         tagsText.setText(item.getTagsText());
         stockCountText.setText("ストック数：" + item.getStockCount());
         commentCountText.setText("コメント数：" + item.getCommentCount());
-        createIconFetchTask(iconImage, item).execute();
+        fetchIconAsync(iconImage, item);
         
         return view;
     }
     
-    IconFetchTask createIconFetchTask(ImageView iconImage, Item item) {
-        return new IconFetchTask(iconImage, item);
+    void fetchIconAsync(ImageView iconImage, Item item) {
+        new IconFetchTask(iconImage, item).execute();
     }
 }
