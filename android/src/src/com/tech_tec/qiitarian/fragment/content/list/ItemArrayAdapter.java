@@ -28,6 +28,9 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         TextView titleText = (TextView)view.findViewById(R.id.text_item_title);
         titleText.setText(item.getArticleTitle().toString());
         
+        TextView usernameText = (TextView)view.findViewById(R.id.text_item_username);
+        usernameText.setText(item.getUserName().toString());
+        
         return view;
     }
     
