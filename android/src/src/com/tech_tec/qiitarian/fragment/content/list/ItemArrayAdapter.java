@@ -31,6 +31,9 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         TextView usernameText = (TextView)view.findViewById(R.id.text_item_username);
         usernameText.setText(item.getUserName());
         
+        TextView createdAtText = (TextView)view.findViewById(R.id.text_item_created_at);
+        createdAtText.setText(item.getCreatedAt());
+        
         return view;
     }
     
