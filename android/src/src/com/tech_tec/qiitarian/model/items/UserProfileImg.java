@@ -13,20 +13,25 @@ import android.graphics.BitmapFactory;
 public class UserProfileImg {
     
     private URL mUrl;
+    private Bitmap mCachedBitmap;
     
     public UserProfileImg(URL url) {
         mUrl = url;
     }
     
     public Bitmap fetchImg() throws IOException {
+        if (mCachedBitmap != null) {
+            return mCachedBitmap;
+        }
+        
         QiitarianLog.d("start fetch user icon");
         
         URLConnection connection = mUrl.openConnection();
         InputStream input = connection.getInputStream();
-        Bitmap bitmap = BitmapFactory.decodeStream(input);
+        mCachedBitmap = BitmapFactory.decodeStream(input);
         
         QiitarianLog.d("end fetch user icon");
         
-        return bitmap;
+        return mCachedBitmap;
     }
 }
