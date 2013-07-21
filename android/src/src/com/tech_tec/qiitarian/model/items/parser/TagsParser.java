@@ -22,16 +22,11 @@ public class TagsParser {
     
     void addTagTo(Tags tags, JSONObject jsonObject) {
         try {
-            Tag tag = createTag(jsonObject);
+            Tag tag = new TagParser().parse(jsonObject);
             tags.add(tag);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-    }
-    
-    Tag createTag(JSONObject object) throws JSONException {
-        String tagText = object.getString("name");
-        return new Tag(tagText);
     }
     
 }
