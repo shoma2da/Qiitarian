@@ -9,21 +9,15 @@ import android.graphics.Bitmap;
 public class Item {
     
     private ArticleInfo mArticleInfo;
-    private UserName mUserName;
-    private UserProfileImg mUserProfileImg;
+    private User mUser;
     
-    public Item(UserName userName, ArticleInfo articleInfo, UserProfileImg userProfileImg) {
-        mUserName = userName;
+    public Item(ArticleInfo articleInfo, User user) {
         mArticleInfo = articleInfo;
-        mUserProfileImg = userProfileImg;
+        mUser = user;
     }
 
     public String getArticleTitle() {
         return mArticleInfo.getArticleTitle();
-    }
-    
-    public String getUserName() {
-        return mUserName.toString();
     }
     
     public String getCreatedAt() {
@@ -43,6 +37,11 @@ public class Item {
     }
     
     public Bitmap fetchIconImg() throws IOException {
-        return mUserProfileImg.fetchImg();
+        return mUser.fetchIconImg();
     }
+    
+    public String getUserName() {
+        return mUser.getUserName();
+    }
+    
 }
