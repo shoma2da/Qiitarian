@@ -16,7 +16,7 @@ public class ItemsFragment extends ListFragment {
         
         ArrayAdapter<Item> adapter = new ItemArrayAdapter(getActivity());
         setListAdapter(adapter);
-        getListView().setOnItemClickListener(new GotoDetailOnItemClickListener());
+        getListView().setOnItemClickListener(new GotoDetailOnItemClickListener(getActivity()));
         
         new FetchItemsAsyncTask(new SetItemsForListCallback(getListView())).execute();
     }
