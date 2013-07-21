@@ -23,7 +23,7 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = mInflater.inflate(R.layout.listraw_item, null);
         
-        Item item = getItem(position);
+        final Item item = getItem(position);
         
         TextView titleText = (TextView)view.findViewById(R.id.text_item_title);
         TextView usernameText = (TextView)view.findViewById(R.id.text_item_username);

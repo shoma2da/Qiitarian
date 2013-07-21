@@ -1,14 +1,22 @@
 package com.tech_tec.qiitarian.model.items;
 
+import java.io.IOException;
+
+import android.graphics.Bitmap;
+
+import com.tech_tec.qiitarian.model.items.parser.UserProfileImg;
+
 
 public class Item {
     
     private ArticleInfo mArticleInfo;
     private UserName mUserName;
+    private UserProfileImg mUserProfileImg;
     
-    public Item(UserName userName, ArticleInfo articleInfo) {
+    public Item(UserName userName, ArticleInfo articleInfo, UserProfileImg userProfileImg) {
         mUserName = userName;
         mArticleInfo = articleInfo;
+        mUserProfileImg = userProfileImg;
     }
 
     public String getArticleTitle() {
@@ -33,5 +41,9 @@ public class Item {
     
     public int getCommentCount() {
         return mArticleInfo.getCommentCount();
+    }
+    
+    public Bitmap fetchIconImg() throws IOException {
+        return mUserProfileImg.fetchImg();
     }
 }
