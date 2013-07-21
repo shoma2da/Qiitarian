@@ -2,18 +2,16 @@ package com.tech_tec.qiitarian.model.items;
 
 public class Item {
     
-    private ArticleTitle mArticleTitle;
+    private ArticleInfo mArticleInfo;
     private UserName mUserName;
-    private CreatedAt mCreatedAt;
     
-    public Item(ArticleTitle articleTitle, UserName userName, CreatedAt createdAt) {
-        mArticleTitle = articleTitle;
+    public Item(UserName userName, ArticleInfo articleInfo) {
         mUserName = userName;
-        mCreatedAt = createdAt;
+        mArticleInfo = articleInfo;
     }
 
     public String getArticleTitle() {
-        return mArticleTitle.toString();
+        return mArticleInfo.getArticleTitle();
     }
     
     public String getUserName() {
@@ -21,6 +19,6 @@ public class Item {
     }
     
     public String getCreatedAt() {
-        return mCreatedAt.toString();
+        return mArticleInfo.getCreatedAt();
     }
 }
