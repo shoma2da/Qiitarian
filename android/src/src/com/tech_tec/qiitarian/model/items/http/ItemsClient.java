@@ -9,7 +9,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import android.util.Log;
+import com.tech_tec.qiitarian.QiitarianLog;
 
 public class ItemsClient {
     
@@ -17,8 +17,9 @@ public class ItemsClient {
         HttpClient client = createHttpClient();
         HttpUriRequest request = createRequest();
                 
-        Log.d("qiitarian", "access to " + request.getURI());
+        QiitarianLog.d("access to " + request.getURI());
         HttpResponse response = client.execute(request);
+        QiitarianLog.d("finish access");
         
         return new HttpResponseWrapper(response);
     }
