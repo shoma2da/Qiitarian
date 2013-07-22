@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.activity.task.AuthInfoFetcherCallbackImpl;
 import com.tech_tec.qiitarian.activity.task.FetchAuthInfoTask;
-import com.tech_tec.qiitarian.old.model.LoginService;
+import com.tech_tec.qiitarian.model.auth.LoginService;
 
 public class LoginActivity extends Activity {
     

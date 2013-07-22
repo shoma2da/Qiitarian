@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import com.tech_tec.qiitarian.activity.HomeActivity;
 import com.tech_tec.qiitarian.activity.task.FetchAuthInfoTask.Callback;
-import com.tech_tec.qiitarian.old.model.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
 
 public class AuthInfoFetcherCallbackImpl implements Callback {
     

@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.old.model;
+package com.tech_tec.qiitarian.model.auth;
 
 public class Token {
     

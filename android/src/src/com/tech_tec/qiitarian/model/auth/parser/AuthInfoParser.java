@@ -1,11 +1,11 @@
-package com.tech_tec.qiitarian.old.model.parser;
+package com.tech_tec.qiitarian.model.auth.parser;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.tech_tec.qiitarian.old.model.AuthInfo;
-import com.tech_tec.qiitarian.old.model.Token;
-import com.tech_tec.qiitarian.old.model.UrlName;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.Token;
+import com.tech_tec.qiitarian.model.auth.UrlName;
 
 public class AuthInfoParser {
     

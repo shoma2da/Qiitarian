@@ -1,8 +1,8 @@
-package com.tech_tec.qiitarian.old.model.pref;
+package com.tech_tec.qiitarian.model.auth.pref;
 
-import com.tech_tec.qiitarian.old.model.AuthInfo;
-import com.tech_tec.qiitarian.old.model.Token;
-import com.tech_tec.qiitarian.old.model.UrlName;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.Token;
+import com.tech_tec.qiitarian.model.auth.UrlName;
 
 import android.content.Context;
 import android.content.SharedPreferences;

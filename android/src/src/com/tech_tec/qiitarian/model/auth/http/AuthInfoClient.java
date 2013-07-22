@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.old.model.http;
+package com.tech_tec.qiitarian.model.auth.http;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import com.tech_tec.qiitarian.QiitarianLog;
+import com.tech_tec.qiitarian.model.auth.LoginService;
 import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
-import com.tech_tec.qiitarian.old.model.LoginService;
 
 public class AuthInfoClient {
     

@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.old.model.AuthInfo;
-import com.tech_tec.qiitarian.old.model.pref.AuthInfoPreferences;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 
 public class LaunchActivity extends Activity {
     

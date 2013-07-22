@@ -8,8 +8,8 @@ import org.json.JSONException;
 
 import android.os.AsyncTask;
 
-import com.tech_tec.qiitarian.old.model.AuthInfo;
-import com.tech_tec.qiitarian.old.model.LoginService;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.LoginService;
 
 public class FetchAuthInfoTask extends AsyncTask<Void, Void, AuthInfo> {
     

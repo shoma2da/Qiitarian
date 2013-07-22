@@ -6,11 +6,11 @@ import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
 
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.LoginService;
+import com.tech_tec.qiitarian.model.auth.http.AuthInfoClient;
+import com.tech_tec.qiitarian.model.auth.parser.AuthInfoParser;
 import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
-import com.tech_tec.qiitarian.old.model.AuthInfo;
-import com.tech_tec.qiitarian.old.model.LoginService;
-import com.tech_tec.qiitarian.old.model.http.AuthInfoClient;
-import com.tech_tec.qiitarian.old.model.parser.AuthInfoParser;
 
 public class AuthInfoFetcher {
     
