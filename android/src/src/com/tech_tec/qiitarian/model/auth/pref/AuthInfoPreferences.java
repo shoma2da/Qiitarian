@@ -19,14 +19,14 @@ public class AuthInfoPreferences {
         mPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
     }
     
-    public void put(AuthInfo authInfo) {
+    public void save(AuthInfo authInfo) {
         mPreferences.edit()
                     .putString(KEY_USERNAME, authInfo.getUrlNameStr())
                     .putString(KEY_TOKEN, authInfo.getTokenStr())
                     .commit();
     }
     
-    public AuthInfo get() {
+    public AuthInfo load() {
         String urlName = mPreferences.getString(KEY_USERNAME, null);
         String token = mPreferences.getString(KEY_TOKEN, null);
         

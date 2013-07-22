@@ -33,6 +33,6 @@ public class LaunchActivity extends Activity {
     }
     
     private AuthInfo loadAuthInfo() {
-        return new AuthInfoPreferences(getApplicationContext()).get();
+        return new AuthInfoPreferences(getApplicationContext()).load();
     }
 }

@@ -7,17 +7,22 @@ import android.widget.Toast;
 import com.tech_tec.qiitarian.activity.HomeActivity;
 import com.tech_tec.qiitarian.activity.task.FetchAuthInfoTask.Callback;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 
-public class AuthInfoFetcherCallbackImpl implements Callback {
+public class AuthInfoFetchAction implements Callback {
     
     private Activity mActivity;
+    private AuthInfoPreferences mPreferences;
     
-    public AuthInfoFetcherCallbackImpl(Activity activity) {
+    public AuthInfoFetchAction(Activity activity, AuthInfoPreferences preferences) {
         mActivity = activity;
+        mPreferences = preferences;
     }
     
     @Override
     public void onSuccess(AuthInfo authInfo) {
+        mPreferences.save(authInfo);
+        
         Toast.makeText(mActivity, "token : " + authInfo.getTokenStr(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(mActivity, HomeActivity.class);
         mActivity.startActivity(intent);

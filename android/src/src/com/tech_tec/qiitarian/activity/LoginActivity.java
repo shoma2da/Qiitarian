@@ -9,9 +9,10 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.activity.task.AuthInfoFetcherCallbackImpl;
+import com.tech_tec.qiitarian.activity.task.AuthInfoFetchAction;
 import com.tech_tec.qiitarian.activity.task.FetchAuthInfoTask;
 import com.tech_tec.qiitarian.model.auth.LoginService;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 
 public class LoginActivity extends Activity {
     
@@ -36,7 +37,9 @@ public class LoginActivity extends Activity {
                 final String password = passwordEditText.getText().toString();
                 final LoginService service  = getService();
                 
-                new FetchAuthInfoTask(username, password, service, new AuthInfoFetcherCallbackImpl(LoginActivity.this)).execute();
+                AuthInfoPreferences preferences = new AuthInfoPreferences(getApplicationContext());
+                AuthInfoFetchAction action = new AuthInfoFetchAction(LoginActivity.this, preferences);
+                new FetchAuthInfoTask(username, password, service, action).execute();
             }
             private LoginService getService() {
                 int checkedId = loginServiceGroup.getCheckedRadioButtonId();
