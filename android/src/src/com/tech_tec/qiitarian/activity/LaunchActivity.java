@@ -4,7 +4,7 @@ import javax.inject.Inject;
 
 import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.model.AuthInfo;
+import com.tech_tec.qiitarian.old.model.AuthInfo;
 
 import android.app.Activity;
 import android.content.Intent;

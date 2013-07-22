@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.model;
+package com.tech_tec.qiitarian.old.model;
 
 import java.io.ByteArrayOutputStream;
 

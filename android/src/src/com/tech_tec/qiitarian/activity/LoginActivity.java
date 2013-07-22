@@ -15,10 +15,10 @@ import android.widget.Toast;
 
 import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.model.AuthInfo;
-import com.tech_tec.qiitarian.model.AuthInfo.OnUpdateCallback;
-import com.tech_tec.qiitarian.model.LoginService;
-import com.tech_tec.qiitarian.model.ResponseType;
+import com.tech_tec.qiitarian.old.model.AuthInfo;
+import com.tech_tec.qiitarian.old.model.LoginService;
+import com.tech_tec.qiitarian.old.model.ResponseType;
+import com.tech_tec.qiitarian.old.model.AuthInfo.OnUpdateCallback;
 
 public class LoginActivity extends Activity implements OnUpdateCallback {
     

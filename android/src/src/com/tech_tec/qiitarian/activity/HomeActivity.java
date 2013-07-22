@@ -14,7 +14,7 @@ import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.TagsFragment;
 import com.tech_tec.qiitarian.fragment.content.UserFragment;
 import com.tech_tec.qiitarian.fragment.content.list.ItemsFragment;
-import com.tech_tec.qiitarian.model.AuthInfo;
+import com.tech_tec.qiitarian.old.model.AuthInfo;
 
 public class HomeActivity extends FragmentActivity {
     

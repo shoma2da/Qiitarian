@@ -1,7 +1,7 @@
-package com.tech_tec.qiitarian.model.test;
+package com.tech_tec.qiitarian.old.model;
 
-import com.tech_tec.qiitarian.model.AuthInfo;
-import com.tech_tec.qiitarian.model.LoginService;
+import com.tech_tec.qiitarian.old.model.AuthInfo;
+import com.tech_tec.qiitarian.old.model.LoginService;
 
 import android.content.Context;
 import android.content.ContextWrapper;
