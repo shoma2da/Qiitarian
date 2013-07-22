@@ -8,6 +8,7 @@ import org.apache.http.ParseException;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 public class HttpResponseWrapper {
     
@@ -21,6 +22,12 @@ public class HttpResponseWrapper {
         HttpEntity entity = mResponse.getEntity();
         String responseContent = EntityUtils.toString(entity);
         return new JSONArray(responseContent);
+    }
+    
+    public JSONObject toJSONObject() throws ParseException, IOException, JSONException {
+        HttpEntity entity = mResponse.getEntity();
+        String responseContent = EntityUtils.toString(entity);
+        return new JSONObject(responseContent);
     }
     
     public boolean isOK() {

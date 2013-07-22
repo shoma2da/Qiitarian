@@ -1,7 +1,5 @@
 package com.tech_tec.qiitarian.activity;
 
-import javax.inject.Inject;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -9,23 +7,17 @@ import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.TagsFragment;
 import com.tech_tec.qiitarian.fragment.content.UserFragment;
 import com.tech_tec.qiitarian.fragment.content.list.ItemsFragment;
-import com.tech_tec.qiitarian.old.model.AuthInfo;
 
 public class HomeActivity extends FragmentActivity {
-    
-    @Inject AuthInfo authInfo;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        
-        ((QiitarianApplication)getApplication()).getObjectGraph().inject(this);
         
         showLatestFragment();
         

@@ -1,25 +1,23 @@
 package com.tech_tec.qiitarian.activity;
 
-import javax.inject.Inject;
-
-import com.tech_tec.qiitarian.QiitarianApplication;
-import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.old.model.AuthInfo;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.old.model.AuthInfo;
+import com.tech_tec.qiitarian.old.model.pref.AuthInfoPreferences;
+
 public class LaunchActivity extends Activity {
     
-    @Inject AuthInfo mAuthInfo;
+    private AuthInfo mAuthInfo;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
         
-        ((QiitarianApplication)getApplication()).getObjectGraph().inject(this);
+        mAuthInfo = loadAuthInfo();
         
         if (hasAuthInfo()) {
             Intent intent = new Intent(this, HomeActivity.class);
@@ -31,6 +29,10 @@ public class LaunchActivity extends Activity {
     }
     
     private boolean hasAuthInfo() {
-        return mAuthInfo != null && mAuthInfo.getToken() != null &&  mAuthInfo.getToken().length() != 0;
+        return mAuthInfo != null && mAuthInfo.getTokenStr() != null &&  mAuthInfo.getTokenStr().length() != 0;
+    }
+    
+    private AuthInfo loadAuthInfo() {
+        return new AuthInfoPreferences(getApplicationContext()).get();
     }
 }

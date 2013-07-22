@@ -1,16 +1,30 @@
 package com.tech_tec.qiitarian.old.model;
 
-import java.io.ByteArrayOutputStream;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.json.JSONObject;
-
-import android.content.Context;
-import android.content.SharedPreferences;
 
 public class AuthInfo {
+    
+    public static final AuthInfo NULL = new AuthInfo();
+    
+    private UrlName mUrlName;
+    private Token mToken;
+    
+    private AuthInfo() {
+    }
+    
+    public AuthInfo(UrlName urlName, Token token) {
+        mUrlName = urlName;
+        mToken = token;
+    }
+    
+    public String getTokenStr() {
+        return mToken.toString();
+    }
+    
+    public String getUrlNameStr() {
+        return mUrlName.toString();
+    }
+    
+    /*
     private static final String PREF_NAME = "authinfo.xml";
     private static final String KEY_SERVICE = "service";
     private static final String KEY_USERNAME = "username";
@@ -92,4 +106,5 @@ public class AuthInfo {
             client.getConnectionManager().shutdown();
         }
     }
+    */
 }

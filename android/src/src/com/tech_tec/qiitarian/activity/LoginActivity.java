@@ -1,36 +1,23 @@
 package com.tech_tec.qiitarian.activity;
 
-import javax.inject.Inject;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
-import com.tech_tec.qiitarian.QiitarianApplication;
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.old.model.AuthInfo;
+import com.tech_tec.qiitarian.activity.task.AuthInfoFetcherCallbackImpl;
+import com.tech_tec.qiitarian.activity.task.FetchAuthInfoTask;
 import com.tech_tec.qiitarian.old.model.LoginService;
-import com.tech_tec.qiitarian.old.model.ResponseType;
-import com.tech_tec.qiitarian.old.model.AuthInfo.OnUpdateCallback;
 
-public class LoginActivity extends Activity implements OnUpdateCallback {
-    
-    @Inject AuthInfo mAuthInfo;
-    
-    private Handler mHandler = new Handler();
+public class LoginActivity extends Activity {
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((QiitarianApplication)getApplication()).getObjectGraph().inject(this);
-        
         setContentView(R.layout.activity_main);
         
         initViews();
@@ -49,19 +36,14 @@ public class LoginActivity extends Activity implements OnUpdateCallback {
                 final String password = passwordEditText.getText().toString();
                 final LoginService service  = getService();
                 
-                new Thread(new Runnable() {
-                    
-                    @Override
-                    public void run() {
-                        mAuthInfo.updateAuthInfo(username, password, service, LoginActivity.this);
-                    }
-                }).start();
+                new FetchAuthInfoTask(username, password, service, new AuthInfoFetcherCallbackImpl(LoginActivity.this)).execute();
             }
             private LoginService getService() {
                 int checkedId = loginServiceGroup.getCheckedRadioButtonId();
                 if (R.id.radio_login_by_github == checkedId) {
                     return LoginService.GITHUB;
-                } else if (R.id.radio_login_by_twitter == checkedId) {
+                }
+                if (R.id.radio_login_by_twitter == checkedId) {
                     return LoginService.TWITTER;
                 }
                 return null;
@@ -70,21 +52,4 @@ public class LoginActivity extends Activity implements OnUpdateCallback {
         
     }
 
-    @Override
-    public void onUpdate(final ResponseType type) {
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                if (type == ResponseType.SUCCESS) {
-                    Toast.makeText(getApplicationContext(), "token : " + mAuthInfo.getToken(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(intent);
-                } else if (type == ResponseType.FAILED) {
-                    Toast.makeText(getApplicationContext(), "ユーザ名かパスワードが違います", Toast.LENGTH_SHORT).show();
-                } else if (type == ResponseType.ERROR) {
-                    Toast.makeText(getApplicationContext(), "通信エラーが発生しています", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
 }
