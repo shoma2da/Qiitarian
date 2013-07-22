@@ -24,6 +24,7 @@ public class GotoDetailOnItemClickListener implements OnItemClickListener {
         QiitarianLog.d("item title is [" + item.getArticleTitle() + "]");
         
         Intent intent = new Intent(mActivity, DetailActivity.class);
+        intent.putExtra(DetailActivity.KEY_ARG_OF_ITEM_UUID, item.getUuidStr());
         mActivity.startActivity(intent);
     }
     
