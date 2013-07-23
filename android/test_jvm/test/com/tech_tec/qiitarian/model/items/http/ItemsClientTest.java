@@ -1,20 +1,9 @@
 package com.tech_tec.qiitarian.model.items.http;
 
 import static junit.framework.Assert.*;
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
 
-import java.io.IOException;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.junit.Test;
-
-import com.tech_tec.qiitarian.model.items.http.ItemsClient;
-import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 
 public class ItemsClientTest {
     
@@ -27,26 +16,4 @@ public class ItemsClientTest {
         assertEquals(request.getURI().toASCIIString(), "https://qiita.com/api/v1/items");
     }
     
-    @Test
-    public void デフォルトで使っているのはDefaultHttpClientか() {
-        ItemsClient client = new ItemsClient();
-        HttpClient wrapedClient = client.createHttpClient();
-        
-        assertEquals(DefaultHttpClient.class, wrapedClient.getClass());
-    }
-    
-    @Test
-    public void リクエストを投げる() throws ClientProtocolException, IOException {
-        final HttpClient mockClient = mock(HttpClient.class);
-        when(mockClient.execute((HttpUriRequest)any())).thenReturn(mock(HttpResponse.class));
-        ItemsClient client = new ItemsClient() {
-            @Override
-            HttpClient createHttpClient() {
-                return mockClient;
-            }
-        };
-        
-        HttpResponseWrapper data = client.execute();
-        assertNotNull(data);
-    }
 }
