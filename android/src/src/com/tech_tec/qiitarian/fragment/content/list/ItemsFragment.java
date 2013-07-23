@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.widget.ArrayAdapter;
 
+import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask;
 import com.tech_tec.qiitarian.fragment.content.list.task.SetItemsForListCallback;
 import com.tech_tec.qiitarian.model.items.Item;
@@ -17,6 +18,7 @@ public class ItemsFragment extends ListFragment {
         ArrayAdapter<Item> adapter = new ItemArrayAdapter(getActivity());
         setListAdapter(adapter);
         getListView().setOnItemClickListener(new GotoDetailOnItemClickListener(getActivity()));
+        setEmptyText(getString(R.string.list_empty_message));
         
         new FetchItemsAsyncTask(new SetItemsForListCallback(getListView())).execute();
     }
