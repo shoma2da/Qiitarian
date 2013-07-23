@@ -15,14 +15,14 @@ import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 public class AuthInfoFetcher {
     
     public AuthInfo fetch(String username, String password, LoginService service) throws ClientProtocolException, IOException, ParseException, JSONException {
-        AuthInfoClient client = createAuthInfoClient();
-        HttpResponseWrapper response = client.execute(username, password, service);
+        AuthInfoClient client = createAuthInfoClient(username, password, service);
+        HttpResponseWrapper response = client.execute();
         
         return processResponse(response);
     }
     
-    AuthInfoClient createAuthInfoClient() {
-        return new AuthInfoClient();
+    AuthInfoClient createAuthInfoClient(String username, String password, LoginService service) {
+        return new AuthInfoClient(username, password, service);
     }
     
     private AuthInfo processResponse(HttpResponseWrapper response) throws ParseException, JSONException, IOException {

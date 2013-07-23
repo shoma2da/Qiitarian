@@ -1,38 +1,26 @@
 package com.tech_tec.qiitarian.model.auth.http;
 
-import java.io.IOException;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.tech_tec.qiitarian.QiitarianLog;
 import com.tech_tec.qiitarian.model.auth.LoginService;
-import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
+import com.tech_tec.qiitarian.model.http.ClientBase;
 
-public class AuthInfoClient {
+public class AuthInfoClient extends ClientBase {
     
-    //TODO ItemsClientと重複しまくり
-    public HttpResponseWrapper execute(String username, String password, LoginService service) throws ClientProtocolException, IOException {
-        HttpClient client = createHttpClient();
-        HttpUriRequest request = createRequest(username, password, service);
-                
-        QiitarianLog.d("access to " + request.getURI());
-        HttpResponse response = client.execute(request);
-        QiitarianLog.d("finish access");
-        
-        return new HttpResponseWrapper(response);
+    private String mUsername;
+    private String mPassword;
+    private LoginService mService;
+    
+    public AuthInfoClient(String username, String password, LoginService service) {
+        mUsername = username;
+        mPassword = password;
+        mService = service;
     }
     
-    HttpClient createHttpClient() {
-        return new DefaultHttpClient();
-    }
-    
-    HttpUriRequest createRequest(String username, String password, LoginService service) {
-        String url = String.format("https://qiita.com/api/v1/auth?url_name=%s&password=%s", service.convert(username), password);
+    @Override
+    protected HttpUriRequest createRequest() {
+        String url = String.format("https://qiita.com/api/v1/auth?url_name=%s&password=%s", mService.convert(mUsername), mPassword);
         return new HttpPost(url);
     }
 }
