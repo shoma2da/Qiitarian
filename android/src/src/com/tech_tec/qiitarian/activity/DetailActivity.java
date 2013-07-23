@@ -1,12 +1,12 @@
 package com.tech_tec.qiitarian.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.detail.DetailFragment.ItemUuidGettable;
 
-public class DetailActivity extends Activity implements ItemUuidGettable {
+public class DetailActivity extends FragmentActivity implements ItemUuidGettable {
     
     public static final String KEY_ARG_OF_ITEM_UUID = "item_uuid";
     
