@@ -12,12 +12,12 @@ public class ProgressShowCallback implements UiCallback {
     }
     
     @Override
-    public void onPostExecute() {
+    public void onPreExecute() {
         //何もしない
     }
     
     @Override
-    public void onPreExecute() {
+    public void onPostExecute() {
         mListView.onRefreshComplete();
     }
     

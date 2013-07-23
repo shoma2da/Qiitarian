@@ -2,7 +2,6 @@ package com.tech_tec.qiitarian.fragment.content.list;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import com.markupartist.android.widget.PullToRefreshListView;
 import com.markupartist.android.widget.PullToRefreshListView.OnRefreshListener;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask;
+import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask.UiCallback;
 import com.tech_tec.qiitarian.fragment.content.list.task.ProgressShowCallback;
 import com.tech_tec.qiitarian.fragment.content.list.task.SetItemsForListCallback;
 import com.tech_tec.qiitarian.model.items.Item;
@@ -37,11 +37,9 @@ public class ItemsFragment extends Fragment {
         mListView.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh() {
-                /*
                 SetItemsForListCallback callback = new SetItemsForListCallback(adapter);
-                ProgressShowCallback uiCallback = new ProgressShowCallback(mListView);
+                UiCallback uiCallback = new ProgressShowCallback(mListView);
                 new FetchItemsAsyncTask(callback, uiCallback).execute();
-                */
             }
         });
     }
