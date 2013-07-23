@@ -7,9 +7,17 @@ import com.tech_tec.qiitarian.model.items.Items;
 public class FetchItemsAsyncTask extends AsyncTask<Void, Void, Items> {
     
     private Callback mCallback;
+    private UiCallback mUiCallback;
     
-    public FetchItemsAsyncTask(Callback callback) {
+    public FetchItemsAsyncTask(Callback callback, UiCallback uiCallback) {
         mCallback = callback;
+        mUiCallback = uiCallback;
+    }
+    
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mUiCallback.onPreExecute();
     }
     
     @Override
@@ -30,6 +38,7 @@ public class FetchItemsAsyncTask extends AsyncTask<Void, Void, Items> {
     @Override
     protected void onPostExecute(Items result) {
         super.onPostExecute(result);
+        mUiCallback.onPostExecute();
         
         if (result == null) {
             mCallback.onError();
@@ -47,5 +56,10 @@ public class FetchItemsAsyncTask extends AsyncTask<Void, Void, Items> {
         void onSuccess(Items items);
         void onEmptySuccess();
         void onError();
+    }
+    
+    public interface UiCallback {
+        void onPostExecute();
+        void onPreExecute();
     }
 }

@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask;
+import com.tech_tec.qiitarian.fragment.content.list.task.ProgressShowCallback;
 import com.tech_tec.qiitarian.fragment.content.list.task.SetItemsForListCallback;
 import com.tech_tec.qiitarian.model.items.Item;
 
@@ -20,7 +21,9 @@ public class ItemsFragment extends ListFragment {
         getListView().setOnItemClickListener(new GotoDetailOnItemClickListener(getActivity()));
         setEmptyText(getString(R.string.list_empty_message));
         
-        new FetchItemsAsyncTask(new SetItemsForListCallback(getListView())).execute();
+        SetItemsForListCallback callback = new SetItemsForListCallback(getListView());
+        ProgressShowCallback uiCallback = new ProgressShowCallback(this);
+        new FetchItemsAsyncTask(callback, uiCallback).execute();
     }
     
 }
