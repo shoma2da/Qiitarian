@@ -1,25 +1,24 @@
 package com.tech_tec.qiitarian.fragment.content.list.task;
 
-import android.support.v4.app.ListFragment;
-
+import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask.UiCallback;
 
 public class ProgressShowCallback implements UiCallback {
     
-    private ListFragment mListFragment;
+    private PullToRefreshListView mListView;
     
-    public ProgressShowCallback(ListFragment listFragment) {
-        mListFragment = listFragment;
+    public ProgressShowCallback(PullToRefreshListView listView) {
+        mListView = listView;
     }
     
     @Override
     public void onPostExecute() {
-        mListFragment.setListShown(true);
+        //何もしない
     }
     
     @Override
     public void onPreExecute() {
-        mListFragment.setListShown(false);
+        mListView.onRefreshComplete();
     }
     
 }
