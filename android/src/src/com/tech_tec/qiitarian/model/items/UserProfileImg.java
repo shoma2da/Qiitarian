@@ -19,6 +19,10 @@ public class UserProfileImg {
         mUrl = url;
     }
     
+    public Bitmap getIconImg() {
+        return mCachedBitmap;
+    }
+    
     public Bitmap fetchImg() throws IOException {
         if (mCachedBitmap != null) {
             return mCachedBitmap;
@@ -33,5 +37,9 @@ public class UserProfileImg {
         QiitarianLog.d("end fetch user icon");
         
         return mCachedBitmap;
+    }
+    
+    public boolean hasIconImg() {
+        return mCachedBitmap != null;
     }
 }

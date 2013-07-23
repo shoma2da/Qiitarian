@@ -20,7 +20,7 @@ public class ItemArrayAdapterTest extends AndroidTestCase {
         
         mItemArrayAdapter = new ItemArrayAdapter(getContext()) {
             @Override
-            void fetchIconAsync(ImageView iconImage, Item item) {
+            void setIcon(ImageView iconImage, Item item) {
                 //何もしない
             }
         };

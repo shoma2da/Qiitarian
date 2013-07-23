@@ -15,8 +15,16 @@ public class User {
         mUserProfileImg = userProfileImg;
     }
     
+    public Bitmap getIconImg() {
+        return mUserProfileImg.getIconImg();
+    }
+    
     public Bitmap fetchIconImg() throws IOException {
         return mUserProfileImg.fetchImg();
+    }
+    
+    public boolean hasIconImg() {
+        return mUserProfileImg.hasIconImg();
     }
     
     public String getUserName() {

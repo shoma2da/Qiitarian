@@ -38,8 +38,16 @@ public class Item {
         return mArticleInfo.getCommentCount();
     }
     
+    public Bitmap getIconImg() {
+        return mUser.getIconImg();
+    }
+    
     public Bitmap fetchIconImg() throws IOException {
         return mUser.fetchIconImg();
+    }
+    
+    public boolean hasIconImg() {
+        return mUser.hasIconImg();
     }
     
     public String getUserName() {
