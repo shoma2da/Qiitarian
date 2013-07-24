@@ -28,7 +28,7 @@ public class SetItemsForListCallback implements FetchItemsAsyncTask.Callback {
         if (alreadyHas(item)) {
             return;
         }
-        mAdapter.add(item);
+        mAdapter.insert(item, 0);
     }
     
     private boolean alreadyHas(Item item) {
