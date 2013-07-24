@@ -57,8 +57,12 @@ public class Item {
     }
     
     @Override
-    public boolean equals(Object o) {
-        return mUuid.equals(o);
+    public boolean equals(Object object) {
+        if ((object instanceof Item) == false) {
+            return false;
+        }
+        Item item = (Item)object;
+        return mUuid.equals(item.mUuid);
     }
     
 }
