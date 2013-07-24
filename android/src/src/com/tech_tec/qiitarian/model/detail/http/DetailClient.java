@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content.detail.http;
+package com.tech_tec.qiitarian.model.detail.http;
 
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
