@@ -13,4 +13,13 @@ public class Uuid {
         return mUuid;
     }
     
+    @Override
+    public boolean equals(Object object) {
+        if ((object instanceof Uuid) == false) {
+            return false;
+        }
+        
+        Uuid target = (Uuid)object;
+        return mUuid.equals(target.mUuid);
+    }
 }

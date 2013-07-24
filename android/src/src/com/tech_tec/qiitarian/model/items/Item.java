@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import android.graphics.Bitmap;
 
-
-
 public class Item {
     
     private ArticleInfo mArticleInfo;
@@ -56,6 +54,11 @@ public class Item {
     
     public String getUuidStr() {
         return mUuid.toString();
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        return mUuid.equals(o);
     }
     
 }
