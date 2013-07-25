@@ -12,7 +12,7 @@ import com.tech_tec.qiitarian.model.items.UserProfileImg;
 public class UserParser {
     
     public User parse(JSONObject object) throws JSONException, MalformedURLException {
-        UrlName userName = new UserNameParser().parser(object);
+        UrlName userName = new UrlNameParser().parser(object);
         UserProfileImg userProfileImg = new UserProfileImgParser().parse(object);
         
         return new User(userName, userProfileImg);

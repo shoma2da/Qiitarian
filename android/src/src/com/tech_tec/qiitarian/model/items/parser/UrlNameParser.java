@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.items.UrlName;
 
-public class UserNameParser {
+public class UrlNameParser {
     
     public UrlName parser(JSONObject object) throws JSONException {
         String userName = object.getString("url_name");
