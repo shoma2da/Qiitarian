@@ -18,7 +18,7 @@ public class DetailClient extends ClientBase {
     }
     
     protected HttpUriRequest createRequest() {
-        String url = String.format("https://qiita.com/api/v1/items/%s?token=", mUuid.toString(), mAuthInfo.getTokenStr());
+        String url = String.format("https://qiita.com/api/v1/items/%s?token=%s", mUuid.toString(), mAuthInfo.getTokenStr());
         return new HttpGet(url);
     }
 
