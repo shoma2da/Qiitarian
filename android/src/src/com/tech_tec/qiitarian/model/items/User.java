@@ -7,11 +7,11 @@ import android.graphics.Bitmap;
 
 public class User {
     
-    private UserName mUserName;
+    private UrlName mUrlName;
     private UserProfileImg mUserProfileImg;
     
-    public User(UserName userName, UserProfileImg userProfileImg) {
-        mUserName = userName;
+    public User(UrlName urlName, UserProfileImg userProfileImg) {
+        mUrlName = urlName;
         mUserProfileImg = userProfileImg;
     }
     
@@ -28,7 +28,7 @@ public class User {
     }
     
     public String getUserName() {
-        return mUserName.toString();
+        return mUrlName.toString();
     }
     
 }
