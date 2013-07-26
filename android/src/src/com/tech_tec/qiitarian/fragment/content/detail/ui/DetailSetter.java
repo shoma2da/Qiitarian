@@ -22,13 +22,15 @@ public class DetailSetter {
         TextView userNameText = (TextView)mView.findViewById(R.id.text_user_name);
         TextView titleText = (TextView)mView.findViewById(R.id.text_article_title);
         TextView createdAtText = (TextView)mView.findViewById(R.id.text_created_at);
-        ImageView userIconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
+        TextView stockCountText = (TextView)mView.findViewById(R.id.text_stock_count);
         
         userNameText.setText(mDetail.getUserName());
         titleText.setText(mDetail.getArticleTitle());
         createdAtText.setText(mDetail.getDateStr());
+        stockCountText.setText("ストック数：" + mDetail.getStockCount());
         
         //アイコンの非同期取得
+        ImageView userIconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
         new FetchIconTask(userIconImage, mDetail).execute();
     }
     
