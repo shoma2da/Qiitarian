@@ -14,9 +14,9 @@ import com.tech_tec.qiitarian.model.detail.parser.DetailParser;
 import com.tech_tec.qiitarian.model.items.Uuid;
 import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 
-public class DetailFetcher {
+class DetailFetcher {
     
-    public Detail fetch(Uuid uuid, AuthInfo authInfo) throws ClientProtocolException, IOException, ParseException, JSONException {
+    Detail fetch(Uuid uuid, AuthInfo authInfo) throws ClientProtocolException, IOException, ParseException, JSONException {
         DetailClient client = new DetailClient(uuid, authInfo);
         HttpResponseWrapper response = client.execute();
         
