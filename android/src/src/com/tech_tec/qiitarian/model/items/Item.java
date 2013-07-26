@@ -3,10 +3,11 @@ package com.tech_tec.qiitarian.model.items;
 import java.io.IOException;
 
 import com.tech_tec.qiitarian.model.User;
+import com.tech_tec.qiitarian.task.icon.IconFechable;
 
 import android.graphics.Bitmap;
 
-public class Item {
+public class Item implements IconFechable {
     
     private ArticleInfo mArticleInfo;
     private User mUser;
@@ -42,6 +43,7 @@ public class Item {
         return mUser.getIconImg();
     }
     
+    @Override
     public Bitmap fetchIconImg() throws IOException {
         return mUser.fetchIconImg();
     }

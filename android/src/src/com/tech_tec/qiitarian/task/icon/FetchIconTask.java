@@ -6,22 +6,20 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 import android.widget.ImageView;
 
-import com.tech_tec.qiitarian.model.items.Item;
-
 public class FetchIconTask {
     
     private ImageView mImageView;
-    private Item mItem;
+    private IconFechable mIconFechable;
     private Handler mHandler = new Handler();
     
-    public FetchIconTask(ImageView imageView, Item item) {
+    public FetchIconTask(ImageView imageView, IconFechable iconFechable) {
         mImageView = imageView;
-        mItem = item;
+        mIconFechable = iconFechable;
     }
     
     protected Bitmap doInBackground(Void... params) {
         try {
-            return mItem.fetchIconImg();
+            return mIconFechable.fetchIconImg();
         } catch (IOException e) {
             e.printStackTrace();
             return null;
