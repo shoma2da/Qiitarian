@@ -1,6 +1,6 @@
 package com.tech_tec.qiitarian.model.detail;
 
-import com.tech_tec.qiitarian.model.items.User;
+import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.items.Uuid;
 
 public class Detail {

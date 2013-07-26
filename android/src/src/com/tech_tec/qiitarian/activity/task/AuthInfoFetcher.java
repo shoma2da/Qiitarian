@@ -9,8 +9,8 @@ import org.json.JSONException;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.LoginService;
 import com.tech_tec.qiitarian.model.auth.http.AuthInfoClient;
+import com.tech_tec.qiitarian.model.auth.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.auth.parser.AuthInfoParser;
-import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 
 public class AuthInfoFetcher {
     

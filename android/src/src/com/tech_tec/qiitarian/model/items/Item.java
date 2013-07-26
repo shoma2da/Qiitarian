@@ -2,6 +2,8 @@ package com.tech_tec.qiitarian.model.items;
 
 import java.io.IOException;
 
+import com.tech_tec.qiitarian.model.User;
+
 import android.graphics.Bitmap;
 
 public class Item {

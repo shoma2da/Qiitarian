@@ -7,9 +7,9 @@ import java.text.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
 
+import com.tech_tec.qiitarian.model.auth.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.items.Items;
 import com.tech_tec.qiitarian.model.items.http.ItemsClient;
-import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.items.parser.ItemsParser;
 
 class ItemsFetcher {

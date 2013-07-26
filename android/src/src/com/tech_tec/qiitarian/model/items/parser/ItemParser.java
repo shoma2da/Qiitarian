@@ -5,10 +5,11 @@ import java.net.MalformedURLException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.items.ArticleInfo;
 import com.tech_tec.qiitarian.model.items.Item;
-import com.tech_tec.qiitarian.model.items.User;
 import com.tech_tec.qiitarian.model.items.Uuid;
+import com.tech_tec.qiitarian.model.parser.UserParser;
 
 public class ItemParser {
     

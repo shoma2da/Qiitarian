@@ -9,7 +9,7 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import com.tech_tec.qiitarian.QiitarianLog;
-import com.tech_tec.qiitarian.model.items.http.HttpResponseWrapper;
+import com.tech_tec.qiitarian.model.auth.http.HttpResponseWrapper;
 
 public class SendRequestStrategy {
     
