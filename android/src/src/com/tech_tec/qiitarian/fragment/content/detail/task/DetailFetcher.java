@@ -16,14 +16,14 @@ import com.tech_tec.qiitarian.model.items.Uuid;
 
 class DetailFetcher {
     
-    Detail fetch(Uuid uuid, AuthInfo authInfo) throws ClientProtocolException, IOException, ParseException, JSONException {
+    Detail fetch(Uuid uuid, AuthInfo authInfo) throws ClientProtocolException, IOException, ParseException, JSONException, java.text.ParseException {
         DetailClient client = new DetailClient(uuid, authInfo);
         HttpResponseWrapper response = client.execute();
         
         return processResponse(response);
     }
     
-    private Detail processResponse(HttpResponseWrapper wrapper) throws JSONException, ParseException, IOException {
+    private Detail processResponse(HttpResponseWrapper wrapper) throws JSONException, ParseException, IOException, java.text.ParseException {
         if (wrapper.isOK()) {
             JSONObject json = wrapper.toJSONObject();
             return new DetailParser().parse(json);

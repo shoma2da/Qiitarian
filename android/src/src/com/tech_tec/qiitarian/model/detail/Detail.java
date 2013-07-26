@@ -2,15 +2,18 @@ package com.tech_tec.qiitarian.model.detail;
 
 import com.tech_tec.qiitarian.model.ArticleTitle;
 import com.tech_tec.qiitarian.model.User;
+import com.tech_tec.qiitarian.model.items.CreatedAt;
 
 public class Detail {
     
     private User mUser;
     private ArticleTitle mArticleTitle;
+    private CreatedAt mCreatedAt;
     
-    public Detail(User user, ArticleTitle articleTitle) {
+    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt) {
         mUser = user;
         mArticleTitle = articleTitle;
+        mCreatedAt = createdAt;
     }
     
     public String getUserName() {
@@ -21,4 +24,7 @@ public class Detail {
         return mArticleTitle.toString();
     }
     
+    public String getDateStr() {
+        return mCreatedAt.getDateStr();
+    }
 }

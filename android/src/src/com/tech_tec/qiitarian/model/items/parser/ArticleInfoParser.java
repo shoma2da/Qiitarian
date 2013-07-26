@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.model.items.parser;
 
+import java.text.ParseException;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -10,7 +12,7 @@ import com.tech_tec.qiitarian.model.parser.ArticleTitleParser;
 
 public class ArticleInfoParser {
     
-    public ArticleInfo parse(JSONObject object) throws JSONException {
+    public ArticleInfo parse(JSONObject object) throws JSONException, ParseException {
         ArticleTitle title = new ArticleTitleParser().parse(object);
         ArticleMeta articleMeta = new ArticleMetaParser().parse(object);
         

@@ -1,6 +1,7 @@
 package com.tech_tec.qiitarian.model.items.parser;
 
 import java.net.MalformedURLException;
+import java.text.ParseException;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -13,7 +14,7 @@ import com.tech_tec.qiitarian.model.parser.UserParser;
 
 public class ItemParser {
     
-    public Item parse(JSONObject object) throws JSONException, MalformedURLException {
+    public Item parse(JSONObject object) throws JSONException, MalformedURLException, ParseException {
         ArticleInfo articleInfo = new ArticleInfoParser().parse(object);
         User user = new UserParser().parse(object.getJSONObject("user"));
         Uuid uuid = new UuidParser().parse(object);

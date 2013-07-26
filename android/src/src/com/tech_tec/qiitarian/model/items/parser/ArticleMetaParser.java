@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.model.items.parser;
 
+import java.text.ParseException;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,7 +13,7 @@ import com.tech_tec.qiitarian.model.items.Tags;
 
 public class ArticleMetaParser {
 
-    public ArticleMeta parse(JSONObject object) throws JSONException {
+    public ArticleMeta parse(JSONObject object) throws JSONException, ParseException {
         CreatedAt createdAt = new CreatedAtParser().parse(object);
         Tags tags = parseTags(object);
         ReactionCounts reactionCounts = new ReactionCountsParser().parseReactionCounts(object);
