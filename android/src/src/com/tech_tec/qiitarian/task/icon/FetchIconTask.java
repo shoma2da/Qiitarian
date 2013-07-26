@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.task.list;
+package com.tech_tec.qiitarian.task.icon;
 
 import java.io.IOException;
 
