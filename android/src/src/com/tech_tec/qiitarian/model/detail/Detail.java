@@ -16,12 +16,14 @@ public class Detail implements IconFechable {
     private ArticleTitle mArticleTitle;
     private CreatedAt mCreatedAt;
     private StockCount mStockCount;
+    private ArticleBody mArticleBody;
     
-    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount) {
+    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody) {
         mUser = user;
         mArticleTitle = articleTitle;
         mCreatedAt = createdAt;
         mStockCount = stockCount;
+        mArticleBody = articleBody;
     }
     
     public String getUserName() {
@@ -38,6 +40,10 @@ public class Detail implements IconFechable {
     
     public int getStockCount() {
         return mStockCount.toInt();
+    }
+    
+    public String getArticleBodyStr() {
+        return mArticleBody.toString();
     }
 
     @Override

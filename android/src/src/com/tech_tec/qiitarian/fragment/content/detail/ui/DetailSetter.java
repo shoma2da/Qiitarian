@@ -1,5 +1,6 @@
 package com.tech_tec.qiitarian.fragment.content.detail.ui;
 
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,11 +24,13 @@ public class DetailSetter {
         TextView titleText = (TextView)mView.findViewById(R.id.text_article_title);
         TextView createdAtText = (TextView)mView.findViewById(R.id.text_created_at);
         TextView stockCountText = (TextView)mView.findViewById(R.id.text_stock_count);
+        TextView articleBodyText = (TextView)mView.findViewById(R.id.text_article_body);
         
         userNameText.setText(mDetail.getUserName());
         titleText.setText(mDetail.getArticleTitle());
         createdAtText.setText(mDetail.getDateStr());
         stockCountText.setText("ストック数：" + mDetail.getStockCount());
+        articleBodyText.setText(Html.fromHtml(mDetail.getArticleBodyStr()));
         
         //アイコンの非同期取得
         ImageView userIconImage = (ImageView)mView.findViewById(R.id.image_user_icon);

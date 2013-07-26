@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import com.tech_tec.qiitarian.model.ArticleTitle;
 import com.tech_tec.qiitarian.model.StockCount;
 import com.tech_tec.qiitarian.model.User;
+import com.tech_tec.qiitarian.model.detail.ArticleBody;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.parser.CreatedAtParser;
@@ -23,8 +24,9 @@ public class DetailParser {
         ArticleTitle articleTitle = new ArticleTitleParser().parse(object);
         CreatedAt createdAt = new CreatedAtParser().parse(object);
         StockCount stockCount = new StockCountParser().parse(object);
+        ArticleBody articleBody = new ArticleBodyParser().parse(object);
         
-        return new Detail(user, articleTitle, createdAt, stockCount);
+        return new Detail(user, articleTitle, createdAt, stockCount, articleBody);
     }
     
 }
