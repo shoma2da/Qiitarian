@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.model.items;
+package com.tech_tec.qiitarian.model;
 
 public class ArticleTitle {
     

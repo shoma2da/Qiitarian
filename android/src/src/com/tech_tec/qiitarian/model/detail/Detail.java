@@ -1,7 +1,7 @@
 package com.tech_tec.qiitarian.model.detail;
 
+import com.tech_tec.qiitarian.model.ArticleTitle;
 import com.tech_tec.qiitarian.model.User;
-import com.tech_tec.qiitarian.model.items.ArticleTitle;
 
 public class Detail {
     

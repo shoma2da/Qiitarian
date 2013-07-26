@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.model.items;
 
+import com.tech_tec.qiitarian.model.ArticleTitle;
+
 public class ArticleInfo {
     
     private ArticleTitle mArticleTitle;
