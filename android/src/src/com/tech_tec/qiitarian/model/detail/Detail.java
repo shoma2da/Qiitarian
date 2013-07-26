@@ -1,15 +1,12 @@
 package com.tech_tec.qiitarian.model.detail;
 
 import com.tech_tec.qiitarian.model.User;
-import com.tech_tec.qiitarian.model.items.Uuid;
 
 public class Detail {
     
     private User mUser;
-    private Uuid mUuid;
     
-    public Detail(Uuid uuid, User user) {
-        mUuid = uuid;
+    public Detail(User user) {
         mUser = user;
     }
     
