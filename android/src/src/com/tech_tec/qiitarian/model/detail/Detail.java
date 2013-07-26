@@ -1,6 +1,7 @@
 package com.tech_tec.qiitarian.model.detail;
 
 import java.io.IOException;
+import java.util.Iterator;
 
 import android.graphics.Bitmap;
 
@@ -17,13 +18,15 @@ public class Detail implements IconFechable {
     private CreatedAt mCreatedAt;
     private StockCount mStockCount;
     private ArticleBody mArticleBody;
+    private Comments mComments;
     
-    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody) {
+    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments) {
         mUser = user;
         mArticleTitle = articleTitle;
         mCreatedAt = createdAt;
         mStockCount = stockCount;
         mArticleBody = articleBody;
+        mComments = comments;
     }
     
     public String getUserName() {
@@ -45,9 +48,17 @@ public class Detail implements IconFechable {
     public String getArticleBodyStr() {
         return mArticleBody.toString();
     }
-
+    
     @Override
     public Bitmap fetchIconImg() throws IOException {
         return mUser.fetchIconImg();
+    }
+    
+    public Iterator<Comment> getCommentIterator() {
+        return mComments.getCommentIterator();
+    }
+    
+    public boolean hasComment() {
+        return getCommentIterator().hasNext();
     }
 }
