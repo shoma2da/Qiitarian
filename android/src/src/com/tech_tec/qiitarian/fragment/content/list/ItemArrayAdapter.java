@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.list.task.IconFetchTask;
+import com.tech_tec.qiitarian.fragment.content.list.task.FetchIconTask;
 import com.tech_tec.qiitarian.model.items.Item;
 
 public class ItemArrayAdapter extends ArrayAdapter<Item> {
@@ -54,6 +54,6 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
             iconImage.setImageBitmap(item.getIconImg());
             return;
         }
-        new IconFetchTask(iconImage, item).execute();
+        new FetchIconTask(iconImage, item).execute();
     }
 }

@@ -8,13 +8,13 @@ import android.widget.ImageView;
 
 import com.tech_tec.qiitarian.model.items.Item;
 
-public class IconFetchTask {
+public class FetchIconTask {
     
     private ImageView mImageView;
     private Item mItem;
     private Handler mHandler = new Handler();
     
-    public IconFetchTask(ImageView imageView, Item item) {
+    public FetchIconTask(ImageView imageView, Item item) {
         mImageView = imageView;
         mItem = item;
     }
