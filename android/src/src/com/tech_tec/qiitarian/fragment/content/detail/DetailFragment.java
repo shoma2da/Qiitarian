@@ -5,9 +5,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-import com.tech_tec.qiitarian.QiitarianLog;
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.fragment.content.detail.task.FetchDetailAsyncTask;
+import com.tech_tec.qiitarian.fragment.content.detail.task.FetchDetailAsyncTask.Callback;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
+import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.items.Uuid;
 
 public class DetailFragment extends Fragment {
@@ -27,7 +32,20 @@ public class DetailFragment extends Fragment {
         
         ItemUuidGettable gettable = (ItemUuidGettable)getActivity();
         Uuid uuid = new Uuid(gettable.getUuid()); //TODO パラメータとして直接受け取る？？
-        QiitarianLog.d(uuid.toString());
+        
+        AuthInfo authInfo = new AuthInfoPreferences(getActivity().getApplicationContext()).load();
+        
+        new FetchDetailAsyncTask(uuid, authInfo, new Callback() {
+            @Override
+            public void onSuccess(Detail detail) {
+                Toast.makeText(getActivity(), detail.toString(), Toast.LENGTH_SHORT).show();
+            }
+            
+            @Override
+            public void onError() {
+                Toast.makeText(getActivity(), "通信エラー", Toast.LENGTH_SHORT).show();
+            }
+        }).execute();
     }
     
     public interface ItemUuidGettable {

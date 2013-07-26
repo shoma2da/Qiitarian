@@ -1,5 +1,6 @@
 package com.tech_tec.qiitarian.model.detail.parser;
 
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 
 import org.json.JSONException;

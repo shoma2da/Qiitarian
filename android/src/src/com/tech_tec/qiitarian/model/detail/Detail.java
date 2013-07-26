@@ -13,4 +13,9 @@ public class Detail {
         mUser = user;
     }
     
+    @Override
+    public String toString() {
+        return mUser.getUserName();
+    }
+    
 }
