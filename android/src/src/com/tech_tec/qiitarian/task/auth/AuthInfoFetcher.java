@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.activity.task;
+package com.tech_tec.qiitarian.task.auth;
 
 import java.io.IOException;
 

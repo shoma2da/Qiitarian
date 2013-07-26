@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.list.task.FetchIconTask;
 import com.tech_tec.qiitarian.model.items.Item;
+import com.tech_tec.qiitarian.task.list.FetchIconTask;
 
 public class ItemArrayAdapter extends ArrayAdapter<Item> {
     

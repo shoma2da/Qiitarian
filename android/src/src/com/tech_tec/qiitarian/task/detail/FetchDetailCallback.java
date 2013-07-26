@@ -1,11 +1,11 @@
-package com.tech_tec.qiitarian.fragment.content.detail.task;
+package com.tech_tec.qiitarian.task.detail;
 
 import android.view.View;
 import android.widget.Toast;
 
-import com.tech_tec.qiitarian.fragment.content.detail.task.FetchDetailAsyncTask.Callback;
 import com.tech_tec.qiitarian.fragment.content.detail.ui.DetailSetter;
 import com.tech_tec.qiitarian.model.detail.Detail;
+import com.tech_tec.qiitarian.task.detail.FetchDetailAsyncTask.Callback;
 
 public class FetchDetailCallback implements Callback {
     

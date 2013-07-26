@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content.list.task;
+package com.tech_tec.qiitarian.task.list;
 
 import java.io.IOException;
 

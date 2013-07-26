@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.detail.task.FetchDetailAsyncTask;
-import com.tech_tec.qiitarian.fragment.content.detail.task.FetchDetailCallback;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 import com.tech_tec.qiitarian.model.items.Uuid;
+import com.tech_tec.qiitarian.task.detail.FetchDetailAsyncTask;
+import com.tech_tec.qiitarian.task.detail.FetchDetailCallback;
 
 public class DetailFragment extends Fragment {
     

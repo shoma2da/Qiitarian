@@ -9,10 +9,10 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.activity.task.AuthInfoFetchAction;
-import com.tech_tec.qiitarian.activity.task.FetchAuthInfoTask;
 import com.tech_tec.qiitarian.model.auth.LoginService;
 import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
+import com.tech_tec.qiitarian.task.auth.AuthInfoFetchAction;
+import com.tech_tec.qiitarian.task.auth.FetchAuthInfoTask;
 
 public class LoginActivity extends Activity {
     

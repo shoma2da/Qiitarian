@@ -10,11 +10,11 @@ import android.widget.ArrayAdapter;
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.markupartist.android.widget.PullToRefreshListView.OnRefreshListener;
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask;
-import com.tech_tec.qiitarian.fragment.content.list.task.FetchItemsAsyncTask.UiCallback;
-import com.tech_tec.qiitarian.fragment.content.list.task.ProgressShowCallback;
-import com.tech_tec.qiitarian.fragment.content.list.task.SetItemsForListCallback;
 import com.tech_tec.qiitarian.model.items.Item;
+import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask;
+import com.tech_tec.qiitarian.task.list.ProgressShowCallback;
+import com.tech_tec.qiitarian.task.list.SetItemsForListCallback;
+import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.UiCallback;
 
 public class ItemsFragment extends Fragment {
     

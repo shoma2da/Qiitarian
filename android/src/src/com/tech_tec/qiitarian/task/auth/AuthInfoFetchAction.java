@@ -1,13 +1,13 @@
-package com.tech_tec.qiitarian.activity.task;
+package com.tech_tec.qiitarian.task.auth;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.widget.Toast;
 
 import com.tech_tec.qiitarian.activity.HomeActivity;
-import com.tech_tec.qiitarian.activity.task.FetchAuthInfoTask.Callback;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
+import com.tech_tec.qiitarian.task.auth.FetchAuthInfoTask.Callback;
 
 public class AuthInfoFetchAction implements Callback {
     

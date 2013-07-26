@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content.detail.task;
+package com.tech_tec.qiitarian.task.detail;
 
 import android.os.AsyncTask;
 
