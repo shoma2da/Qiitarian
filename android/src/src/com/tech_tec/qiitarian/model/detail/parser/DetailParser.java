@@ -7,14 +7,17 @@ import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.detail.Detail;
+import com.tech_tec.qiitarian.model.items.ArticleTitle;
+import com.tech_tec.qiitarian.model.items.parser.ArticleTitleParser;
 import com.tech_tec.qiitarian.model.parser.UserParser;
 
 public class DetailParser {
     
     public Detail parse(JSONObject object) throws MalformedURLException, JSONException {
         User user = new UserParser().parse(object.getJSONObject("user"));
+        ArticleTitle articleTitle = new ArticleTitleParser().parse(object);
         
-        return new Detail(user);
+        return new Detail(user, articleTitle);
     }
     
 }

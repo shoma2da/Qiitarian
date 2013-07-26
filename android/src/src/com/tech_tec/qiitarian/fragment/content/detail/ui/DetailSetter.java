@@ -18,7 +18,10 @@ public class DetailSetter {
     
     public void view() {
         TextView userNameText = (TextView)mView.findViewById(R.id.text_user_name);
+        TextView titleText = (TextView)mView.findViewById(R.id.text_article_title);
+        
         userNameText.setText(mDetail.getUserName());
+        titleText.setText(mDetail.getArticleTitle());
     }
     
 }
