@@ -33,7 +33,7 @@ public class DetailFragment extends Fragment {
         
         AuthInfo authInfo = new AuthInfoPreferences(getActivity().getApplicationContext()).load();
         
-        FetchDetailCallback callback = new FetchDetailCallback(getActivity());
+        FetchDetailCallback callback = new FetchDetailCallback(getView());
         new FetchDetailAsyncTask(uuid, authInfo, callback).execute();
     }
     

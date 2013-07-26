@@ -13,9 +13,8 @@ public class Detail {
         mUser = user;
     }
     
-    @Override
-    public String toString() {
-        return mUser.getUserName();
+    public String getUserName() {
+       return mUser.getUserName();
     }
     
 }
