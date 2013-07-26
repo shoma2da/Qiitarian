@@ -5,9 +5,9 @@ import java.io.IOException;
 import android.graphics.Bitmap;
 
 import com.tech_tec.qiitarian.model.ArticleTitle;
+import com.tech_tec.qiitarian.model.StockCount;
 import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
-import com.tech_tec.qiitarian.model.items.StockCount;
 import com.tech_tec.qiitarian.task.icon.IconFechable;
 
 public class Detail implements IconFechable {

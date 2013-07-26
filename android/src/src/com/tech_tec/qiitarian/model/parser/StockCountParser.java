@@ -1,9 +1,9 @@
-package com.tech_tec.qiitarian.model.items.parser;
+package com.tech_tec.qiitarian.model.parser;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.tech_tec.qiitarian.model.items.StockCount;
+import com.tech_tec.qiitarian.model.StockCount;
 
 public class StockCountParser {
     

@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.model.items;
 
+import com.tech_tec.qiitarian.model.StockCount;
+
 public class ReactionCounts {
     
     private CommentCount mCommentCount;

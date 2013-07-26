@@ -7,13 +7,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.ArticleTitle;
+import com.tech_tec.qiitarian.model.StockCount;
 import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
-import com.tech_tec.qiitarian.model.items.StockCount;
 import com.tech_tec.qiitarian.model.items.parser.CreatedAtParser;
-import com.tech_tec.qiitarian.model.items.parser.StockCountParser;
 import com.tech_tec.qiitarian.model.parser.ArticleTitleParser;
+import com.tech_tec.qiitarian.model.parser.StockCountParser;
 import com.tech_tec.qiitarian.model.parser.UserParser;
 
 public class DetailParser {
