@@ -68,36 +68,11 @@
             >
         
             <LinearLayout
+                android:id="@+id/layout_tags"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                >
-                
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Java"
-                    android:layout_marginLeft="3dip"
-                    android:layout_marginRight="3dip"
-                    />
-                
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Android"
-                    android:layout_marginLeft="3dip"
-                    android:layout_marginRight="3dip"
-                    />
-                
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="iPhone"
-                    android:layout_marginLeft="3dip"
-                    android:layout_marginRight="3dip"
-                    />
-                
-            </LinearLayout>
+                />
             
             <TextView
                 android:id="@+id/text_article_body"

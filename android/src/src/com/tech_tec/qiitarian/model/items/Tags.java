@@ -1,6 +1,7 @@
 package com.tech_tec.qiitarian.model.items;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Tags {
     
@@ -17,6 +18,10 @@ public class Tags {
         }
         
         return builder.toString();
+    }
+    
+    public Iterator<Tag> getTagIterator() {
+        return mTagList.iterator();
     }
     
 }

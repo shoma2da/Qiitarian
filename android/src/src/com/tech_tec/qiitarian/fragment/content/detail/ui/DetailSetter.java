@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.model.detail.Comment;
 import com.tech_tec.qiitarian.model.detail.Detail;
+import com.tech_tec.qiitarian.model.items.Tag;
 import com.tech_tec.qiitarian.task.icon.FetchIconTask;
 
 public class DetailSetter {
@@ -68,6 +69,18 @@ public class DetailSetter {
             commentBodyText.setText(comment.getHtmlBody());
             
             commentsLayout.addView(commentView);
+        }
+        
+        //タグの設定
+        ViewGroup tagsLayout = (ViewGroup)mView.findViewById(R.id.layout_tags);
+        Iterator<Tag> tagIterator = mDetail.getTagIterator();
+        while (tagIterator.hasNext()) {
+            TextView view = (TextView)inflater.inflate(R.layout.layout_detail_tag, null);
+            
+            Tag tag = tagIterator.next();
+            view.setText(tag.toString());
+            
+            tagsLayout.addView(view);
         }
         
         //アイコンの非同期取得

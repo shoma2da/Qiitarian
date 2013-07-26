@@ -9,6 +9,8 @@ import com.tech_tec.qiitarian.model.ArticleTitle;
 import com.tech_tec.qiitarian.model.StockCount;
 import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
+import com.tech_tec.qiitarian.model.items.Tag;
+import com.tech_tec.qiitarian.model.items.Tags;
 import com.tech_tec.qiitarian.task.icon.IconFechable;
 
 public class Detail implements IconFechable {
@@ -19,14 +21,16 @@ public class Detail implements IconFechable {
     private StockCount mStockCount;
     private ArticleBody mArticleBody;
     private Comments mComments;
+    private Tags mTags;
     
-    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments) {
+    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags) {
         mUser = user;
         mArticleTitle = articleTitle;
         mCreatedAt = createdAt;
         mStockCount = stockCount;
         mArticleBody = articleBody;
         mComments = comments;
+        mTags = tags;
     }
     
     public String getUserName() {
@@ -60,5 +64,9 @@ public class Detail implements IconFechable {
     
     public boolean hasComment() {
         return getCommentIterator().hasNext();
+    }
+    
+    public Iterator<Tag> getTagIterator() {
+        return mTags.getTagIterator();
     }
 }

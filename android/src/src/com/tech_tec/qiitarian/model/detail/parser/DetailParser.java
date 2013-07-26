@@ -13,7 +13,9 @@ import com.tech_tec.qiitarian.model.detail.ArticleBody;
 import com.tech_tec.qiitarian.model.detail.Comments;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
+import com.tech_tec.qiitarian.model.items.Tags;
 import com.tech_tec.qiitarian.model.items.parser.CreatedAtParser;
+import com.tech_tec.qiitarian.model.items.parser.TagsParser;
 import com.tech_tec.qiitarian.model.parser.ArticleTitleParser;
 import com.tech_tec.qiitarian.model.parser.StockCountParser;
 import com.tech_tec.qiitarian.model.parser.UserParser;
@@ -27,8 +29,9 @@ public class DetailParser {
         StockCount stockCount = new StockCountParser().parse(object);
         ArticleBody articleBody = new ArticleBodyParser().parse(object);
         Comments comments = new CommentsParser().parse(object.getJSONArray("comments"));
+        Tags tags = new TagsParser().parse(object.getJSONArray("tags"));
         
-        return new Detail(user, articleTitle, createdAt, stockCount, articleBody, comments);
+        return new Detail(user, articleTitle, createdAt, stockCount, articleBody, comments, tags);
     }
     
 }
