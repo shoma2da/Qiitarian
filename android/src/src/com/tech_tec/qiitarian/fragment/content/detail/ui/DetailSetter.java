@@ -2,7 +2,6 @@ package com.tech_tec.qiitarian.fragment.content.detail.ui;
 
 import java.util.Iterator;
 
-import android.content.Context;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.text.method.MovementMethod;
@@ -10,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
@@ -23,10 +21,12 @@ public class DetailSetter {
     
     private Detail mDetail;
     private View mView;
+    private LayoutInflater mInflater;
     
-    public DetailSetter(Detail detail, View view) {
+    public DetailSetter(Detail detail, View view, LayoutInflater inflater) {
         mDetail = detail;
         mView = view;
+        mInflater = inflater;
     }
     
     public void view() {
@@ -55,10 +55,9 @@ public class DetailSetter {
             commentsLabelText.setVisibility(View.VISIBLE);
         }
         Iterator<Comment> commentIterator = mDetail.getCommentIterator();
-        LayoutInflater inflater = LayoutInflater.from(mView.getContext().getApplicationContext()); //TODO inflater受け取る！
         while (commentIterator.hasNext()) {
             Comment comment = commentIterator.next();
-            View commentView = inflater.inflate(R.layout.layout_article_comment, null);
+            View commentView = mInflater.inflate(R.layout.layout_article_comment, null);
             
             ImageView imageView = (ImageView)commentView.findViewById(R.id.image_icon);
             TextView commentUserNameText = (TextView)commentView.findViewById(R.id.text_user_name);
@@ -75,7 +74,7 @@ public class DetailSetter {
         ViewGroup tagsLayout = (ViewGroup)mView.findViewById(R.id.layout_tags);
         Iterator<Tag> tagIterator = mDetail.getTagIterator();
         while (tagIterator.hasNext()) {
-            TextView view = (TextView)inflater.inflate(R.layout.layout_detail_tag, null);
+            TextView view = (TextView)mInflater.inflate(R.layout.layout_detail_tag, null);
             
             Tag tag = tagIterator.next();
             view.setText(tag.toString());

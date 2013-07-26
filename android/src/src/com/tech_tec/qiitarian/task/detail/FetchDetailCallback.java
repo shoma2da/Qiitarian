@@ -1,5 +1,6 @@
 package com.tech_tec.qiitarian.task.detail;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,7 +18,8 @@ public class FetchDetailCallback implements Callback {
     
     @Override
     public void onSuccess(Detail detail) {
-        DetailSetter setter = new DetailSetter(detail, mView);
+        LayoutInflater inflater = LayoutInflater.from(mView.getContext());
+        DetailSetter setter = new DetailSetter(detail, mView, inflater);
         setter.view();
     }
     
