@@ -11,10 +11,16 @@ public class FetchIconTask {
     private ImageView mImageView;
     private IconFechable mIconFechable;
     private Handler mHandler = new Handler();
+    private Object mTag;
     
     public FetchIconTask(ImageView imageView, IconFechable iconFechable) {
+        this(imageView, iconFechable, null);
+    }
+    
+    public FetchIconTask(ImageView imageView, IconFechable iconFechable, Object tag) {
         mImageView = imageView;
         mIconFechable = iconFechable;
+        mTag = tag;
     }
     
     protected Bitmap doInBackground(Void... params) {
@@ -30,7 +36,14 @@ public class FetchIconTask {
         if (result == null) {
             return;
         }
-        mImageView.setImageBitmap(result);
+        if (mTag == null) {
+            mImageView.setImageBitmap(result);
+            return;
+        }
+        if (mTag.equals(mImageView.getTag())) {
+            mImageView.setImageBitmap(result);
+            return;
+        }
     }
     
     public void execute() {

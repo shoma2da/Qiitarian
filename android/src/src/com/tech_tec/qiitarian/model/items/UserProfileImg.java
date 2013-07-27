@@ -42,4 +42,5 @@ public class UserProfileImg {
     public boolean hasIconImg() {
         return mCachedBitmap != null;
     }
+    
 }

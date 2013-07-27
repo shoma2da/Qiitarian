@@ -37,6 +37,7 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         TextView stockCountText = (TextView)view.findViewById(R.id.text_item_stock_count);
         TextView commentCountText = (TextView)view.findViewById(R.id.text_item_comment_count);
         ImageView iconImage = (ImageView)view.findViewById(R.id.image_item_user_profile);
+        iconImage.setImageResource(android.R.drawable.ic_menu_gallery);
         
         titleText.setText(item.getArticleTitle());
         usernameText.setText(item.getUserName());
@@ -54,6 +55,9 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
             iconImage.setImageBitmap(item.getIconImg());
             return;
         }
-        new FetchIconTask(iconImage, item).execute();
+        
+        //非同期画像取得
+        iconImage.setTag(item.getUuidStr());
+        new FetchIconTask(iconImage, item, item.getUuidStr()).execute();
     }
 }
