@@ -10,6 +10,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import com.tech_tec.qiitarian.QiitarianLog;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.detail.Detail;
+import com.tech_tec.qiitarian.model.http.stock.DeleteStockClient;
 import com.tech_tec.qiitarian.model.http.stock.PutStockClient;
 
 class PutStockOnClickListener implements OnCheckedChangeListener {
@@ -38,6 +39,8 @@ class PutStockOnClickListener implements OnCheckedChangeListener {
             public void run() {
                 if (isChecked) {
                     sendPutStockRequest();
+                } else {
+                    sendDeleteStockRequest();
                 }
             }
         };
@@ -46,6 +49,16 @@ class PutStockOnClickListener implements OnCheckedChangeListener {
     private void sendPutStockRequest() {
         try {
             new PutStockClient(mAuthInfo, mDetail).execute();
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    private void sendDeleteStockRequest() {
+        try {
+            new DeleteStockClient(mAuthInfo, mDetail).execute();
         } catch (ClientProtocolException e) {
             e.printStackTrace();
         } catch (IOException e) {
