@@ -41,7 +41,14 @@ public class FetchDetailAsyncTask extends AsyncTask<Void, Void, Detail> {
         mCallback.onSuccess(result);
     }
     
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mCallback.onPreExecute();
+    }
+    
     public interface Callback {
+        void onPreExecute();
         void onSuccess(Detail detail);
         void onError();
     }
