@@ -24,8 +24,9 @@ public class Detail implements IconFechable {
     private ArticleBody mArticleBody;
     private Comments mComments;
     private Tags mTags;
+    private IsStocked mIsStocked;
     
-    public Detail(Uuid uuid, User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags) {
+    public Detail(Uuid uuid, User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags, IsStocked stocked) {
         mUuid = uuid;
         mUser = user;
         mArticleTitle = articleTitle;
@@ -34,6 +35,7 @@ public class Detail implements IconFechable {
         mArticleBody = articleBody;
         mComments = comments;
         mTags = tags;
+        mIsStocked = stocked;
     }
     
     public String getUserName() {
@@ -75,5 +77,9 @@ public class Detail implements IconFechable {
     
     public String getUuidStr() {
         return mUuid.toString();
+    }
+    
+    public boolean isStocked() {
+        return mIsStocked.value();
     }
 }

@@ -92,6 +92,7 @@ public class DetailSetter {
         
         //ストック用の設定
         ToggleButton stockButton = (ToggleButton)mView.findViewById(R.id.button_stock);
+        stockButton.setChecked(mDetail.isStocked());
         AuthInfo authInfo = new AuthInfoPreferences(mView.getContext()).load();
         OnCheckedChangeListener listener = new PutStockOnClickListener(authInfo, mDetail);
         stockButton.setOnCheckedChangeListener(listener);

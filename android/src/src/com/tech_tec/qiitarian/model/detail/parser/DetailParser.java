@@ -12,6 +12,7 @@ import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.detail.ArticleBody;
 import com.tech_tec.qiitarian.model.detail.Comments;
 import com.tech_tec.qiitarian.model.detail.Detail;
+import com.tech_tec.qiitarian.model.detail.IsStocked;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Tags;
 import com.tech_tec.qiitarian.model.items.Uuid;
@@ -33,8 +34,9 @@ public class DetailParser {
         ArticleBody articleBody = new ArticleBodyParser().parse(object);
         Comments comments = new CommentsParser().parse(object.getJSONArray("comments"));
         Tags tags = new TagsParser().parse(object.getJSONArray("tags"));
+        IsStocked isStocked = new IsStockedParser().parse(object);
         
-        return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags);
+        return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags, isStocked);
     }
     
 }
