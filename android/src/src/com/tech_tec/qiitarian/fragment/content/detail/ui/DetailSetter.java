@@ -8,10 +8,10 @@ import android.text.method.MovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
@@ -91,10 +91,10 @@ public class DetailSetter {
         new FetchIconTask(userIconImage, mDetail).execute();
         
         //ストック用の設定
-        Button button = (Button)mView.findViewById(R.id.button_stock);
+        ToggleButton stockButton = (ToggleButton)mView.findViewById(R.id.button_stock);
         AuthInfo authInfo = new AuthInfoPreferences(mView.getContext()).load();
-        OnClickListener onClickListener = new PutStockOnClickListener(authInfo, mDetail);
-        button.setOnClickListener(onClickListener);
+        OnCheckedChangeListener listener = new PutStockOnClickListener(authInfo, mDetail);
+        stockButton.setOnCheckedChangeListener(listener);
     }
     
 }

@@ -81,11 +81,12 @@
                 android:text="hello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\nhello\n"
                 />
             
-            <Button
+            <ToggleButton
                 android:id="@+id/button_stock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ストックする"
+                android:textOn="ストックを解除する"
+                android:textOff="ストックする"
                 />
             
             <TextView

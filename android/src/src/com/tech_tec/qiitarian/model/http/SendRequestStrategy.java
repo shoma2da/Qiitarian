@@ -16,7 +16,7 @@ public class SendRequestStrategy {
     public HttpResponseWrapper execute(HttpUriRequest request) throws ClientProtocolException, IOException {
         HttpClient client = createHttpClient();
                 
-        QiitarianLog.d("access to " + request.getURI());
+        QiitarianLog.d("access to " + request.getMethod() + ":" + request.getURI());
         HttpResponse response = client.execute(request);
         QiitarianLog.d("finish access");
         

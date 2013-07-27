@@ -4,14 +4,15 @@ import java.io.IOException;
 
 import org.apache.http.client.ClientProtocolException;
 
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+
+import com.tech_tec.qiitarian.QiitarianLog;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.http.stock.PutStockClient;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-
-class PutStockOnClickListener implements OnClickListener, Runnable {
+class PutStockOnClickListener implements OnCheckedChangeListener {
     
     private AuthInfo mAuthInfo;
     private Detail mDetail;
@@ -21,17 +22,28 @@ class PutStockOnClickListener implements OnClickListener, Runnable {
         mDetail = detail;
     }
     
-    @Override
-    public void onClick(View v) {
-        start();
-    }
-    
-    void start() {
-        new Thread(this).start();
+    void start(Runnable runnable) {
+        new Thread(runnable).start();
     }
 
     @Override
-    public void run() {
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        QiitarianLog.d("click button");
+        start(createPutStockRunnable(isChecked));
+    }
+    
+    private Runnable createPutStockRunnable(final boolean isChecked) {
+        return new Runnable() {
+            @Override
+            public void run() {
+                if (isChecked) {
+                    sendPutStockRequest();
+                }
+            }
+        };
+    }
+    
+    private void sendPutStockRequest() {
         try {
             new PutStockClient(mAuthInfo, mDetail).execute();
         } catch (ClientProtocolException e) {
