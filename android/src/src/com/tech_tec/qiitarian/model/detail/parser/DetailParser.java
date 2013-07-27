@@ -14,8 +14,10 @@ import com.tech_tec.qiitarian.model.detail.Comments;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Tags;
+import com.tech_tec.qiitarian.model.items.Uuid;
 import com.tech_tec.qiitarian.model.items.parser.CreatedAtParser;
 import com.tech_tec.qiitarian.model.items.parser.TagsParser;
+import com.tech_tec.qiitarian.model.items.parser.UuidParser;
 import com.tech_tec.qiitarian.model.parser.ArticleTitleParser;
 import com.tech_tec.qiitarian.model.parser.StockCountParser;
 import com.tech_tec.qiitarian.model.parser.UserParser;
@@ -23,6 +25,7 @@ import com.tech_tec.qiitarian.model.parser.UserParser;
 public class DetailParser {
     
     public Detail parse(JSONObject object) throws MalformedURLException, JSONException, ParseException {
+        Uuid uuid = new UuidParser().parse(object);
         User user = new UserParser().parse(object.getJSONObject("user"));
         ArticleTitle articleTitle = new ArticleTitleParser().parse(object);
         CreatedAt createdAt = new CreatedAtParser().parse(object);
@@ -31,7 +34,7 @@ public class DetailParser {
         Comments comments = new CommentsParser().parse(object.getJSONArray("comments"));
         Tags tags = new TagsParser().parse(object.getJSONArray("tags"));
         
-        return new Detail(user, articleTitle, createdAt, stockCount, articleBody, comments, tags);
+        return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags);
     }
     
 }

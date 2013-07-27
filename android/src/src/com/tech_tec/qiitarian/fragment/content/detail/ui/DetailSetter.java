@@ -8,10 +8,14 @@ import android.text.method.MovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 import com.tech_tec.qiitarian.model.detail.Comment;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.items.Tag;
@@ -86,6 +90,11 @@ public class DetailSetter {
         ImageView userIconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
         new FetchIconTask(userIconImage, mDetail).execute();
         
+        //ストック用の設定
+        Button button = (Button)mView.findViewById(R.id.button_stock);
+        AuthInfo authInfo = new AuthInfoPreferences(mView.getContext()).load();
+        OnClickListener onClickListener = new PutStockOnClickListener(authInfo, mDetail);
+        button.setOnClickListener(onClickListener);
     }
     
 }

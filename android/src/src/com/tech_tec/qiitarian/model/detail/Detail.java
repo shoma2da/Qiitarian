@@ -11,10 +11,12 @@ import com.tech_tec.qiitarian.model.User;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Tag;
 import com.tech_tec.qiitarian.model.items.Tags;
+import com.tech_tec.qiitarian.model.items.Uuid;
 import com.tech_tec.qiitarian.task.icon.IconFechable;
 
 public class Detail implements IconFechable {
     
+    private Uuid mUuid;
     private User mUser;
     private ArticleTitle mArticleTitle;
     private CreatedAt mCreatedAt;
@@ -23,7 +25,8 @@ public class Detail implements IconFechable {
     private Comments mComments;
     private Tags mTags;
     
-    public Detail(User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags) {
+    public Detail(Uuid uuid, User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags) {
+        mUuid = uuid;
         mUser = user;
         mArticleTitle = articleTitle;
         mCreatedAt = createdAt;
@@ -68,5 +71,9 @@ public class Detail implements IconFechable {
     
     public Iterator<Tag> getTagIterator() {
         return mTags.getTagIterator();
+    }
+    
+    public String getUuidStr() {
+        return mUuid.toString();
     }
 }
