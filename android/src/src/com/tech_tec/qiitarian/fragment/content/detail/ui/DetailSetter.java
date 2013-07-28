@@ -59,11 +59,11 @@ public class DetailSetter {
             
             ImageView imageView = (ImageView)commentView.findViewById(R.id.image_icon);
             TextView commentUserNameText = (TextView)commentView.findViewById(R.id.text_user_name);
-            TextView commentBodyText = (TextView)commentView.findViewById(R.id.text_body);
+            WebView commentBodyWebView = (WebView)commentView.findViewById(R.id.text_body);
             
             new FetchIconTask(imageView, comment).execute();
             commentUserNameText.setText(comment.getUserName());
-            commentBodyText.setText(comment.getHtmlBody());
+            commentBodyWebView.loadDataWithBaseURL("", comment.getBodyStr(), "text/html", "UTF-8", "");
             
             commentsLayout.addView(commentView);
         }

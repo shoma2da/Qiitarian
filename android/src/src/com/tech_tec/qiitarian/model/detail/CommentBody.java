@@ -1,7 +1,5 @@
 package com.tech_tec.qiitarian.model.detail;
 
-import android.text.Html;
-import android.text.Spanned;
 
 public class CommentBody {
     
@@ -11,8 +9,9 @@ public class CommentBody {
         mBody = body;
     }
     
-    public Spanned getHtmlBody() {
-        return Html.fromHtml(mBody);
+    @Override
+    public String toString() {
+        return mBody;
     }
     
 }
