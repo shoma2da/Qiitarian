@@ -9,13 +9,13 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.AbsListView.OnScrollListener;
 
-public class FetcMoreContentOnScrollListener implements OnScrollListener {
+public class FetchMoreContentOnScrollListener implements OnScrollListener {
     
     private ListView mListView;
     private ListAdapter mAdapter;
     private LayoutInflater mInflater;
     
-    public FetcMoreContentOnScrollListener(ListView listView, LayoutInflater inflater, ListAdapter adapter) {
+    public FetchMoreContentOnScrollListener(ListView listView, LayoutInflater inflater, ListAdapter adapter) {
         mListView = listView;
         mInflater = inflater;
         mAdapter = adapter;

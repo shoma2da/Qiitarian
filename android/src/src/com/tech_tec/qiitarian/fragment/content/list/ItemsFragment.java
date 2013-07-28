@@ -47,7 +47,7 @@ public class ItemsFragment extends Fragment {
                 new FetchItemsAsyncTask(callback, uiCallback).execute();
             }
         });
-        mListView.setOnScrollListener(new FetcMoreContentOnScrollListener(mListView, mInflater, adapter));
+        mListView.setOnScrollListener(new FetchMoreContentOnScrollListener(mListView, mInflater, adapter));
         
         mListView.prepareForRefresh();
         mListView.onRefresh();
