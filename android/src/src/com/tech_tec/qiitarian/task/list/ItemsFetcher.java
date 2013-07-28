@@ -14,8 +14,8 @@ import com.tech_tec.qiitarian.model.items.parser.ItemsParser;
 
 class ItemsFetcher {
     
-    public Items fetch() throws ClientProtocolException, IOException, IllegalStateException, JSONException, ParseException {
-        ItemsClient client = createItemsClient();
+    public Items fetch(int page) throws ClientProtocolException, IOException, IllegalStateException, JSONException, ParseException {
+        ItemsClient client = createItemsClient(page);
         HttpResponseWrapper response = client.execute();
         
         return processResponse(response);
@@ -29,8 +29,8 @@ class ItemsFetcher {
         }
     }
     
-    ItemsClient createItemsClient() {
-        return new ItemsClient();
+    ItemsClient createItemsClient(int page) {
+        return new ItemsClient(page);
     }
     
     ItemsParser createItemsParser() {

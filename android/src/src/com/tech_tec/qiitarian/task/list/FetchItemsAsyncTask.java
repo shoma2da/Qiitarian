@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 
 import com.tech_tec.qiitarian.model.items.Items;
 
-public class FetchItemsAsyncTask extends AsyncTask<Void, Void, Items> {
+public class FetchItemsAsyncTask extends AsyncTask<Integer, Void, Items> {
     
     private Callback mCallback;
     private UiCallback mUiCallback;
@@ -21,10 +21,16 @@ public class FetchItemsAsyncTask extends AsyncTask<Void, Void, Items> {
     }
     
     @Override
-    protected Items doInBackground(Void... params) {
+    protected Items doInBackground(Integer... params) {
+        if (params.length == 0) {
+            return null;
+        }
+        
+        int page = params[0];
+        
         try {
             ItemsFetcher fetcher = createItemsFetcher();
-            return fetcher.fetch();
+            return fetcher.fetch(page);
         } catch (Exception e) {
             e.printStackTrace();
         }

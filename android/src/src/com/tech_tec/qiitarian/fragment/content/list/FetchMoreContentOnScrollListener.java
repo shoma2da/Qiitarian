@@ -1,13 +1,13 @@
 package com.tech_tec.qiitarian.fragment.content.list;
 
-import com.tech_tec.qiitarian.R;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.AbsListView.OnScrollListener;
+
+import com.tech_tec.qiitarian.R;
 
 public class FetchMoreContentOnScrollListener implements OnScrollListener {
     

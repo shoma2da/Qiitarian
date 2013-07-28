@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
 import android.widget.ArrayAdapter;
 
 import com.markupartist.android.widget.PullToRefreshListView;
@@ -44,7 +42,7 @@ public class ItemsFragment extends Fragment {
             public void onRefresh() {
                 SetItemsForListCallback callback = new SetItemsForListCallback(adapter);
                 UiCallback uiCallback = new ProgressShowCallback(mListView);
-                new FetchItemsAsyncTask(callback, uiCallback).execute();
+                new FetchItemsAsyncTask(callback, uiCallback).execute(1); //PullToUpdateで更新するのは常に最新の情報
             }
         });
         mListView.setOnScrollListener(new FetchMoreContentOnScrollListener(mListView, mInflater, adapter));
