@@ -2,12 +2,10 @@ package com.tech_tec.qiitarian.fragment.content.detail.ui;
 
 import java.util.Iterator;
 
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.text.method.MovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,18 +36,14 @@ public class DetailSetter {
         TextView titleText = (TextView)mView.findViewById(R.id.text_article_title);
         TextView createdAtText = (TextView)mView.findViewById(R.id.text_created_at);
         TextView stockCountText = (TextView)mView.findViewById(R.id.text_stock_count);
-        TextView articleBodyText = (TextView)mView.findViewById(R.id.text_article_body);
-        
-        //本文内のリンク有効化
-        MovementMethod movementmethod = LinkMovementMethod.getInstance();
-        articleBodyText.setMovementMethod(movementmethod);
+        WebView articleBodyWebView = (WebView)mView.findViewById(R.id.text_article_body);
         
         //各テキストの設定
         userNameText.setText(mDetail.getUserName());
         titleText.setText(mDetail.getArticleTitle());
         createdAtText.setText(mDetail.getDateStr());
         stockCountText.setText("ストック数：" + mDetail.getStockCount());
-        articleBodyText.setText(Html.fromHtml(mDetail.getArticleBodyStr()));
+        articleBodyWebView.loadDataWithBaseURL("", mDetail.getArticleBodyStr(), "text/html", "UTF-8", "");
         
         //コメントの設定
         ViewGroup commentsLayout = (ViewGroup)mView.findViewById(R.id.layout_comments);
