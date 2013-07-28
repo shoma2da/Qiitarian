@@ -8,9 +8,9 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.TagsFragment;
 import com.tech_tec.qiitarian.fragment.content.UserFragment;
 import com.tech_tec.qiitarian.fragment.content.list.ItemsFragment;
+import com.tech_tec.qiitarian.fragment.content.tags.TagsFragment;
 
 public class HomeActivity extends FragmentActivity {
     

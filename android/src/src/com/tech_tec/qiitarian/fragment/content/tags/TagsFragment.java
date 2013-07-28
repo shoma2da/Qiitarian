@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content;
+package com.tech_tec.qiitarian.fragment.content.tags;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
