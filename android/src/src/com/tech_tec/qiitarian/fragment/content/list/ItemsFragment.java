@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.ArrayAdapter;
 
 import com.markupartist.android.widget.PullToRefreshListView;
@@ -19,9 +21,12 @@ import com.tech_tec.qiitarian.task.list.SetItemsForListCallback;
 public class ItemsFragment extends Fragment {
     
     private PullToRefreshListView mListView;
+    private LayoutInflater mInflater;
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        mInflater = inflater;
+        
         View view = inflater.inflate(R.layout.fragment_list, null);
         mListView = (PullToRefreshListView)view.findViewById(R.id.list);
         return view;
@@ -42,9 +47,9 @@ public class ItemsFragment extends Fragment {
                 new FetchItemsAsyncTask(callback, uiCallback).execute();
             }
         });
+        mListView.setOnScrollListener(new FetcMoreContentOnScrollListener(mListView, mInflater, adapter));
         
         mListView.prepareForRefresh();
         mListView.onRefresh();
     }
-    
 }

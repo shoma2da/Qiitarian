@@ -2,6 +2,7 @@ package com.tech_tec.qiitarian.task.list;
 
 import java.util.Iterator;
 
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 import com.tech_tec.qiitarian.model.items.Item;
