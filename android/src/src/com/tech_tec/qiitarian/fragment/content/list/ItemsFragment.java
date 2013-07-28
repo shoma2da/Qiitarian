@@ -12,9 +12,9 @@ import com.markupartist.android.widget.PullToRefreshListView.OnRefreshListener;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask;
+import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.UiCallback;
 import com.tech_tec.qiitarian.task.list.ProgressShowCallback;
 import com.tech_tec.qiitarian.task.list.SetItemsForListCallback;
-import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.UiCallback;
 
 public class ItemsFragment extends Fragment {
     
@@ -42,6 +42,9 @@ public class ItemsFragment extends Fragment {
                 new FetchItemsAsyncTask(callback, uiCallback).execute();
             }
         });
+        
+        mListView.prepareForRefresh();
+        mListView.onRefresh();
     }
     
 }
