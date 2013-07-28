@@ -27,7 +27,7 @@ public class FetchMoreContentOnScrollListener implements OnScrollListener {
             return;
         }
         
-        if (firstVisibleItem + visibleItemCount == totalItemCount) {//リストの最高日を表示したら
+        if (firstVisibleItem + visibleItemCount == totalItemCount) {//リストの最後尾を表示したら
             View footer = mInflater.inflate(R.layout.layout_list_footer, null);
             mListView.addFooterView(footer);
         }
