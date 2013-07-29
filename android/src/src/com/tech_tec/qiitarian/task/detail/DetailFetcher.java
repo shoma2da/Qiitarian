@@ -8,10 +8,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
-import com.tech_tec.qiitarian.model.auth.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.detail.http.DetailClient;
 import com.tech_tec.qiitarian.model.detail.parser.DetailParser;
+import com.tech_tec.qiitarian.model.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.items.Uuid;
 
 class DetailFetcher {

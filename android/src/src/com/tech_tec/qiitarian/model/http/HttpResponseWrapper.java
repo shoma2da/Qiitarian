@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.model.auth.http;
+package com.tech_tec.qiitarian.model.http;
 
 import java.io.IOException;
 
