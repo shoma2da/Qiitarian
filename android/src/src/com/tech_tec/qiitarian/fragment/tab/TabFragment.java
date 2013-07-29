@@ -15,5 +15,4 @@ public class TabFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_tab, null);
         return view;
     }
-    
 }
