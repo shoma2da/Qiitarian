@@ -3,12 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    
+    <RadioGroup
+        android:id="@+id/radio_group_select_tag"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="タグ一覧"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/radio_my_tag"
+            android:checked="true"
+            android:layout_weight="1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="私のタグ"
+            />
+        <RadioButton
+            android:id="@+id/radio_all_tag"
+            android:layout_weight="1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="全てのタグ"
+            />
+    </RadioGroup>
+    
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        ></GridView>
+    
 </LinearLayout>
