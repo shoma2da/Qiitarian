@@ -9,11 +9,11 @@ public class ItemsClientTest {
     
     @Test
     public void 投げるのはGetメソッドでURLはitems() {
-        ItemsClient client = new ItemsClient();
+        ItemsClient client = new ItemsClient(1);
         HttpUriRequest request = client.createRequest();
         
         assertEquals(request.getMethod(), "GET");
-        assertEquals(request.getURI().toASCIIString(), "https://qiita.com/api/v1/items");
+        assertEquals(request.getURI().toASCIIString(), "https://qiita.com/api/v1/items?page=1");
     }
     
 }
