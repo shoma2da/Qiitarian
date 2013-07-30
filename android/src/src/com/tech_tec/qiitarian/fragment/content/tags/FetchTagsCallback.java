@@ -37,4 +37,9 @@ public class FetchTagsCallback implements Callback {
         QiitarianLog.d("一つもタグをフォローしていません");
     }
 
+    @Override
+    public void onPreExecute() {
+        QiitarianLog.d("ほんとはダイアログ開始");
+    }
+
 }

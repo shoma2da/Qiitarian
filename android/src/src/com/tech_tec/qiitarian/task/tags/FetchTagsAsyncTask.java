@@ -22,6 +22,12 @@ public class FetchTagsAsyncTask extends AsyncTask<Void, Void, Tags> {
     }
     
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mCallback.onPreExecute();
+    }
+    
+    @Override
     protected Tags doInBackground(Void... params) {
         TagsFetcher fetcher = new TagsFetcher();
         try {
@@ -57,6 +63,7 @@ public class FetchTagsAsyncTask extends AsyncTask<Void, Void, Tags> {
     }
     
     public interface Callback {
+        void onPreExecute();
         void onSuccess(Tags tags);
         void onEmpty();
         void onError();
