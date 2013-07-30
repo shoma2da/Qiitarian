@@ -1,6 +1,12 @@
 package com.tech_tec.qiitarian.model.tags;
 
-public class Tag {
+import java.io.IOException;
+
+import android.graphics.Bitmap;
+
+import com.tech_tec.qiitarian.task.icon.IconFechable;
+
+public class Tag implements IconFechable {
     
     private Name mName;
     private UrlName mUrlName;
@@ -14,5 +20,18 @@ public class Tag {
     
     public String getNameStr() {
         return mName.toString();
+    }
+
+    @Override
+    public Bitmap fetchIconImg() throws IOException {
+        return mIconImage.fetchImg();
+    }
+    
+    public Bitmap getIconImg() {
+        return mIconImage.getIconImg();
+    }
+    
+    public boolean hasIconImg() {
+        return mIconImage.hasIconImg();
     }
 }
