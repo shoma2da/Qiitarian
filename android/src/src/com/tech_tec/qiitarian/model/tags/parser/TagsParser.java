@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.model.tags.parser;
 
+import java.net.MalformedURLException;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,7 +12,7 @@ import com.tech_tec.qiitarian.model.tags.Tags;
 
 public class TagsParser {
     
-    public Tags parse(JSONArray array) throws JSONException {
+    public Tags parse(JSONArray array) throws JSONException, MalformedURLException {
         QiitarianLog.d("start tags parse");
         
         Tags tags = new Tags();
