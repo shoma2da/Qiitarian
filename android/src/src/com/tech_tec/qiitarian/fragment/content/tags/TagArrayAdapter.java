@@ -20,7 +20,7 @@ public class TagArrayAdapter extends ArrayAdapter<Tag> {
     
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = mInflater.inflate(R.layout.layout_tab_item, null);
+        View view = mInflater.inflate(R.layout.layout_tag_item, null);
         return view;
     }
     
