@@ -4,8 +4,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 
 import android.annotation.SuppressLint;
-import com.tech_tec.qiitarian.model.auth.UrlName;
 import com.tech_tec.qiitarian.model.http.ClientBase;
+import com.tech_tec.qiitarian.model.tags.UrlName;
 
 public class TagsClient extends ClientBase {
     
