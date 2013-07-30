@@ -12,4 +12,7 @@ public class Tag {
         mIconImage = iconImage;
     }
     
+    public String getNameStr() {
+        return mName.toString();
+    }
 }
