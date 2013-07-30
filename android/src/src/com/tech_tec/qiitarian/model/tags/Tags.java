@@ -15,4 +15,8 @@ public class Tags {
         return mTagList.iterator();
     }
     
+    public boolean isEmpty() {
+        return mTagList.isEmpty();
+    }
+    
 }
