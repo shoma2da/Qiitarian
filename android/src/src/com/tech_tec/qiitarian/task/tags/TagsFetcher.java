@@ -9,9 +9,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import com.tech_tec.qiitarian.fragment.content.tags.http.TagsClient;
+import com.tech_tec.qiitarian.model.auth.UrlName;
 import com.tech_tec.qiitarian.model.http.HttpResponseWrapper;
 import com.tech_tec.qiitarian.model.tags.Tags;
-import com.tech_tec.qiitarian.model.tags.UrlName;
 import com.tech_tec.qiitarian.model.tags.parser.TagsParser;
 
 public class TagsFetcher {

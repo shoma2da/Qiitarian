@@ -6,10 +6,10 @@ import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
 
-import com.tech_tec.qiitarian.model.tags.Tags;
-import com.tech_tec.qiitarian.model.tags.UrlName;
-
 import android.os.AsyncTask;
+
+import com.tech_tec.qiitarian.model.auth.UrlName;
+import com.tech_tec.qiitarian.model.tags.Tags;
 
 public class FetchTagsAsyncTask extends AsyncTask<Void, Void, Tags> {
     

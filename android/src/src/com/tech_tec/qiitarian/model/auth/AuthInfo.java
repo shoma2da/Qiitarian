@@ -24,4 +24,9 @@ public class AuthInfo {
         return mUrlName.toString();
     }
     
+    //TODO 単なるgetter作りたくない
+    public UrlName getUrlName() {
+        return mUrlName;
+    }
+    
 }

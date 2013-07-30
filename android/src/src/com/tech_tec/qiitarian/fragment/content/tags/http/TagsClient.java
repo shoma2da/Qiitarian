@@ -4,8 +4,9 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 
 import android.annotation.SuppressLint;
+
+import com.tech_tec.qiitarian.model.auth.UrlName;
 import com.tech_tec.qiitarian.model.http.ClientBase;
-import com.tech_tec.qiitarian.model.tags.UrlName;
 
 public class TagsClient extends ClientBase {
     
@@ -19,7 +20,7 @@ public class TagsClient extends ClientBase {
     
     @Override @SuppressLint("DefaultLocale")
     protected HttpUriRequest createRequest() {
-        String url = String.format("/api/v1/users/%s/following_tags?page=%d", mUrlName.toString(), mPage);
+        String url = String.format("https://qiita.com/api/v1/users/%s/following_tags?page=%d", mUrlName.toString(), mPage);
         return new HttpGet(url);
     }
     
