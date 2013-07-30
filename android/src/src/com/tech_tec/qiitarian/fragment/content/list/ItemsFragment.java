@@ -37,14 +37,7 @@ public class ItemsFragment extends Fragment {
         final ArrayAdapter<Item> adapter = new ItemArrayAdapter(getActivity());
         mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new GotoDetailOnItemClickListener(getActivity()));
-        mListView.setOnRefreshListener(new OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                SetItemsForListCallback callback = new SetItemsForListCallback(adapter);
-                UiCallback uiCallback = new ProgressShowCallback(mListView);
-                new FetchItemsAsyncTask(callback, uiCallback).execute(1); //PullToUpdateで更新するのは常に最新の情報
-            }
-        });
+        mListView.setOnRefreshListener(new FetchLatestItemsOnRefreshListener(mListView, adapter));
         mListView.setOnScrollListener(new FetchMoreContentOnScrollListener(mListView, mInflater, adapter));
         
         mListView.prepareForRefresh();
