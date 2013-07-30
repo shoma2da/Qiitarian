@@ -32,19 +32,11 @@ public class FetchTagsAsyncTask extends AsyncTask<Void, Void, Tags> {
         TagsFetcher fetcher = new TagsFetcher();
         try {
             return fetcher.fetch(mUrlName);
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-            return null;
-        } catch (ParseException e) {
-            e.printStackTrace();
-            return null;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return null;
         }
+        catch (ClientProtocolException e) { e.printStackTrace(); return null; }
+        catch (ParseException          e) { e.printStackTrace(); return null; }
+        catch (IOException             e) { e.printStackTrace(); return null; }
+        catch (JSONException           e) { e.printStackTrace(); return null; }
     }
     
     @Override
