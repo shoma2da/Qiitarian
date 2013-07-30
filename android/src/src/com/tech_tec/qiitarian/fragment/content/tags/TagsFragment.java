@@ -25,33 +25,12 @@ public class TagsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tags, null);
         
         GridView gridView = (GridView)view.findViewById(R.id.grid_tags);
-        final ArrayAdapter<Tag> adapter = new TagArrayAdapter(getActivity());
+        ArrayAdapter<Tag> adapter = new TagArrayAdapter(getActivity());
         gridView.setAdapter(adapter);
         
-        //サンプル------------------------------------------
         AuthInfo authInfo = new AuthInfoPreferences(getActivity()).load();
         int page = 1;
-        new FetchTagsAsyncTask(authInfo.getUrlName(), page, new FetchTagsAsyncTask.Callback() {
-            @Override
-            public void onSuccess(Tags tags) {
-                Iterator<Tag> iterator = tags.getTagIterator();
-                while (iterator.hasNext()) {
-                    Tag tag = iterator.next();
-                    adapter.add(tag);
-                }
-            }
-            
-            @Override
-            public void onError() {
-                Toast.makeText(getActivity(), "通信エラーです", Toast.LENGTH_SHORT).show();
-            }
-            
-            @Override
-            public void onEmpty() {
-                Toast.makeText(getActivity(), "一つもタグをフォローしていません", Toast.LENGTH_SHORT).show();
-            }
-        }).execute();
-        //サンプル------------------------------------------
+        new FetchTagsAsyncTask(authInfo.getUrlName(), page, new FetchTagsCallback(adapter)).execute();
         
         return view;
     }
