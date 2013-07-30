@@ -4,28 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-    <RadioGroup
-        android:id="@+id/radio_group_select_tag"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <RadioButton
-            android:id="@+id/radio_my_tag"
-            android:checked="true"
-            android:layout_weight="1"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:text="私のタグ"
-            />
-        <RadioButton
-            android:id="@+id/radio_all_tag"
-            android:layout_weight="1"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:text="全てのタグ"
-            />
-    </RadioGroup>
+        android:gravity="center"
+        android:text="フォロー中のタグ"
+        />
     
     <GridView
         android:id="@+id/grid_tags"
