@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.tech_tec.qiitarian.model.tags.FollowerCount;
 import com.tech_tec.qiitarian.model.tags.IconImage;
 import com.tech_tec.qiitarian.model.tags.ItemCount;
 import com.tech_tec.qiitarian.model.tags.Name;
@@ -18,8 +19,9 @@ public class TagParser {
         UrlName urlName = new UrlNameParser().parse(object);
         IconImage iconImage = new IconImageParser().parse(object);
         ItemCount itemCount = new ItemCountParser().parse(object);
+        FollowerCount followerCount = new FollowerCountParser().parse(object);
         
-        return new Tag(name, urlName, iconImage, itemCount);
+        return new Tag(name, urlName, iconImage, itemCount, followerCount);
     }
     
 }
