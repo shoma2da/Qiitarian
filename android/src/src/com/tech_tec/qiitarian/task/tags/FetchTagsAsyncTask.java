@@ -13,13 +13,11 @@ import com.tech_tec.qiitarian.model.tags.Tags;
 
 public class FetchTagsAsyncTask extends AsyncTask<Void, Void, Tags> {
     
-    private int mPage;
     private UrlName mUrlName;
     private Callback mCallback;
     
-    public FetchTagsAsyncTask(UrlName urlName, int page, Callback callback) {
+    public FetchTagsAsyncTask(UrlName urlName, Callback callback) {
         mUrlName = urlName;
-        mPage = page;
         mCallback = callback;
     }
     
@@ -27,7 +25,7 @@ public class FetchTagsAsyncTask extends AsyncTask<Void, Void, Tags> {
     protected Tags doInBackground(Void... params) {
         TagsFetcher fetcher = new TagsFetcher();
         try {
-            return fetcher.fetch(mUrlName, mPage);
+            return fetcher.fetch(mUrlName);
         } catch (ClientProtocolException e) {
             e.printStackTrace();
             return null;

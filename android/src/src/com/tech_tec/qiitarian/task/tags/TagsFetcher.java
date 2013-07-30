@@ -16,8 +16,8 @@ import com.tech_tec.qiitarian.model.tags.parser.TagsParser;
 
 public class TagsFetcher {
     
-    public Tags fetch(UrlName urlName, int page) throws ClientProtocolException, IOException, ParseException, JSONException {
-        HttpResponseWrapper response = sendRequest(urlName, page);
+    public Tags fetch(UrlName urlName) throws ClientProtocolException, IOException, ParseException, JSONException {
+        HttpResponseWrapper response = sendRequest(urlName);
         if (response.isOK() == false) {
             return null;
         }
@@ -26,8 +26,8 @@ public class TagsFetcher {
         return tags;
     }
     
-    HttpResponseWrapper sendRequest(UrlName urlName, int page) throws ClientProtocolException, IOException {
-        TagsClient client = new TagsClient(urlName, page);
+    HttpResponseWrapper sendRequest(UrlName urlName) throws ClientProtocolException, IOException {
+        TagsClient client = new TagsClient(urlName);
         return client.execute();
     }
     

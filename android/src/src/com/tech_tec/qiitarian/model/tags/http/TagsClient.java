@@ -10,17 +10,17 @@ import com.tech_tec.qiitarian.model.http.ClientBase;
 
 public class TagsClient extends ClientBase {
     
-    private UrlName mUrlName;
-    private int mPage;
+    public static final int PER_PAGE = 100; //TODO とりあえず100件取得して、ページネーションしない
     
-    public TagsClient(UrlName urlName, int page) {
+    private UrlName mUrlName;
+    
+    public TagsClient(UrlName urlName) {
         mUrlName = urlName;
-        mPage = page;
     }
     
     @Override @SuppressLint("DefaultLocale")
     protected HttpUriRequest createRequest() {
-        String url = String.format("https://qiita.com/api/v1/users/%s/following_tags?page=%d", mUrlName.toString(), mPage);
+        String url = String.format("https://qiita.com/api/v1/users/%s/following_tags?per_page=%d", mUrlName.toString(), PER_PAGE);
         return new HttpGet(url);
     }
     
