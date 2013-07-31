@@ -12,6 +12,7 @@
         />
     
     <fragment
+        android:id="@+id/fragment_items"
         android:name="com.tech_tec.qiitarian.fragment.list.ItemsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
