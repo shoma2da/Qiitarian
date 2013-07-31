@@ -5,8 +5,6 @@ import android.widget.ArrayAdapter;
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.markupartist.android.widget.PullToRefreshListView.OnRefreshListener;
 import com.tech_tec.qiitarian.fragment.list.FetchTask.UiCallback;
-import com.tech_tec.qiitarian.fragment.list.items.ProgressShowCallback;
-import com.tech_tec.qiitarian.fragment.list.items.SetItemsForListCallback;
 import com.tech_tec.qiitarian.model.items.Item;
 
 public abstract class FetchLatestItemsCommand implements OnRefreshListener {

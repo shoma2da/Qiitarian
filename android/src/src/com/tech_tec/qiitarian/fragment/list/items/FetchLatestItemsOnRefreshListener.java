@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter;
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.fragment.list.FetchLatestItemsCommand;
 import com.tech_tec.qiitarian.fragment.list.FetchTask;
+import com.tech_tec.qiitarian.fragment.list.SetItemsForListCallback;
 import com.tech_tec.qiitarian.fragment.list.FetchTask.UiCallback;
 import com.tech_tec.qiitarian.model.items.Item;
 

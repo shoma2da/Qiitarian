@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.list.items;
+package com.tech_tec.qiitarian.fragment.list;
 
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.fragment.list.FetchTask.UiCallback;

@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.list.items;
+package com.tech_tec.qiitarian.fragment.list;
 
 import java.util.Iterator;
 
@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.model.items.Items;
 
-public class SetItemsForListCallback implements FetchItemsAsyncTask.Callback {
+public class SetItemsForListCallback implements FetchTask.Callback {
     
     private ArrayAdapter<Item> mAdapter;
     
