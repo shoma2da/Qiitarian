@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.items;
+package com.tech_tec.qiitarian.fragment.list.items;
 
 import android.widget.ArrayAdapter;
 
