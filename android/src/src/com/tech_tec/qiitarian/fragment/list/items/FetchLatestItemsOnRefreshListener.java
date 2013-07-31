@@ -4,11 +4,8 @@ import android.widget.ArrayAdapter;
 
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.fragment.list.FetchLatestItemsCommand;
+import com.tech_tec.qiitarian.fragment.list.items.FetchItemsAsyncTask.UiCallback;
 import com.tech_tec.qiitarian.model.items.Item;
-import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask;
-import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.UiCallback;
-import com.tech_tec.qiitarian.task.list.ProgressShowCallback;
-import com.tech_tec.qiitarian.task.list.SetItemsForListCallback;
 
 public class FetchLatestItemsOnRefreshListener implements FetchLatestItemsCommand {
     

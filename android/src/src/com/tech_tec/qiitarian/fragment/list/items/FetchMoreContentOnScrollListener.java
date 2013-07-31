@@ -11,11 +11,10 @@ import android.widget.ListView;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.list.FetchMoreItemsCommand;
+import com.tech_tec.qiitarian.fragment.list.items.FetchItemsAsyncTask.Callback;
+import com.tech_tec.qiitarian.fragment.list.items.FetchItemsAsyncTask.UiCallback;
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.model.items.Items;
-import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask;
-import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.Callback;
-import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.UiCallback;
 
 public class FetchMoreContentOnScrollListener implements FetchMoreItemsCommand {
     

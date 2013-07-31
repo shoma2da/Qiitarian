@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.task.list;
+package com.tech_tec.qiitarian.fragment.list.items;
 
 import java.util.Iterator;
 
