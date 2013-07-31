@@ -6,18 +6,18 @@ import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.fragment.list.FetchMoreItemsCommand;
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.model.items.Items;
 import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask;
 import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.Callback;
 import com.tech_tec.qiitarian.task.list.FetchItemsAsyncTask.UiCallback;
 
-public class FetchMoreContentOnScrollListener implements OnScrollListener {
+public class FetchMoreContentOnScrollListener implements FetchMoreItemsCommand {
     
     static final int MAX_PAGE = 15;
     
