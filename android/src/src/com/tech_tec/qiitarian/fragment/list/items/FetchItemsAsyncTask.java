@@ -1,10 +1,9 @@
 package com.tech_tec.qiitarian.fragment.list.items;
 
-import android.os.AsyncTask;
-
+import com.tech_tec.qiitarian.fragment.list.FetchTask;
 import com.tech_tec.qiitarian.model.items.Items;
 
-public class FetchItemsAsyncTask extends AsyncTask<Integer, Void, Items> {
+public class FetchItemsAsyncTask extends FetchTask {
     
     private Callback mCallback;
     private UiCallback mUiCallback;

@@ -4,24 +4,19 @@ import android.widget.ArrayAdapter;
 
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.fragment.list.FetchLatestItemsCommand;
+import com.tech_tec.qiitarian.fragment.list.FetchTask;
 import com.tech_tec.qiitarian.fragment.list.items.FetchItemsAsyncTask.UiCallback;
 import com.tech_tec.qiitarian.model.items.Item;
 
-public class FetchLatestItemsOnRefreshListener implements FetchLatestItemsCommand {
-    
-    private PullToRefreshListView mListView;
-    private ArrayAdapter<Item> mAdapter;
+public class FetchLatestItemsOnRefreshListener extends FetchLatestItemsCommand {
     
     public FetchLatestItemsOnRefreshListener(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
-        mListView = listView;
-        mAdapter = adapter;
-    }
-    
-    @Override
-    public void onRefresh() {
-        SetItemsForListCallback callback = new SetItemsForListCallback(mAdapter);
-        UiCallback uiCallback = new ProgressShowCallback(mListView);
-        new FetchItemsAsyncTask(callback, uiCallback).execute(1); //PullToUpdateで更新するのは常に最新の情報
+        super(listView, adapter);
     }
 
+    @Override
+    protected FetchTask createFetchTask(SetItemsForListCallback callback, UiCallback uiCallback) {
+        return new FetchItemsAsyncTask(callback, uiCallback);
+    }
+    
 }
