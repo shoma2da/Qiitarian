@@ -1,70 +1,18 @@
 package com.tech_tec.qiitarian.fragment.list.items;
 
 import com.tech_tec.qiitarian.fragment.list.FetchTask;
-import com.tech_tec.qiitarian.model.items.Items;
+import com.tech_tec.qiitarian.fragment.list.ItemsFetcher;
+import com.tech_tec.qiitarian.model.items.http.ItemsClient;
 
 public class FetchItemsAsyncTask extends FetchTask {
-    
-    private Callback mCallback;
-    private UiCallback mUiCallback;
-    
+
     public FetchItemsAsyncTask(Callback callback, UiCallback uiCallback) {
-        mCallback = callback;
-        mUiCallback = uiCallback;
+        super(callback, uiCallback);
     }
-    
+
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-        mUiCallback.onPreExecute();
+    protected ItemsFetcher createItemsFetcher(int page) {
+        return new ItemsFetcher(new ItemsClient(page));
     }
     
-    @Override
-    protected Items doInBackground(Integer... params) {
-        if (params.length == 0) {
-            return null;
-        }
-        
-        int page = params[0];
-        
-        try {
-            ItemsFetcher fetcher = createItemsFetcher();
-            return fetcher.fetch(page);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    
-    ItemsFetcher createItemsFetcher() {
-        return new ItemsFetcher();
-    }
-    
-    @Override
-    protected void onPostExecute(Items result) {
-        super.onPostExecute(result);
-        mUiCallback.onPostExecute();
-        
-        if (result == null) {
-            mCallback.onError();
-            return;
-        }
-        if (result.isEmpty()) {
-            mCallback.onEmptySuccess();
-            return;
-        }
-        
-        mCallback.onSuccess(result);
-    }
-    
-    public interface Callback {
-        void onSuccess(Items items);
-        void onEmptySuccess();
-        void onError();
-    }
-    
-    public interface UiCallback {
-        void onPostExecute();
-        void onPreExecute();
-    }
 }

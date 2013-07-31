@@ -1,7 +1,7 @@
 package com.tech_tec.qiitarian.fragment.list.items;
 
 import com.markupartist.android.widget.PullToRefreshListView;
-import com.tech_tec.qiitarian.fragment.list.items.FetchItemsAsyncTask.UiCallback;
+import com.tech_tec.qiitarian.fragment.list.FetchTask.UiCallback;
 
 public class ProgressShowCallback implements UiCallback {
     

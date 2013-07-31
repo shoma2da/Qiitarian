@@ -11,8 +11,9 @@ import android.widget.ListView;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.list.FetchMoreItemsCommand;
-import com.tech_tec.qiitarian.fragment.list.items.FetchItemsAsyncTask.Callback;
-import com.tech_tec.qiitarian.fragment.list.items.FetchItemsAsyncTask.UiCallback;
+import com.tech_tec.qiitarian.fragment.list.FetchTask.Callback;
+import com.tech_tec.qiitarian.fragment.list.FetchTask.UiCallback;
+
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.model.items.Items;
 
