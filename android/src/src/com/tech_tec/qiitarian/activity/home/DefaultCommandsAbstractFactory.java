@@ -7,7 +7,7 @@ import android.widget.ListView;
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FetchMoreItemsCommand;
-import com.tech_tec.qiitarian.fragment.list.GetLatestItemsCommand;
+import com.tech_tec.qiitarian.fragment.list.FetchLatestItemsCommand;
 import com.tech_tec.qiitarian.fragment.list.items.FetchLatestItemsOnRefreshListener;
 import com.tech_tec.qiitarian.fragment.list.items.FetchMoreContentOnScrollListener;
 import com.tech_tec.qiitarian.model.items.Item;
@@ -21,7 +21,7 @@ public class DefaultCommandsAbstractFactory extends CommandsAbstractFactory {
     }
     
     @Override
-    public GetLatestItemsCommand createGetLatestItemsCommand(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
+    public FetchLatestItemsCommand createGetLatestItemsCommand(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
         return new FetchLatestItemsOnRefreshListener(listView, adapter);
     }
 
