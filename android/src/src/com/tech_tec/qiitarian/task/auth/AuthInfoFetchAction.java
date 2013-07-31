@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.tech_tec.qiitarian.activity.HomeActivity;
+import com.tech_tec.qiitarian.activity.home.HomeActivity;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 import com.tech_tec.qiitarian.task.auth.FetchAuthInfoTask.Callback;

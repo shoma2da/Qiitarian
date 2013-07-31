@@ -33,7 +33,7 @@
         </activity>
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:name=".activity.HomeActivity"></activity>
+            android:name="com.tech_tec.qiitarian.activity.home.HomeActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
             android:name=".activity.DetailActivity"></activity>

@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.activity;
+package com.tech_tec.qiitarian.activity.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
