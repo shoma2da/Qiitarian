@@ -8,7 +8,7 @@
         android:id="@+id/fragment_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.tech_tec.qiitarian.fragment.content.detail.DetailFragment"
+        android:name="com.tech_tec.qiitarian.fragment.detail.DetailFragment"
         />
 
 </FrameLayout>

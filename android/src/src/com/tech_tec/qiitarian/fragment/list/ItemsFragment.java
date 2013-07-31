@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content.list;
+package com.tech_tec.qiitarian.fragment.list;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,8 +9,8 @@ import android.widget.ArrayAdapter;
 
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.items.FetchLatestItemsOnRefreshListener;
-import com.tech_tec.qiitarian.fragment.content.items.FetchMoreContentOnScrollListener;
+import com.tech_tec.qiitarian.fragment.items.FetchLatestItemsOnRefreshListener;
+import com.tech_tec.qiitarian.fragment.items.FetchMoreContentOnScrollListener;
 import com.tech_tec.qiitarian.model.items.Item;
 
 public class ItemsFragment extends Fragment {

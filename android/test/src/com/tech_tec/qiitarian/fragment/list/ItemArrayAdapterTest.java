@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content.list;
+package com.tech_tec.qiitarian.fragment.list;
 
 import static org.mockito.Mockito.*;
 import android.test.AndroidTestCase;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.fragment.list.ItemArrayAdapter;
 import com.tech_tec.qiitarian.model.items.Item;
 
 public class ItemArrayAdapterTest extends AndroidTestCase {

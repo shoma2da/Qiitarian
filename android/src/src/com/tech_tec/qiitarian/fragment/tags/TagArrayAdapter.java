@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content.tags;
+package com.tech_tec.qiitarian.fragment.tags;
 
 import android.content.Context;
 import android.view.LayoutInflater;

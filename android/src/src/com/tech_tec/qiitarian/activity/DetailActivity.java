@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.content.detail.DetailFragment.ItemUuidGettable;
+import com.tech_tec.qiitarian.fragment.detail.DetailFragment.ItemUuidGettable;
 
 public class DetailActivity extends FragmentActivity implements ItemUuidGettable {
     

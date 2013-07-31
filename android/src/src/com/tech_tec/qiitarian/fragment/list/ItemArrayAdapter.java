@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content.list;
+package com.tech_tec.qiitarian.fragment.list;
 
 import android.content.Context;
 import android.view.LayoutInflater;

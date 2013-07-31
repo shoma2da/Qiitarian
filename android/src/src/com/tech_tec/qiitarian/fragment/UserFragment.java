@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.content;
+package com.tech_tec.qiitarian.fragment;
 
 import com.tech_tec.qiitarian.R;
 
