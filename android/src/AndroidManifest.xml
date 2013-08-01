@@ -39,7 +39,7 @@
             android:name=".activity.DetailActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:name=".activity.TagItemsActivity"></activity>
+            android:name="com.tech_tec.qiitarian.activity.tagitems.TagItemsActivity"></activity>
     </application>
 
 </manifest>

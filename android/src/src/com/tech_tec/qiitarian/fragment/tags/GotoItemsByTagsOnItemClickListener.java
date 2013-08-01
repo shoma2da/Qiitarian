@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.tech_tec.qiitarian.activity.TagItemsActivity;
+import com.tech_tec.qiitarian.activity.tagitems.TagItemsActivity;
 import com.tech_tec.qiitarian.model.tags.Tag;
 
 public class GotoItemsByTagsOnItemClickListener implements OnItemClickListener {
