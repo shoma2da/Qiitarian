@@ -9,11 +9,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import com.tech_tec.qiitarian.activity.tagitems.TagItemsActivity;
 import com.tech_tec.qiitarian.model.tags.Tag;
 
-public class GotoItemsByTagsOnItemClickListener implements OnItemClickListener {
+public class GotoTagItemsListener implements OnItemClickListener {
     
     private Activity mActivity;
     
-    public GotoItemsByTagsOnItemClickListener(Activity activity) {
+    public GotoTagItemsListener(Activity activity) {
         mActivity = activity;
     }
     

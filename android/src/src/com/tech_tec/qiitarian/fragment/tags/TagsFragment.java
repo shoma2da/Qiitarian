@@ -23,7 +23,7 @@ public class TagsFragment extends Fragment {
         GridView gridView = (GridView)view.findViewById(R.id.grid_tags);
         ArrayAdapter<Tag> adapter = new TagArrayAdapter(getActivity());
         gridView.setAdapter(adapter);
-        gridView.setOnItemClickListener(new GotoItemsByTagsOnItemClickListener(getActivity()));
+        gridView.setOnItemClickListener(new GotoTagItemsListener(getActivity()));
         
         AuthInfo authInfo = new AuthInfoPreferences(getActivity()).load();
         new FetchTagsAsyncTask(authInfo.getUrlName(), new FetchTagsCallback(adapter)).execute();
