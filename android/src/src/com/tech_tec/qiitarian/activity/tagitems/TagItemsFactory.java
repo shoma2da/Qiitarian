@@ -16,11 +16,9 @@ import com.tech_tec.qiitarian.model.tags.UrlName;
 public class TagItemsFactory extends CommandsAbstractFactory {
     
     private UrlName mUrlName;
-    private LayoutInflater mInflater;
     
     public TagItemsFactory(LayoutInflater inflater, UrlName urlName) {
         mUrlName = urlName;
-        mInflater = inflater;
     }
     
     @Override
@@ -29,8 +27,8 @@ public class TagItemsFactory extends CommandsAbstractFactory {
     }
 
     @Override
-    public FetchMoreItemsCommand createFetchMoreItemsCommand(ListView listView, ArrayAdapter<Item> adapter) {
-        return new FetchMoreTagItemsListener(listView, mInflater, adapter, mUrlName);
+    public FetchMoreItemsCommand createFetchMoreItemsCommand(ListView listView, android.widget.ArrayAdapter<Item> adapter, LayoutInflater inflater) {
+        return new FetchMoreTagItemsListener(listView, inflater, adapter, mUrlName);
     }
 
 }

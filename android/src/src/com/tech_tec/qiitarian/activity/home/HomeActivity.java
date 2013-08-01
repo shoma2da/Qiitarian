@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.view.LayoutInflater;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
@@ -60,7 +59,6 @@ public class HomeActivity extends FragmentActivity implements FactoryGettable {
 
     @Override
     public CommandsAbstractFactory getFactory() {
-        LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
-        return new DefaultCommandsAbstractFactory(inflater);
+        return new DefaultCommandsAbstractFactory();
     }
 }

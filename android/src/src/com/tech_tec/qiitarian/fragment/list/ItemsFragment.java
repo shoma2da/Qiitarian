@@ -14,7 +14,7 @@ import com.tech_tec.qiitarian.model.items.Item;
 
 public class ItemsFragment extends Fragment {
     
-    private CommandsAbstractFactory mCommandsAbstractFactory;
+    private Activity mActivity;
     private PullToRefreshListView mListView;
     
     @Override
@@ -24,7 +24,7 @@ public class ItemsFragment extends Fragment {
         if (activity instanceof FactoryGettable == false) {
             throw new RuntimeException("ActivityはFactoryGettableを実装してください");
         }
-        mCommandsAbstractFactory = ((FactoryGettable)activity).getFactory();
+        mActivity = activity;
     }
     
     @Override
@@ -38,11 +38,14 @@ public class ItemsFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         
+        CommandsAbstractFactory mCommandsAbstractFactory = ((FactoryGettable)mActivity).getFactory();
+        LayoutInflater inflater = LayoutInflater.from(mActivity.getApplicationContext());
+        
         final ArrayAdapter<Item> adapter = new ItemArrayAdapter(getActivity());
         mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new GotoDetailOnItemClickListener(getActivity()));
         mListView.setOnRefreshListener(mCommandsAbstractFactory.createFetchLatestItemsCommand(mListView, adapter));
-        mListView.setOnScrollListener(mCommandsAbstractFactory.createFetchMoreItemsCommand(mListView, adapter));
+        mListView.setOnScrollListener(mCommandsAbstractFactory.createFetchMoreItemsCommand(mListView, adapter, inflater));
         
         mListView.prepareForRefresh();
         mListView.onRefresh();

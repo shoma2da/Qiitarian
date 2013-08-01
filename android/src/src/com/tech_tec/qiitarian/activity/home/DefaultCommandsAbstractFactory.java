@@ -14,20 +14,14 @@ import com.tech_tec.qiitarian.model.items.Item;
 
 public class DefaultCommandsAbstractFactory extends CommandsAbstractFactory {
     
-    private LayoutInflater mInflater;
-    
-    public DefaultCommandsAbstractFactory(LayoutInflater inflater) {
-        mInflater = inflater;
-    }
-    
     @Override
     public FetchLatestItemsCommand createFetchLatestItemsCommand(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
         return new FetchLatestItemsOnRefreshListener(listView, adapter);
     }
 
     @Override
-    public FetchMoreItemsCommand createFetchMoreItemsCommand(ListView listView, ArrayAdapter<Item> adapter) {
-        return new FetchMoreContentOnScrollListener(listView, mInflater, adapter);
+    public FetchMoreItemsCommand createFetchMoreItemsCommand(ListView listView, ArrayAdapter<Item> adapter, LayoutInflater inflater) {
+        return new FetchMoreContentOnScrollListener(listView, inflater, adapter);
     }
 
 }
