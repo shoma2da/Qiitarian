@@ -9,7 +9,7 @@ import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FetchMoreItemsCommand;
 import com.tech_tec.qiitarian.fragment.list.FetchLatestItemsCommand;
 import com.tech_tec.qiitarian.fragment.list.items.FetchLatestItemsOnRefreshListener;
-import com.tech_tec.qiitarian.fragment.list.items.FetchMoreContentOnScrollListener;
+import com.tech_tec.qiitarian.fragment.list.items.FetchMoreItemsListener;
 import com.tech_tec.qiitarian.model.items.Item;
 
 public class DefaultCommandsAbstractFactory extends CommandsAbstractFactory {
@@ -21,7 +21,7 @@ public class DefaultCommandsAbstractFactory extends CommandsAbstractFactory {
 
     @Override
     public FetchMoreItemsCommand createFetchMoreItemsCommand(ListView listView, ArrayAdapter<Item> adapter, LayoutInflater inflater) {
-        return new FetchMoreContentOnScrollListener(listView, inflater, adapter);
+        return new FetchMoreItemsListener(listView, inflater, adapter);
     }
 
 }

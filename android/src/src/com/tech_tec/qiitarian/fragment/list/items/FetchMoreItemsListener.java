@@ -10,9 +10,9 @@ import com.tech_tec.qiitarian.fragment.list.FetchTask.Callback;
 import com.tech_tec.qiitarian.fragment.list.FetchTask.UiCallback;
 import com.tech_tec.qiitarian.model.items.Item;
 
-public class FetchMoreContentOnScrollListener extends FetchMoreItemsCommand {
+public class FetchMoreItemsListener extends FetchMoreItemsCommand {
     
-    public FetchMoreContentOnScrollListener(ListView listView, LayoutInflater inflater, ArrayAdapter<Item> adapter) {
+    public FetchMoreItemsListener(ListView listView, LayoutInflater inflater, ArrayAdapter<Item> adapter) {
         super(listView, inflater, adapter);
     }
 
