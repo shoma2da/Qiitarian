@@ -7,7 +7,7 @@ import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 
-public class ItemsByTagActivity extends FragmentActivity implements FactoryGettable {
+public class TagItemsActivity extends FragmentActivity implements FactoryGettable {
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {

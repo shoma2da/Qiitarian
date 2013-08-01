@@ -39,7 +39,7 @@
             android:name=".activity.DetailActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:name=".activity.ItemsByTagActivity"></activity>
+            android:name=".activity.TagItemsActivity"></activity>
     </application>
 
 </manifest>
