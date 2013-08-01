@@ -50,4 +50,10 @@ public class ItemsFragment extends Fragment {
         mListView.prepareForRefresh();
         mListView.onRefresh();
     }
+    
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mActivity = null;
+    }
 }
