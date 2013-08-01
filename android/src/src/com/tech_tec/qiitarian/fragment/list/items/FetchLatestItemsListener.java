@@ -9,9 +9,9 @@ import com.tech_tec.qiitarian.fragment.list.SetItemsForListCallback;
 import com.tech_tec.qiitarian.fragment.list.FetchTask.UiCallback;
 import com.tech_tec.qiitarian.model.items.Item;
 
-public class FetchLatestItemsOnRefreshListener extends FetchLatestItemsCommand {
+public class FetchLatestItemsListener extends FetchLatestItemsCommand {
     
-    public FetchLatestItemsOnRefreshListener(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
+    public FetchLatestItemsListener(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
         super(listView, adapter);
     }
 
