@@ -41,7 +41,7 @@ public class ItemsFragment extends Fragment {
         final ArrayAdapter<Item> adapter = new ItemArrayAdapter(getActivity());
         mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new GotoDetailOnItemClickListener(getActivity()));
-        mListView.setOnRefreshListener(mCommandsAbstractFactory.createGetLatestItemsCommand(mListView, adapter));
+        mListView.setOnRefreshListener(mCommandsAbstractFactory.createFetchLatestItemsCommand(mListView, adapter));
         mListView.setOnScrollListener(mCommandsAbstractFactory.createFetchMoreItemsCommand(mListView, adapter));
         
         mListView.prepareForRefresh();

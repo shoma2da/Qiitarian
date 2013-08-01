@@ -24,7 +24,7 @@ public class TagItemsFactory extends CommandsAbstractFactory {
     }
     
     @Override
-    public FetchLatestItemsCommand createGetLatestItemsCommand(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
+    public FetchLatestItemsCommand createFetchLatestItemsCommand(PullToRefreshListView listView, ArrayAdapter<Item> adapter) {
         return new FetchLatestTagItemsListener(listView, adapter, mUrlName);
     }
 
