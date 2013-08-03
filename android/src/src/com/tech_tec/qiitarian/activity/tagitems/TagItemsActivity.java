@@ -22,7 +22,8 @@ public class TagItemsActivity extends FragmentActivity implements FactoryGettabl
         setContentView(R.layout.activity_list_by_tag);
         
         TextView titleText = (TextView)findViewById(R.id.text_title);
-        titleText.setText(getName().toString() + "の投稿一覧");
+        String title = getString(R.string.tagitems_list_title, getName().toString());
+        titleText.setText(title);
     }
     
     UrlName getUrlName() {
