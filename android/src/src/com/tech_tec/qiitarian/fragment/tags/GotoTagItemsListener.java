@@ -22,7 +22,7 @@ public class GotoTagItemsListener implements OnItemClickListener {
         Tag tag = (Tag)parent.getItemAtPosition(position);
         
         Intent intent = new Intent(mActivity, TagItemsActivity.class);
-        //引数の設定
+        intent.putExtra(TagItemsActivity.KEY_TAG_URLNAME, tag.getUrlNameStr());
         mActivity.startActivity(intent);
     }
 

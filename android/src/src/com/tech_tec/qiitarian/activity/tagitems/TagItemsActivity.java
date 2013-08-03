@@ -11,16 +11,24 @@ import com.tech_tec.qiitarian.model.tags.UrlName;
 
 public class TagItemsActivity extends FragmentActivity implements FactoryGettable {
     
+    public static final String KEY_TAG_URLNAME = "tag_urlname";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_by_tag);
     }
+    
+    UrlName getUrlName() {
+        String urlNameStr = getIntent().getStringExtra(KEY_TAG_URLNAME);
+        return new UrlName(urlNameStr);
+    }
 
     @Override
     public CommandsAbstractFactory getFactory() {
         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
-        return new TagItemsFactory(inflater, new UrlName("Java")/* TODO ダミー！！ */);
+        UrlName urlName = getUrlName();
+        return new TagItemsFactory(inflater, urlName);
     }
     
 }

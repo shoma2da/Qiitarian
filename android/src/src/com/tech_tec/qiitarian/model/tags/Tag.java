@@ -34,4 +34,8 @@ public class Tag implements IconFechable {
     public boolean hasIconImg() {
         return mIconImage.hasIconImg();
     }
+    
+    public String getUrlNameStr() {
+        return mUrlName.toString();
+    }
 }
