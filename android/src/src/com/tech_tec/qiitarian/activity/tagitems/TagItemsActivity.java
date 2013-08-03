@@ -2,10 +2,12 @@ package com.tech_tec.qiitarian.activity.tagitems;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
+import com.tech_tec.qiitarian.model.tags.UrlName;
 
 public class TagItemsActivity extends FragmentActivity implements FactoryGettable {
     
@@ -17,7 +19,8 @@ public class TagItemsActivity extends FragmentActivity implements FactoryGettabl
 
     @Override
     public CommandsAbstractFactory getFactory() {
-        return null;
+        LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+        return new TagItemsFactory(inflater, new UrlName("Java")/* TODO ダミー！！ */);
     }
     
 }
