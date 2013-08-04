@@ -1,19 +1,19 @@
 package com.tech_tec.qiitarian.fragment.user;
 
 import android.content.Context;
-import android.widget.Toast;
+import android.view.View;
 
 import com.tech_tec.qiitarian.fragment.user.FetchUserAsyncTask.Callback;
 import com.tech_tec.qiitarian.model.user.User;
 
 public class FetchUserCallback implements Callback {
     
-    private Context mContext;
     private ProgressManager mProgressManager;
+    private UiSetter mUiSetter;
     
-    public FetchUserCallback(Context context) {
-        mContext = context;
+    public FetchUserCallback(Context context, View view) {
         mProgressManager = new ProgressManager(context);
+        mUiSetter = new UiSetter(view);
     }
     
     @Override
@@ -23,13 +23,14 @@ public class FetchUserCallback implements Callback {
 
     @Override
     public void onSuccess(User user) {
-        Toast.makeText(mContext, "get user information " + user.getDescription(), Toast.LENGTH_SHORT).show();
         mProgressManager.dismiss();
+        mUiSetter.showView(user);
     }
 
     @Override
     public void onError() {
         mProgressManager.dismiss();
+        mUiSetter.showErrorView();
     }
 
 }

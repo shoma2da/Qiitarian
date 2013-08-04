@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.fragment.user.FetchUserAsyncTask.Callback;
 import com.tech_tec.qiitarian.model.common.UserUrlName;
 
 public class UserFragment extends Fragment {
@@ -15,7 +16,8 @@ public class UserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user, null);
         
-        FetchUserAsyncTask task = new FetchUserAsyncTask(new UserUrlName("himara2"), new FetchUserCallback(getActivity()));
+        Callback callback = new FetchUserCallback(getActivity(), view);
+        FetchUserAsyncTask task = new FetchUserAsyncTask(new UserUrlName("himara2"), callback);
         task.execute();
         
         return view;
