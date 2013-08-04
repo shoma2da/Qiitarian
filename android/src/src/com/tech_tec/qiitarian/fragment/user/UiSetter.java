@@ -18,14 +18,14 @@ public class UiSetter {
     }
     
     void showView(User user) {
+        setToNameText(user);
+        setToDescText(user);
+        setToIconImage(user);
+    }
+    
+    private void setToNameText(User user) {
         TextView nameText = (TextView)mView.findViewById(R.id.text_user_name);
         nameText.setText(user.getNameStr());
-        
-        setToDescText(user);
-        
-        //アイコン表示
-        ImageView iconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
-        new FetchIconTask(iconImage, user).execute();
     }
     
     private void setToDescText(User user) {
@@ -36,6 +36,11 @@ public class UiSetter {
         }
         
         descText.setText(user.getDescription());
+    }
+    
+    private void setToIconImage(User user) {
+        ImageView iconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
+        new FetchIconTask(iconImage, user).execute();
     }
     
     void showErrorView() {
