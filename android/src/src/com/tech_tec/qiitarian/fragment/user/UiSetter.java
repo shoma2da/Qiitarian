@@ -17,6 +17,10 @@ public class UiSetter {
         mView = view;
     }
     
+    void showErrorView() {
+        Toast.makeText(mView.getContext(), "通信エラー", Toast.LENGTH_SHORT).show();
+    }
+    
     void showView(User user) {
         setToNameText(user);
         setToDescText(user);
@@ -41,10 +45,6 @@ public class UiSetter {
     private void setToIconImage(User user) {
         ImageView iconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
         new FetchIconTask(iconImage, user).execute();
-    }
-    
-    void showErrorView() {
-        Toast.makeText(mView.getContext(), "通信エラー", Toast.LENGTH_SHORT).show();
     }
     
 }
