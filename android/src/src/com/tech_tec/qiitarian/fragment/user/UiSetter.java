@@ -25,6 +25,7 @@ public class UiSetter {
         setToNameText(user);
         setToDescText(user);
         setToIconImage(user);
+        setToFacebookName(user);
     }
     
     private void setToNameText(User user) {
@@ -45,6 +46,16 @@ public class UiSetter {
     private void setToIconImage(User user) {
         ImageView iconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
         new FetchIconTask(iconImage, user).execute();
+    }
+    
+    private void setToFacebookName(User user) {
+        TextView facebookText = (TextView)mView.findViewById(R.id.text_facebook);
+        if (user.hasFacebookNmae() == false) {
+            facebookText.setVisibility(View.GONE);
+            return;
+        }
+        
+        facebookText.setText("Facebook:" + user.getFacebookName());
     }
     
 }

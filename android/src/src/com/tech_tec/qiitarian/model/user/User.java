@@ -41,4 +41,12 @@ public class User implements IconFechable {
         return mProfileImage.fetchImg();
     }
     
+    public boolean hasFacebookNmae() {
+        return (mFacebookName != null) && (mFacebookName.isEmpty() == false);
+    }
+    
+    public String getFacebookName() {
+        return mFacebookName.toString();
+    }
+    
 }
