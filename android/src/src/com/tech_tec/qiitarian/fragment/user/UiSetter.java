@@ -21,6 +21,7 @@ public class UiSetter {
         TextView nameText = (TextView)mView.findViewById(R.id.text_user_name);
         nameText.setText(user.getNameStr());
         
+        //アイコン表示
         ImageView iconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
         new FetchIconTask(iconImage, user).execute();
     }
