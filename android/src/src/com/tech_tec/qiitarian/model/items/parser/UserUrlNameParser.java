@@ -3,7 +3,7 @@ package com.tech_tec.qiitarian.model.items.parser;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.tech_tec.qiitarian.model.items.UserUrlName;
+import com.tech_tec.qiitarian.model.common.UserUrlName;
 
 public class UserUrlNameParser {
     

@@ -6,7 +6,7 @@ import java.net.URL;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.tech_tec.qiitarian.model.items.UserProfileImg;
+import com.tech_tec.qiitarian.model.common.UserProfileImg;
 
 public class UserProfileImgParser {
     

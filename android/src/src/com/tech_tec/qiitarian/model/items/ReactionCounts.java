@@ -1,6 +1,6 @@
 package com.tech_tec.qiitarian.model.items;
 
-import com.tech_tec.qiitarian.model.StockCount;
+import com.tech_tec.qiitarian.model.common.StockCount;
 
 public class ReactionCounts {
     

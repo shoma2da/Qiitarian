@@ -3,10 +3,10 @@ package com.tech_tec.qiitarian.model.items.parser;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.tech_tec.qiitarian.model.StockCount;
+import com.tech_tec.qiitarian.model.common.StockCount;
+import com.tech_tec.qiitarian.model.common.parser.StockCountParser;
 import com.tech_tec.qiitarian.model.items.CommentCount;
 import com.tech_tec.qiitarian.model.items.ReactionCounts;
-import com.tech_tec.qiitarian.model.parser.StockCountParser;
 
 public class ReactionCountsParser {
     

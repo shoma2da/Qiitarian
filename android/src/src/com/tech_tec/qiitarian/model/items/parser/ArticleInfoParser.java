@@ -5,10 +5,10 @@ import java.text.ParseException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.tech_tec.qiitarian.model.ArticleTitle;
+import com.tech_tec.qiitarian.model.common.ArticleTitle;
+import com.tech_tec.qiitarian.model.common.parser.ArticleTitleParser;
 import com.tech_tec.qiitarian.model.items.ArticleInfo;
 import com.tech_tec.qiitarian.model.items.ArticleMeta;
-import com.tech_tec.qiitarian.model.parser.ArticleTitleParser;
 
 public class ArticleInfoParser {
     

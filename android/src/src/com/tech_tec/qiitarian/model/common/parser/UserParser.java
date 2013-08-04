@@ -1,13 +1,13 @@
-package com.tech_tec.qiitarian.model.parser;
+package com.tech_tec.qiitarian.model.common.parser;
 
 import java.net.MalformedURLException;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.tech_tec.qiitarian.model.User;
-import com.tech_tec.qiitarian.model.items.UserUrlName;
-import com.tech_tec.qiitarian.model.items.UserProfileImg;
+import com.tech_tec.qiitarian.model.common.User;
+import com.tech_tec.qiitarian.model.common.UserProfileImg;
+import com.tech_tec.qiitarian.model.common.UserUrlName;
 import com.tech_tec.qiitarian.model.items.parser.UserUrlNameParser;
 import com.tech_tec.qiitarian.model.items.parser.UserProfileImgParser;
 

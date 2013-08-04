@@ -5,9 +5,9 @@ import java.util.Iterator;
 
 import android.graphics.Bitmap;
 
-import com.tech_tec.qiitarian.model.ArticleTitle;
-import com.tech_tec.qiitarian.model.StockCount;
-import com.tech_tec.qiitarian.model.User;
+import com.tech_tec.qiitarian.model.common.ArticleTitle;
+import com.tech_tec.qiitarian.model.common.StockCount;
+import com.tech_tec.qiitarian.model.common.User;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Tag;
 import com.tech_tec.qiitarian.model.items.Tags;

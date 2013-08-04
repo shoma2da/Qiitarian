@@ -1,9 +1,7 @@
-package com.tech_tec.qiitarian.model;
+package com.tech_tec.qiitarian.model.common;
 
 import java.io.IOException;
 
-import com.tech_tec.qiitarian.model.items.UserUrlName;
-import com.tech_tec.qiitarian.model.items.UserProfileImg;
 
 import android.graphics.Bitmap;
 

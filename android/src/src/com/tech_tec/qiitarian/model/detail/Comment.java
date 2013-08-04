@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import android.graphics.Bitmap;
 
-import com.tech_tec.qiitarian.model.User;
+import com.tech_tec.qiitarian.model.common.User;
 import com.tech_tec.qiitarian.task.icon.IconFechable;
 
 public class Comment implements IconFechable {
