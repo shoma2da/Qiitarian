@@ -25,6 +25,12 @@ public class FetchUserAsyncTask extends AsyncTask<Void, Void, ResponseHandler> {
     }
     
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mCallback.onPreExecute();
+    }
+    
+    @Override
     protected ResponseHandler doInBackground(Void... params) {
         UserClient client = new UserClient(mUrlName);
         try {
