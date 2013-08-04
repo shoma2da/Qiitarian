@@ -8,4 +8,9 @@ public class Description {
         mDescription = description;
     }
     
+    @Override
+    public String toString() {
+        return mDescription;
+    }
+    
 }

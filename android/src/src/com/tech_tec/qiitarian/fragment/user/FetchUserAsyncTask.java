@@ -45,6 +45,7 @@ public class FetchUserAsyncTask extends AsyncTask<Void, Void, ResponseHandler> {
     }
     
     public interface Callback {
+        void onPreExecute();
         void onSuccess(User user);
         void onError();
     }

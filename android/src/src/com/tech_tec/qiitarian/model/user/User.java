@@ -18,4 +18,8 @@ public class User {
         mGithubName = githubName;
     }
     
+    public String getDescription() {
+        return mDescription.toString();
+    }
+    
 }
