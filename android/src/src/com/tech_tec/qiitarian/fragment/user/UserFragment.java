@@ -15,7 +15,6 @@ public class UserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user, null);
         
-        //TODO サンプル
         FetchUserAsyncTask task = new FetchUserAsyncTask(new UserUrlName("himara2"), new FetchUserCallback(getActivity()));
         task.execute();
         
