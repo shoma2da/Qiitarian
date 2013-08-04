@@ -30,6 +30,7 @@ public class UiSetter {
         setToGithubName(user);
         setToFollowingCount(user);
         setToFollowerCount(user);
+        setToItemCount(user);
     }
     
     private void setToNameText(User user) {
@@ -90,6 +91,11 @@ public class UiSetter {
     private void setToFollowerCount(User user) {
         TextView followerCountText = (TextView)mView.findViewById(R.id.text_follower);
         followerCountText.setText("follower:" + user.getFollowerCount());
+    }
+    
+    private void setToItemCount(User user) {
+        TextView itemCountText = (TextView)mView.findViewById(R.id.text_item_count);
+        itemCountText.setText("投稿数:" + user.getItemCount());
     }
     
 }

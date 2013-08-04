@@ -16,8 +16,9 @@ public class User implements IconFechable {
     private GithubName mGithubName;
     private FollowingCount mFollowingCount;
     private FollowerCount mFollowerCount;
+    private ItemCount mItemCount;
     
-    public User(UrlName urlName, ProfileImage profileImage, Description description, FacebookName facebookName, TwitterName twitterName, GithubName githubName, FollowingCount followingCount, FollowerCount followerCount) {
+    public User(UrlName urlName, ProfileImage profileImage, Description description, FacebookName facebookName, TwitterName twitterName, GithubName githubName, FollowingCount followingCount, FollowerCount followerCount, ItemCount itemCount) {
         mUrlName = urlName;
         mProfileImage = profileImage;
         mDescription = description;
@@ -26,6 +27,7 @@ public class User implements IconFechable {
         mGithubName = githubName;
         mFollowingCount = followingCount;
         mFollowerCount = followerCount;
+        mItemCount = itemCount;
     }
     
     public String getDescription() {
@@ -75,6 +77,10 @@ public class User implements IconFechable {
     
     public int getFollowerCount() {
         return mFollowerCount.toInt();
+    }
+    
+    public int getItemCount() {
+        return mItemCount.toInt();
     }
     
 }

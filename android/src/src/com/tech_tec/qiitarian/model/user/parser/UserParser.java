@@ -10,6 +10,7 @@ import com.tech_tec.qiitarian.model.user.FacebookName;
 import com.tech_tec.qiitarian.model.user.FollowerCount;
 import com.tech_tec.qiitarian.model.user.FollowingCount;
 import com.tech_tec.qiitarian.model.user.GithubName;
+import com.tech_tec.qiitarian.model.user.ItemCount;
 import com.tech_tec.qiitarian.model.user.ProfileImage;
 import com.tech_tec.qiitarian.model.user.TwitterName;
 import com.tech_tec.qiitarian.model.user.UrlName;
@@ -26,8 +27,9 @@ public class UserParser {
         GithubName githubName = new GithubNameParser().parse(object);
         FollowingCount followingCount = new FollowingCountParser().parse(object);
         FollowerCount followerCount = new FollowerCountParser().parse(object);
+        ItemCount itemCount = new ItemCountParser().parse(object);
         
-        return new User(urlName, profileImage, description, facebookName, twitterName, githubName, followingCount, followerCount);
+        return new User(urlName, profileImage, description, facebookName, twitterName, githubName, followingCount, followerCount, itemCount);
     }
     
 }
