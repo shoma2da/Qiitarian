@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.model.items.parser;
+package com.tech_tec.qiitarian.model.common.parser;
 
 import java.net.MalformedURLException;
 import java.net.URL;

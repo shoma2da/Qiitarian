@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.model.items.parser;
+package com.tech_tec.qiitarian.model.common.parser;
 
 import org.json.JSONException;
 import org.json.JSONObject;
