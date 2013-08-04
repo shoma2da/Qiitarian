@@ -26,6 +26,7 @@ public class UiSetter {
         setToDescText(user);
         setToIconImage(user);
         setToFacebookName(user);
+        setToTwitterName(user);
     }
     
     private void setToNameText(User user) {
@@ -55,7 +56,17 @@ public class UiSetter {
             return;
         }
         
-        facebookText.setText("Facebook:" + user.getFacebookName());
+        facebookText.setText("FACEBOOK:" + user.getFacebookName());
+    }
+    
+    private void setToTwitterName(User user) {
+        TextView twitterText = (TextView)mView.findViewById(R.id.text_twitter);
+        if (user.hasTwitterName() == false) {
+            twitterText.setVisibility(View.GONE);
+            return;
+        }
+        
+        twitterText.setText("TWITTER:" + user.getTwitterName());
     }
     
 }

@@ -49,4 +49,12 @@ public class User implements IconFechable {
         return mFacebookName.toString();
     }
     
+    public boolean hasTwitterName() {
+        return (mTwitterName != null) && (mTwitterName.isEmpty() == false);
+    }
+    
+    public String getTwitterName() {
+        return mTwitterName.toString();
+    }
+    
 }

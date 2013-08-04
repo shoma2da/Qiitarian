@@ -33,6 +33,7 @@
         />
         
     <TextView
+        android:id="@+id/text_twitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="twitter:shoma2da"
