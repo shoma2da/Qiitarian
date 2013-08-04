@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.user.Description;
+import com.tech_tec.qiitarian.model.user.FacebookName;
 import com.tech_tec.qiitarian.model.user.ProfileImage;
 import com.tech_tec.qiitarian.model.user.UrlName;
 import com.tech_tec.qiitarian.model.user.User;
@@ -16,8 +17,9 @@ public class UserParser {
         UrlName urlName = new UrlNameParser().parse(object);
         ProfileImage profileImage = new ProfileImageParser().parse(object);
         Description description = new DescriptionParser().parse(object);
+        FacebookName facebookName = new FacebookNameParser().parse(object);
         
-        return new User(urlName, profileImage, description);
+        return new User(urlName, profileImage, description, facebookName);
     }
     
 }
