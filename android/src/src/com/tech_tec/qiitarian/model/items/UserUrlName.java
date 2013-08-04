@@ -1,10 +1,10 @@
 package com.tech_tec.qiitarian.model.items;
 
-public class UrlName {
+public class UserUrlName {
     
     private String mUserName;
     
-    public UrlName(String userName) {
+    public UserUrlName(String userName) {
         mUserName = userName;
     }
     

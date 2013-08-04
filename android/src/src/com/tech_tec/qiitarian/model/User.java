@@ -2,7 +2,7 @@ package com.tech_tec.qiitarian.model;
 
 import java.io.IOException;
 
-import com.tech_tec.qiitarian.model.items.UrlName;
+import com.tech_tec.qiitarian.model.items.UserUrlName;
 import com.tech_tec.qiitarian.model.items.UserProfileImg;
 
 import android.graphics.Bitmap;
@@ -10,10 +10,10 @@ import android.graphics.Bitmap;
 
 public class User {
     
-    private UrlName mUrlName;
+    private UserUrlName mUrlName;
     private UserProfileImg mUserProfileImg;
     
-    public User(UrlName urlName, UserProfileImg userProfileImg) {
+    public User(UserUrlName urlName, UserProfileImg userProfileImg) {
         mUrlName = urlName;
         mUserProfileImg = userProfileImg;
     }

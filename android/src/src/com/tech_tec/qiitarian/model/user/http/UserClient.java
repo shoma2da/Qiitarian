@@ -4,13 +4,13 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 
 import com.tech_tec.qiitarian.model.http.ClientBase;
-import com.tech_tec.qiitarian.model.items.UrlName;
+import com.tech_tec.qiitarian.model.items.UserUrlName;
 
 public class UserClient extends ClientBase {
     
-    private UrlName mUrlName;
+    private UserUrlName mUrlName;
     
-    public UserClient(UrlName urlName) {
+    public UserClient(UserUrlName urlName) {
         mUrlName = urlName;
     }
     
