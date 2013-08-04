@@ -8,6 +8,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.fragment.SearchFragment;
 import com.tech_tec.qiitarian.fragment.UserFragment;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
@@ -32,8 +33,10 @@ public class HomeActivity extends FragmentActivity implements FactoryGettable {
                     showLatestFragment();
                 } else if (R.id.radio_tags == checkedId) {
                     showTagsFragment();
-                } else {
+                } else if (R.id.radio_user == checkedId) {
                     showUserFragment();
+                } else {
+                    showSearchFragment();
                 }
             }
         });
@@ -54,6 +57,11 @@ public class HomeActivity extends FragmentActivity implements FactoryGettable {
     private void showUserFragment() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.content_container, new UserFragment());
+        transaction.commit();
+    }
+    private void showSearchFragment() {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.content_container, new SearchFragment());
         transaction.commit();
     }
 
