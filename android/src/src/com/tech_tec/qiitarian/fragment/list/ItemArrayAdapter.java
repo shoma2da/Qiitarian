@@ -1,23 +1,29 @@
 package com.tech_tec.qiitarian.fragment.list;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.activity.user.UserActivity;
+import com.tech_tec.qiitarian.model.common.UserUrlName;
 import com.tech_tec.qiitarian.model.items.Item;
 import com.tech_tec.qiitarian.task.icon.FetchIconTask;
 
 public class ItemArrayAdapter extends ArrayAdapter<Item> {
     
+    private Context mContext;
     private LayoutInflater mInflater;
     
     public ItemArrayAdapter(Context context) {
         super(context, 0);
+        mContext = context;
         mInflater = LayoutInflater.from(context);
     }
     
@@ -50,7 +56,16 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         return view;
     }
     
-    void setIcon(ImageView iconImage, Item item) {
+    void setIcon(ImageView iconImage, final Item item) {
+        iconImage.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, UserActivity.class);
+                intent.putExtra(UserActivity.KEY_USER_URLNAME, new UserUrlName(item.getUserName()));
+                mContext.startActivity(intent);
+            }
+        });
+
         if (item.hasIconImg()) {
             iconImage.setImageBitmap(item.getIconImg());
             return;

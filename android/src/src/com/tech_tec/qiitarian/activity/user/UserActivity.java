@@ -2,6 +2,7 @@ package com.tech_tec.qiitarian.activity.user;
 
 import java.io.Serializable;
 
+import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.user.UserUrlNameGettable;
 import com.tech_tec.qiitarian.model.common.UserUrlName;
 
@@ -10,11 +11,12 @@ import android.support.v4.app.FragmentActivity;
 
 public class UserActivity extends FragmentActivity implements UserUrlNameGettable {
     
-    private static final String KEY_USER_URLNAME = "user_urlname";
+    public static final String KEY_USER_URLNAME = "user_urlname";
     
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
+        setContentView(R.layout.activity_user);
     }
     
     @Override
