@@ -19,7 +19,10 @@ public class UiSetter {
     
     void showView(User user) {
         TextView nameText = (TextView)mView.findViewById(R.id.text_user_name);
+        TextView descText = (TextView)mView.findViewById(R.id.text_description);
+
         nameText.setText(user.getNameStr());
+        descText.setText(user.getDescription());
         
         //アイコン表示
         ImageView iconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
