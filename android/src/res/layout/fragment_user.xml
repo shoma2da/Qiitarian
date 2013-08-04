@@ -8,7 +8,61 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ユーザ"
+        android:text="名前"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <ImageView
+        android:src="@drawable/ic_launcher"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="デスクリプション"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="facebook:shoma2da"
+        />
+        
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="twitter:shoma2da"
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="github:shoma2da"
+        />
+        
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="フォローしている：100人"
+        />
+        
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="フォローされている：100人"
+        />
+        
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投稿数：100(リンク)"
+        />
+        
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ストック数：100(リンク)"
+        />
+        
 </LinearLayout>
