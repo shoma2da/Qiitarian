@@ -57,4 +57,12 @@ public class User implements IconFechable {
         return mTwitterName.toString();
     }
     
+    public boolean hasGithubName() {
+        return (mGithubName != null) && (mGithubName.isEmpty() == false);
+    }
+    
+    public String getGithubName() {
+        return mGithubName.toString();
+    }
+    
 }

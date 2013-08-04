@@ -8,4 +8,13 @@ public class GithubName {
         mName = name;
     }
     
+    @Override
+    public String toString() {
+        return mName;
+    }
+    
+    public boolean isEmpty() {
+        return mName == null || mName.equals("");
+    }
+    
 }

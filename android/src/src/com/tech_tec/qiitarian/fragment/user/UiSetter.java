@@ -27,6 +27,7 @@ public class UiSetter {
         setToIconImage(user);
         setToFacebookName(user);
         setToTwitterName(user);
+        setToGithubName(user);
     }
     
     private void setToNameText(User user) {
@@ -67,6 +68,16 @@ public class UiSetter {
         }
         
         twitterText.setText("TWITTER:" + user.getTwitterName());
+    }
+    
+    private void setToGithubName(User user) {
+        TextView githubText = (TextView)mView.findViewById(R.id.text_github);
+        if (user.hasGithubName() == false) {
+            githubText.setVisibility(View.GONE);
+            return;
+        }
+        
+        githubText.setText("GITHUB:" + user.getGithubName());
     }
     
 }
