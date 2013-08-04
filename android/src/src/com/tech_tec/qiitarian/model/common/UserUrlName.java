@@ -1,6 +1,10 @@
 package com.tech_tec.qiitarian.model.common;
 
-public class UserUrlName {
+import java.io.Serializable;
+
+public class UserUrlName implements Serializable {
+    
+    private static final long serialVersionUID = 4845175806161913015L;
     
     private String mUserName;
     
