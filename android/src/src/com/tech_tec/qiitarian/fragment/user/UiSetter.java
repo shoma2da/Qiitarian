@@ -28,6 +28,7 @@ public class UiSetter {
         setToFacebookName(user);
         setToTwitterName(user);
         setToGithubName(user);
+        setToFollowingCount(user);
     }
     
     private void setToNameText(User user) {
@@ -78,6 +79,11 @@ public class UiSetter {
         }
         
         githubText.setText("GITHUB:" + user.getGithubName());
+    }
+    
+    private void setToFollowingCount(User user) {
+        TextView followingCountText = (TextView)mView.findViewById(R.id.text_following);
+        followingCountText.setText("following:" + user.getFollowingCount());
     }
     
 }

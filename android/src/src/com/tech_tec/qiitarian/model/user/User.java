@@ -14,14 +14,16 @@ public class User implements IconFechable {
     private FacebookName mFacebookName;
     private TwitterName mTwitterName;
     private GithubName mGithubName;
+    private FollowingCount mFollowingCount;
     
-    public User(UrlName urlName, ProfileImage profileImage, Description description, FacebookName facebookName, TwitterName twitterName, GithubName githubName) {
+    public User(UrlName urlName, ProfileImage profileImage, Description description, FacebookName facebookName, TwitterName twitterName, GithubName githubName, FollowingCount followingCount) {
         mUrlName = urlName;
         mProfileImage = profileImage;
         mDescription = description;
         mFacebookName = facebookName;
         mTwitterName = twitterName;
         mGithubName = githubName;
+        mFollowingCount = followingCount;
     }
     
     public String getDescription() {
@@ -63,6 +65,10 @@ public class User implements IconFechable {
     
     public String getGithubName() {
         return mGithubName.toString();
+    }
+    
+    public int getFollowingCount() {
+        return mFollowingCount.toInt();
     }
     
 }

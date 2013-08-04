@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import com.tech_tec.qiitarian.model.user.Description;
 import com.tech_tec.qiitarian.model.user.FacebookName;
+import com.tech_tec.qiitarian.model.user.FollowingCount;
 import com.tech_tec.qiitarian.model.user.GithubName;
 import com.tech_tec.qiitarian.model.user.ProfileImage;
 import com.tech_tec.qiitarian.model.user.TwitterName;
@@ -22,8 +23,9 @@ public class UserParser {
         FacebookName facebookName = new FacebookNameParser().parse(object);
         TwitterName twitterName = new TwitterNameParser().parse(object);
         GithubName githubName = new GithubNameParser().parse(object);
+        FollowingCount followingCount = new FollowingCountParser().parse(object);
         
-        return new User(urlName, profileImage, description, facebookName, twitterName, githubName);
+        return new User(urlName, profileImage, description, facebookName, twitterName, githubName, followingCount);
     }
     
 }
