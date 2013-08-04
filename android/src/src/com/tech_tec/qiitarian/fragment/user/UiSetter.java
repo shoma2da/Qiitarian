@@ -1,8 +1,10 @@
 package com.tech_tec.qiitarian.fragment.user;
 
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.model.user.User;
 
 public class UiSetter {
@@ -14,11 +16,12 @@ public class UiSetter {
     }
     
     void showView(User user) {
-        Toast.makeText(mView.getContext(), user.getDescription(), Toast.LENGTH_SHORT).show();
+        TextView nameText = (TextView)mView.findViewById(R.id.text_user_name);
+        nameText.setText(user.getNameStr());
     }
     
     void showErrorView() {
-        Toast.makeText(mView.getContext(), "エラー", Toast.LENGTH_SHORT).show();
+        Toast.makeText(mView.getContext(), "通信エラー", Toast.LENGTH_SHORT).show();
     }
     
 }
