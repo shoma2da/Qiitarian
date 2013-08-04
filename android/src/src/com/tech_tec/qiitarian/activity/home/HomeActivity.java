@@ -14,8 +14,12 @@ import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 import com.tech_tec.qiitarian.fragment.list.ItemsFragment;
 import com.tech_tec.qiitarian.fragment.tags.TagsFragment;
 import com.tech_tec.qiitarian.fragment.user.UserFragment;
+import com.tech_tec.qiitarian.fragment.user.UserUrlNameGettable;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
+import com.tech_tec.qiitarian.model.common.UserUrlName;
 
-public class HomeActivity extends FragmentActivity implements FactoryGettable {
+public class HomeActivity extends FragmentActivity implements FactoryGettable, UserUrlNameGettable {
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,5 +72,12 @@ public class HomeActivity extends FragmentActivity implements FactoryGettable {
     @Override
     public CommandsAbstractFactory getFactory() {
         return new DefaultCommandsAbstractFactory();
+    }
+
+    @Override
+    public UserUrlName getUserUrlName() {
+        AuthInfo authInfo = new AuthInfoPreferences(getApplicationContext()).load();
+        String urlName = authInfo.getUrlNameStr();
+        return new UserUrlName(urlName);
     }
 }
