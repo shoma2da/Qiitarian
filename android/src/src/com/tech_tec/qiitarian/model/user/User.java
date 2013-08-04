@@ -1,6 +1,12 @@
 package com.tech_tec.qiitarian.model.user;
 
-public class User {
+import java.io.IOException;
+
+import android.graphics.Bitmap;
+
+import com.tech_tec.qiitarian.task.icon.IconFechable;
+
+public class User implements IconFechable {
     
     private UrlName mUrlName;
     private ProfileImage mProfileImage;
@@ -24,6 +30,11 @@ public class User {
     
     public String getNameStr() {
         return mUrlName.toString();
+    }
+
+    @Override
+    public Bitmap fetchIconImg() throws IOException {
+        return mProfileImage.fetchImg();
     }
     
 }

@@ -2,12 +2,14 @@ package com.tech_tec.qiitarian.model.user;
 
 import java.net.URL;
 
-public class ProfileImage {
-    
-    private URL mUrl;
-    
+import com.tech_tec.qiitarian.model.common.UserProfileImg;
+
+
+//TODO
+public class ProfileImage extends UserProfileImg {
+
     public ProfileImage(URL url) {
-        mUrl = url;
+        super(url);
     }
     
 }

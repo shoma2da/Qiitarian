@@ -1,11 +1,13 @@
 package com.tech_tec.qiitarian.fragment.user;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.model.user.User;
+import com.tech_tec.qiitarian.task.icon.FetchIconTask;
 
 public class UiSetter {
     
@@ -18,6 +20,9 @@ public class UiSetter {
     void showView(User user) {
         TextView nameText = (TextView)mView.findViewById(R.id.text_user_name);
         nameText.setText(user.getNameStr());
+        
+        ImageView iconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
+        new FetchIconTask(iconImage, user).execute();
     }
     
     void showErrorView() {

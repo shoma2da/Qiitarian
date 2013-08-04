@@ -12,6 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
     <ImageView
+        android:id="@+id/image_user_icon"
         android:src="@drawable/ic_launcher"
         android:layout_width="50dip"
         android:layout_height="50dip"
