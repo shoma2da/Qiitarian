@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import com.tech_tec.qiitarian.model.user.Description;
 import com.tech_tec.qiitarian.model.user.FacebookName;
 import com.tech_tec.qiitarian.model.user.ProfileImage;
+import com.tech_tec.qiitarian.model.user.TwitterName;
 import com.tech_tec.qiitarian.model.user.UrlName;
 import com.tech_tec.qiitarian.model.user.User;
 
@@ -18,8 +19,9 @@ public class UserParser {
         ProfileImage profileImage = new ProfileImageParser().parse(object);
         Description description = new DescriptionParser().parse(object);
         FacebookName facebookName = new FacebookNameParser().parse(object);
+        TwitterName twitterName = new TwitterNameParser().parse(object);
         
-        return new User(urlName, profileImage, description, facebookName);
+        return new User(urlName, profileImage, description, facebookName, twitterName);
     }
     
 }
