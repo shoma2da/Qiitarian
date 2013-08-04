@@ -17,7 +17,7 @@ public class UserFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_user, null);
         
         Callback callback = new FetchUserCallback(getActivity(), view);
-        FetchUserAsyncTask task = new FetchUserAsyncTask(new UserUrlName("himara2"), callback);
+        FetchUserAsyncTask task = new FetchUserAsyncTask(new UserUrlName("shoma2da"), callback);
         task.execute();
         
         return view;

@@ -13,4 +13,8 @@ public class Description {
         return mDescription;
     }
     
+    public boolean isEmpty() {
+        return mDescription == null || mDescription.equals("");
+    }
+    
 }

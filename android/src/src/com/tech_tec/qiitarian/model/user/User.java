@@ -28,6 +28,10 @@ public class User implements IconFechable {
         return mDescription.toString();
     }
     
+    public boolean hasDescription() {
+        return (mDescription != null) && (mDescription.isEmpty() == false);
+    }
+    
     public String getNameStr() {
         return mUrlName.toString();
     }
