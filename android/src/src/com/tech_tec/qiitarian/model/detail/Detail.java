@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import com.tech_tec.qiitarian.model.common.ArticleTitle;
 import com.tech_tec.qiitarian.model.common.StockCount;
 import com.tech_tec.qiitarian.model.common.User;
+import com.tech_tec.qiitarian.model.common.UserUrlName;
 import com.tech_tec.qiitarian.model.items.CreatedAt;
 import com.tech_tec.qiitarian.model.items.Tag;
 import com.tech_tec.qiitarian.model.items.Tags;
@@ -81,5 +82,9 @@ public class Detail implements IconFechable {
     
     public boolean isStocked() {
         return mIsStocked.value();
+    }
+    
+    public UserUrlName getUserUrlName() {
+        return mUser.getUserUrlName();
     }
 }

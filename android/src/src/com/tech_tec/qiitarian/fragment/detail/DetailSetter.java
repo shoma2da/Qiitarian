@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.fragment.list.GotoUserActivityListener;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 import com.tech_tec.qiitarian.model.detail.Comment;
@@ -24,12 +25,14 @@ public class DetailSetter {
     
     private Detail mDetail;
     private View mView;
+    private Context mContext;
     private LayoutInflater mInflater;
     
     public DetailSetter(Detail detail, View view, Context context) {
         mDetail = detail;
         mView = view;
         mInflater = LayoutInflater.from(context);
+        mContext = context;
     }
     
     public void view() {
@@ -81,9 +84,10 @@ public class DetailSetter {
             tagsLayout.addView(view);
         }
         
-        //アイコンの非同期取得
+        //アイコンの設定
         ImageView userIconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
         new FetchIconTask(userIconImage, mDetail).execute();
+        userIconImage.setOnClickListener(new GotoUserActivityListener(mContext, mDetail.getUserUrlName()));
         
         //ストック用の設定
         ToggleButton stockButton = (ToggleButton)mView.findViewById(R.id.button_stock);
