@@ -19,7 +19,7 @@ public class TagItemsActivity extends FragmentActivity implements FactoryGettabl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_by_tag);
+        setContentView(R.layout.activity_list_tagitems);
         
         TextView titleText = (TextView)findViewById(R.id.text_title);
         String title = getString(R.string.tagitems_list_title, getName().toString());
