@@ -56,15 +56,8 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         return view;
     }
     
-    void setIcon(ImageView iconImage, final Item item) {
-        iconImage.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, UserActivity.class);
-                intent.putExtra(UserActivity.KEY_USER_URLNAME, new UserUrlName(item.getUserName()));
-                mContext.startActivity(intent);
-            }
-        });
+    void setIcon(ImageView iconImage, Item item) {
+        iconImage.setOnClickListener(new GotoUserActivityListener(mContext, item));
 
         if (item.hasIconImg()) {
             iconImage.setImageBitmap(item.getIconImg());
