@@ -8,10 +8,10 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.tech_tec.qiitarian.R;
-import com.tech_tec.qiitarian.fragment.SearchFragment;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 import com.tech_tec.qiitarian.fragment.list.ItemsFragment;
+import com.tech_tec.qiitarian.fragment.search.SearchFragment;
 import com.tech_tec.qiitarian.fragment.tags.TagsFragment;
 import com.tech_tec.qiitarian.fragment.user.UserFragment;
 import com.tech_tec.qiitarian.fragment.user.UserUrlNameGettable;
