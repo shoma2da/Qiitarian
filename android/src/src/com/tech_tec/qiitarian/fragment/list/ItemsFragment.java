@@ -10,9 +10,10 @@ import android.widget.ArrayAdapter;
 
 import com.markupartist.android.widget.PullToRefreshListView;
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.activity.home.DefaultCommandsAbstractFactory;
 import com.tech_tec.qiitarian.model.items.Item;
 
-public class ItemsFragment extends Fragment {
+public class ItemsFragment extends Fragment implements FactoryGettable {
     
     private Activity mActivity;
     private PullToRefreshListView mListView;
@@ -56,4 +57,10 @@ public class ItemsFragment extends Fragment {
         super.onDetach();
         mActivity = null;
     }
+
+    @Override
+    public CommandsAbstractFactory getFactory() {
+        return new DefaultCommandsAbstractFactory();
+    }
+
 }
