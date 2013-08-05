@@ -43,6 +43,9 @@
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
             android:name="com.tech_tec.qiitarian.activity.user.UserActivity"></activity>
+        <activity
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:name="com.tech_tec.qiitarian.activity.usersitem.UsersItemActivity"></activity>
     </application>
 
 </manifest>
