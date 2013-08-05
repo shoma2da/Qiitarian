@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.fragment.list.search;
 
+import java.io.UnsupportedEncodingException;
+
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 
@@ -16,7 +18,13 @@ public class SearchClient extends ClientBase {
     
     @Override
     protected HttpUriRequest createRequest() {
-        String url = String.format("https://qiita.com/api/v1/search?q=%s", mSearchWord.toString());
+        String url = "https://qiita.com/api/v1/search?q=";
+        try {
+            String param = mSearchWord.toUrlString();
+            url += param;
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         return new HttpGet(url);
     }
     
