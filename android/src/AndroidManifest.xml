@@ -46,6 +46,9 @@
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
             android:name="com.tech_tec.qiitarian.activity.usersitem.UsersItemActivity"></activity>
+        <activity
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:name="com.tech_tec.qiitarian.activity.userstocks.UserStocksActivity"></activity>
     </application>
 
 </manifest>

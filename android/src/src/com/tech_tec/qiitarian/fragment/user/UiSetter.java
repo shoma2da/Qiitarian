@@ -31,6 +31,7 @@ public class UiSetter {
         setToFollowingCount(user);
         setToFollowerCount(user);
         setToItemCount(user);
+        setToStock(user);
     }
     
     private void setToNameText(User user) {
@@ -98,6 +99,11 @@ public class UiSetter {
         itemCountText.setText("投稿数:" + user.getItemCount());
         
         itemCountText.setOnClickListener(new GotoUsersItemActivityListener(mView.getContext(), user));
+    }
+    
+    private void setToStock(User user) {
+        View stockView = (TextView)mView.findViewById(R.id.text_stock);
+        stockView.setOnClickListener(new GotoUserStocksActivityListener(mView.getContext()));
     }
     
 }
