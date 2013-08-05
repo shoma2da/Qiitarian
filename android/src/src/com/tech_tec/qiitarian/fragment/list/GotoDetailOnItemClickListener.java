@@ -7,7 +7,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.tech_tec.qiitarian.QiitarianLog;
-import com.tech_tec.qiitarian.activity.DetailActivity;
+import com.tech_tec.qiitarian.activity.detail.DetailActivity;
 import com.tech_tec.qiitarian.model.items.Item;
 
 public class GotoDetailOnItemClickListener implements OnItemClickListener {

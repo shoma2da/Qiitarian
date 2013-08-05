@@ -36,7 +36,7 @@
             android:name="com.tech_tec.qiitarian.activity.home.HomeActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:name=".activity.DetailActivity"></activity>
+            android:name="com.tech_tec.qiitarian.activity.detail.DetailActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Black.NoTitleBar"
             android:name="com.tech_tec.qiitarian.activity.tagitems.TagItemsActivity"></activity>
