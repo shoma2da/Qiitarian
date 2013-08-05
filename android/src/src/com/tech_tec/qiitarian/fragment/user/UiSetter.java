@@ -97,7 +97,7 @@ public class UiSetter {
         TextView itemCountText = (TextView)mView.findViewById(R.id.text_item_count);
         itemCountText.setText("投稿数:" + user.getItemCount());
         
-        itemCountText.setOnClickListener(new GotoUsersItemActivityListener(mView.getContext()));
+        itemCountText.setOnClickListener(new GotoUsersItemActivityListener(mView.getContext(), user));
     }
     
 }
