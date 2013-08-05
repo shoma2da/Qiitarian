@@ -2,6 +2,7 @@ package com.tech_tec.qiitarian.fragment.detail;
 
 import java.util.Iterator;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +26,10 @@ public class DetailSetter {
     private View mView;
     private LayoutInflater mInflater;
     
-    public DetailSetter(Detail detail, View view, LayoutInflater inflater) {
+    public DetailSetter(Detail detail, View view, Context context) {
         mDetail = detail;
         mView = view;
-        mInflater = inflater;
+        mInflater = LayoutInflater.from(context);
     }
     
     public void view() {
