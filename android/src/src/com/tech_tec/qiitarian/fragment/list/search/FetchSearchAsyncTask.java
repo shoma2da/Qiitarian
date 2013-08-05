@@ -15,7 +15,7 @@ public class FetchSearchAsyncTask extends FetchTask {
 
     @Override
     protected ItemsFetcher createItemsFetcher(int page) {
-        return new ItemsFetcher(new SearchClient(mSearchWord));
+        return new ItemsFetcher(new SearchClient(mSearchWord, page));
     }
 
 }
