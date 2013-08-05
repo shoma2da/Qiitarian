@@ -3,6 +3,7 @@ package com.tech_tec.qiitarian.model.items;
 import java.io.IOException;
 
 import com.tech_tec.qiitarian.model.common.User;
+import com.tech_tec.qiitarian.model.common.UserUrlName;
 import com.tech_tec.qiitarian.task.icon.IconFechable;
 
 import android.graphics.Bitmap;
@@ -58,6 +59,10 @@ public class Item implements IconFechable {
     
     public String getUuidStr() {
         return mUuid.toString();
+    }
+    
+    public UserUrlName getUserUrlName() {
+        return mUser.getUserUrlName();
     }
     
     @Override

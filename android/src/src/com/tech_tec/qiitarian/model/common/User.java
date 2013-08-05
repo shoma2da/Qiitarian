@@ -32,4 +32,8 @@ public class User {
         return mUrlName.toString();
     }
     
+    public UserUrlName getUserUrlName() {
+        return mUrlName;
+    }
+    
 }

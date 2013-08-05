@@ -53,7 +53,7 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
     }
     
     void setIcon(ImageView iconImage, Item item) {
-        iconImage.setOnClickListener(new GotoUserActivityListener(mContext, item));
+        iconImage.setOnClickListener(new GotoUserActivityListener(mContext, item.getUserUrlName()));
 
         if (item.hasIconImg()) {
             iconImage.setImageBitmap(item.getIconImg());
