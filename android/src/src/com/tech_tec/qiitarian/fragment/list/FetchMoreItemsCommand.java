@@ -28,6 +28,8 @@ public abstract class FetchMoreItemsCommand implements OnScrollListener {
     private Integer mCurrentPage = 1;
     private AsyncTask<Integer, Void, Items> mAsyncTask;
     
+    private boolean mHasMoreConent = true;
+    
     public FetchMoreItemsCommand(ListView listView, LayoutInflater inflater, ArrayAdapter<Item> adapter) {
         mListView = listView;
         mInflater = inflater;
@@ -36,6 +38,10 @@ public abstract class FetchMoreItemsCommand implements OnScrollListener {
 
     @Override
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+        if (mHasMoreConent == false) {
+            return;
+        }
+        
         if (mCurrentPage == MAX_PAGE) {
             return;
         }
@@ -62,6 +68,7 @@ public abstract class FetchMoreItemsCommand implements OnScrollListener {
             }
             @Override
             public void onEmptySuccess() {
+                mHasMoreConent = false;
             }
         };
         UiCallback uiCallback = new UiCallback() {
