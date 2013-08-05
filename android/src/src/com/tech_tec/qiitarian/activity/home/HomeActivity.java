@@ -69,8 +69,11 @@ public class HomeActivity extends FragmentActivity implements FactoryGettable, U
         transaction.commit();
     }
     private void showSearchFragment() {
+        SearchFragment searchFragment = new SearchFragment();
+        mFactoryGettable = searchFragment;
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.content_container, new SearchFragment());
+        transaction.replace(R.id.content_container, searchFragment);
         transaction.commit();
     }
 
