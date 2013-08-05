@@ -39,7 +39,7 @@ public class LoginActivity extends Activity {
                 
                 AuthInfoPreferences preferences = new AuthInfoPreferences(getApplicationContext());
                 AuthInfoFetchAction action = new AuthInfoFetchAction(LoginActivity.this, preferences);
-                new FetchAuthInfoTask(username, password, service, action).execute();
+                new FetchAuthInfoTask(username, password, service, action, LoginActivity.this).execute();
             }
             private LoginService getService() {
                 int checkedId = loginServiceGroup.getCheckedRadioButtonId();

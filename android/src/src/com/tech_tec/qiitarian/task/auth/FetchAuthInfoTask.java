@@ -6,8 +6,10 @@ import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
 
+import android.content.Context;
 import android.os.AsyncTask;
 
+import com.tech_tec.qiitarian.fragment.user.ProgressManager;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.LoginService;
 
@@ -17,12 +19,21 @@ public class FetchAuthInfoTask extends AsyncTask<Void, Void, AuthInfo> {
     private String mPassword;
     private LoginService mService;
     private Callback mCallback;
+
+    private ProgressManager mProgressManager;
     
-    public FetchAuthInfoTask(String username, String password, LoginService service, Callback callback) {
+    public FetchAuthInfoTask(String username, String password, LoginService service, Callback callback, Context context) {
         mUsername = username;
         mPassword = password;
         mService = service;
         mCallback = callback;
+        mProgressManager = new ProgressManager(context);
+    }
+    
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mProgressManager.show();
     }
     
     @Override
@@ -55,6 +66,8 @@ public class FetchAuthInfoTask extends AsyncTask<Void, Void, AuthInfo> {
             return;
         }
         mCallback.onSuccess(result);
+        
+        mProgressManager.dismiss();
     }
     
     public interface Callback {
