@@ -1,11 +1,15 @@
 package com.tech_tec.qiitarian.fragment.user;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.activity.usersitem.UsersItemActivity;
 import com.tech_tec.qiitarian.model.user.User;
 import com.tech_tec.qiitarian.task.icon.FetchIconTask;
 
@@ -96,6 +100,8 @@ public class UiSetter {
     private void setToItemCount(User user) {
         TextView itemCountText = (TextView)mView.findViewById(R.id.text_item_count);
         itemCountText.setText("投稿数:" + user.getItemCount());
+        
+        itemCountText.setOnClickListener(new GotoUsersItemActivityListener(mView.getContext()));
     }
     
 }
