@@ -26,7 +26,7 @@ public class TagsFragment extends Fragment {
         gridView.setOnItemClickListener(new GotoTagItemsListener(getActivity()));
         
         AuthInfo authInfo = new AuthInfoPreferences(getActivity()).load();
-        new FetchTagsAsyncTask(authInfo.getUrlName(), new FetchTagsCallback(adapter)).execute();
+        new FetchTagsAsyncTask(authInfo.getUrlName(), new FetchTagsCallback(adapter, getActivity())).execute();
         
         return view;
     }
