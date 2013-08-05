@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.user.FetchUserAsyncTask.Callback;
-import com.tech_tec.qiitarian.model.common.UserUrlName;
 
 public class UserFragment extends Fragment {
     
