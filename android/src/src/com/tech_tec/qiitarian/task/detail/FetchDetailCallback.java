@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
-import com.tech_tec.qiitarian.fragment.detail.ui.DetailSetter;
+import com.tech_tec.qiitarian.fragment.detail.DetailSetter;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.task.detail.FetchDetailAsyncTask.Callback;
 

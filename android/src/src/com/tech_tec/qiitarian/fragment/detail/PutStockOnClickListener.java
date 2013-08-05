@@ -1,4 +1,4 @@
-package com.tech_tec.qiitarian.fragment.detail.ui;
+package com.tech_tec.qiitarian.fragment.detail;
 
 import java.io.IOException;
 
