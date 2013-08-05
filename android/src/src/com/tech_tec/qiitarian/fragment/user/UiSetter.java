@@ -103,7 +103,7 @@ public class UiSetter {
     
     private void setToStock(User user) {
         View stockView = (TextView)mView.findViewById(R.id.text_stock);
-        stockView.setOnClickListener(new GotoUserStocksActivityListener(mView.getContext()));
+        stockView.setOnClickListener(new GotoUserStocksActivityListener(mView.getContext(), user));
     }
     
 }
