@@ -8,5 +8,7 @@
     <string name="list_empty_message">No Items...</string>
     
     <string name="tagitems_list_title">「%1$s」の投稿一覧</string>
+    
+    <string name="facebook_url">http://facebook.com/</string>
 
 </resources>

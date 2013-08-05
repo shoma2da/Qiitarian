@@ -60,8 +60,8 @@ public class UiSetter {
             facebookText.setVisibility(View.GONE);
             return;
         }
-        
         facebookText.setText("FACEBOOK:" + user.getFacebookName());
+        facebookText.setOnClickListener(new GotoFacebookPageListener(user, mView.getContext()));
     }
     
     private void setToTwitterName(User user) {
