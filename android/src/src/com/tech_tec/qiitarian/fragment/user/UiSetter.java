@@ -70,8 +70,8 @@ public class UiSetter {
             twitterText.setVisibility(View.GONE);
             return;
         }
-        
         twitterText.setText("TWITTER:" + user.getTwitterName());
+        twitterText.setOnClickListener(new GotoTwitterPageListener(user, mView.getContext()));
     }
     
     private void setToGithubName(User user) {
