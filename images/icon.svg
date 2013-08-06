@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="qiitarian.svg"
+   inkscape:export-filename="/Users/shoma2da/Desktop/qiitarian.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4344">
+      <stop
+         style="stop-color:#009b0d;stop-opacity:1;"
+         offset="0"
+         id="stop4346" />
+      <stop
+         style="stop-color:#59f44e;stop-opacity:1"
+         offset="1"
+         id="stop4348" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4085"
+       inkscape:collect="always">
+      <stop
+         id="stop4087"
+         offset="0"
+         style="stop-color:#06ff00;stop-opacity:1;" />
+      <stop
+         id="stop4089"
+         offset="1"
+         style="stop-color:#f8ffeb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3964">
+      <stop
+         style="stop-color:#06ff00;stop-opacity:1;"
+         offset="0"
+         id="stop3966" />
+      <stop
+         style="stop-color:#a9ff00;stop-opacity:1"
+         offset="1"
+         id="stop3968" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3053"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3049"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3045"
+       is_visible="true" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3964"
+       id="linearGradient3970"
+       x1="112.16399"
+       y1="462.05789"
+       x2="205.35909"
+       y2="363.29587"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3964-5"
+       id="linearGradient3970-1"
+       x1="112.16399"
+       y1="462.05789"
+       x2="205.35909"
+       y2="363.29587"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3964-5">
+      <stop
+         style="stop-color:#06ff00;stop-opacity:1;"
+         offset="0"
+         id="stop3966-1" />
+      <stop
+         style="stop-color:#a9ff00;stop-opacity:1"
+         offset="1"
+         id="stop3968-6" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(0.79667985,0,0,0.81958917,-1.008288,80.289878)"
+       y2="363.29587"
+       x2="205.35909"
+       y1="462.05789"
+       x1="112.16399"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4044"
+       xlink:href="#linearGradient3964"
+       inkscape:collect="always" />
+    <filter
+       inkscape:collect="always"
+       id="filter4186">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.3078"
+         id="feGaussianBlur4188" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4085-1"
+       id="linearGradient4308-4"
+       gradientUnits="userSpaceOnUse"
+       x1="203.50342"
+       y1="445.35699"
+       x2="121.44228"
+       y2="353.60522"
+       gradientTransform="translate(5.9793308,-14.639051)" />
+    <linearGradient
+       id="linearGradient4085-1"
+       inkscape:collect="always">
+      <stop
+         id="stop4087-6"
+         offset="0"
+         style="stop-color:#06ff00;stop-opacity:1;" />
+      <stop
+         id="stop4089-3"
+         offset="1"
+         style="stop-color:#f8ffeb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4344"
+       id="linearGradient4397"
+       gradientUnits="userSpaceOnUse"
+       x1="218.14247"
+       y1="437.52206"
+       x2="300.82217"
+       y2="345.1517" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4085"
+       id="linearGradient4424"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(5.9793308,-14.639051)"
+       x1="203.50342"
+       y1="445.35699"
+       x2="121.44228"
+       y2="353.60522" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.8500412"
+     inkscape:cx="211.88161"
+     inkscape:cy="672.7518"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1436"
+     inkscape:window-height="856"
+     inkscape:window-x="4"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Avenir;-inkscape-font-specification:Avenir Ultra-Bold"
+       x="129.48344"
+       y="420.74182"
+       id="text3796"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="129.48344"
+         y="420.74182"
+         id="tspan3800" /></text>
+    <g
+       id="g4445"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         ry="20"
+         rx="20"
+         y="320.36218"
+         x="123"
+         height="69"
+         width="69"
+         id="rect3956-9"
+         style="fill:#069b00;fill-opacity:1" />
+      <g
+         transform="translate(-13.358261,-32.180603)"
+         id="g4410">
+        <rect
+           style="fill:url(#linearGradient4424);fill-opacity:1"
+           id="rect3956"
+           width="69"
+           height="69"
+           x="133.35826"
+           y="355.54279"
+           rx="20"
+           ry="20"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <g
+           transform="translate(40.824393,25.360622)"
+           id="g4322">
+          <text
+             xml:space="preserve"
+             style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter4186);font-family:Sans"
+             x="100.05472"
+             y="373.8024"
+             id="text3804-0"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               x="100.05472"
+               y="373.8024"
+               id="tspan3808-1"
+               style="font-size:40px;font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;fill:#3c3c3c;fill-opacity:1;font-family:Avenir;-inkscape-font-specification:Avenir Ultra-Bold">Q</tspan></text>
+          <g
+             transform="translate(-34.845065,-36.668601)"
+             id="g3824">
+            <text
+               xml:space="preserve"
+               style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+               x="133.53143"
+               y="409.27484"
+               id="text3804"
+               sodipodi:linespacing="125%"><tspan
+                 sodipodi:role="line"
+                 x="133.53143"
+                 y="409.27484"
+                 id="tspan3808"
+                 style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Avenir;-inkscape-font-specification:Avenir"><tspan
+                   style="font-size:40px;font-weight:800;letter-spacing:3px;fill:#f9f9f9;fill-opacity:1;-inkscape-font-specification:Avenir Ultra-Bold"
+                   id="tspan3810">Q</tspan><tspan
+                   id="tspan3909"
+                   style="fill:#004f47;fill-opacity:1"><tspan
+   style="letter-spacing:-0.04px"
+   id="tspan4251">i</tspan>ita </tspan></tspan></text>
+            <text
+               xml:space="preserve"
+               style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+               x="150.26056"
+               y="425.27469"
+               id="text3820"
+               sodipodi:linespacing="125%"><tspan
+                 sodipodi:role="line"
+                 id="tspan3822"
+                 x="150.26056"
+                 y="425.27469"
+                 style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#004f47;fill-opacity:1;font-family:Avenir;-inkscape-font-specification:Avenir">rian</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       ry="10"
+       rx="10"
+       y="353.39905"
+       x="227.62692"
+       height="72"
+       width="72"
+       id="rect4334"
+       style="fill:url(#linearGradient4397);fill-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4336"
+       y="411.59573"
+       x="235.0656"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Chalkboard;-inkscape-font-specification:Chalkboard Bold"
+       xml:space="preserve"><tspan
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Chalkboard;-inkscape-font-specification:Chalkboard Bold"
+         y="411.59573"
+         x="235.0656"
+         id="tspan4338"
+         sodipodi:role="line">Q</tspan></text>
+  </g>
+</svg>
