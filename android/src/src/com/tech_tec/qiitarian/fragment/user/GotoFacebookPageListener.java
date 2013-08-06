@@ -21,8 +21,9 @@ public class GotoFacebookPageListener implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        String urlBase = mContext.getString(R.string.facebook_url);
-        Uri uri = Uri.parse(urlBase + mUser.getFacebookName());
+        String urlStr = mContext.getString(R.string.facebook_url, mUser.getFacebookName());
+
+        Uri uri = Uri.parse(urlStr);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         mContext.startActivity(intent);
     }
