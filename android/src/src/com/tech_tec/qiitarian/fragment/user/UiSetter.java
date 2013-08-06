@@ -82,6 +82,7 @@ public class UiSetter {
         }
         
         githubText.setText("GITHUB:" + user.getGithubName());
+        githubText.setOnClickListener(new GotoGithubPageListener(user, mView.getContext()));
     }
     
     private void setToFollowingCount(User user) {
