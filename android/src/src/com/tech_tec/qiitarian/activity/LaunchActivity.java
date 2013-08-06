@@ -2,6 +2,7 @@ package com.tech_tec.qiitarian.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.tech_tec.qiitarian.R;
@@ -18,6 +19,10 @@ public class LaunchActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
         
+        new WaitAsyncTask().execute();
+    }
+    
+    private void gotoNextActivity() {
         mAuthInfo = loadAuthInfo();
         
         if (hasAuthInfo()) {
@@ -27,6 +32,8 @@ public class LaunchActivity extends Activity {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
+        
+        finish();
     }
     
     private boolean hasAuthInfo() {
@@ -35,5 +42,23 @@ public class LaunchActivity extends Activity {
     
     private AuthInfo loadAuthInfo() {
         return new AuthInfoPreferences(getApplicationContext()).load();
+    }
+    
+    private class WaitAsyncTask extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            gotoNextActivity();
+        }
     }
 }
