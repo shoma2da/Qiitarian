@@ -29,4 +29,8 @@ public class AuthInfo {
         return mUrlName;
     }
     
+    public boolean isValid() {
+        return mToken != null &&  mToken.toString().length() != 0;
+    }
+    
 }

@@ -12,8 +12,6 @@ import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 
 public class LaunchActivity extends Activity {
     
-    private AuthInfo mAuthInfo;
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +21,9 @@ public class LaunchActivity extends Activity {
     }
     
     private void gotoNextActivity() {
-        mAuthInfo = loadAuthInfo();
+        AuthInfo authInfo = loadAuthInfo();
         
-        if (hasAuthInfo()) {
+        if (authInfo != null && authInfo.isValid()) {
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         } else {
@@ -34,10 +32,6 @@ public class LaunchActivity extends Activity {
         }
         
         finish();
-    }
-    
-    private boolean hasAuthInfo() {
-        return mAuthInfo != null && mAuthInfo.getTokenStr() != null &&  mAuthInfo.getTokenStr().length() != 0;
     }
     
     private AuthInfo loadAuthInfo() {
