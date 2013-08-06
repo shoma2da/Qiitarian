@@ -180,7 +180,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.85737426"
      inkscape:cx="477.50931"
-     inkscape:cy="267.36923"
+     inkscape:cy="220.71516"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -388,7 +388,8 @@
        id="g3902"
        transform="translate(29.509766,88.913581)"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/Users/shoma2da/Desktop/hdpi.png">
       <rect
          ry="0"
          rx="0"
@@ -496,7 +497,8 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        transform="matrix(1.3333333,0,0,1.3333333,28.761454,-110.03336)"
-       id="g3924">
+       id="g3924"
+       inkscape:export-filename="/Users/shoma2da/Desktop/xhdpi.png">
       <rect
          style="fill:none;stroke:none"
          id="rect3926"
@@ -604,7 +606,8 @@
        id="g3966"
        transform="matrix(2,0,0,2,-48.742065,-507.9273)"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/Users/shoma2da/Desktop/xxhdpi.png">
       <rect
          ry="0"
          rx="0"
@@ -712,7 +715,8 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        transform="matrix(0.66666667,0,0,0.66666667,54.258086,287.86054)"
-       id="g4008">
+       id="g4008"
+       inkscape:export-filename="/Users/shoma2da/Desktop/mdpi.png">
       <rect
          style="fill:none;stroke:none"
          id="rect4010"
@@ -820,7 +824,8 @@
        id="g4050"
        transform="matrix(0.5,0,0,0.5,40.628815,387.33402)"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/Users/shoma2da/Desktop/ldpi.png">
       <rect
          ry="0"
          rx="0"
