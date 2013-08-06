@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="qiitarian.svg"
+   sodipodi:docname="icon.svg"
    inkscape:export-filename="/Users/shoma2da/Desktop/qiitarian.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -158,6 +158,30 @@
        y1="445.35699"
        x2="121.44228"
        y2="353.60522" />
+    <filter
+       inkscape:collect="always"
+       id="filter4239"
+       x="-0.24032967"
+       width="1.4806593"
+       y="-2.1336587"
+       height="5.2673174">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.5154002"
+         id="feGaussianBlur4241" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4440"
+       x="-0.21051852"
+       width="1.421037"
+       y="-1.0030589"
+       height="3.0061177">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="5.8597442"
+         id="feGaussianBlur4442" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -167,8 +191,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.8500412"
-     inkscape:cx="211.88161"
-     inkscape:cy="672.7518"
+     inkscape:cx="252.33497"
+     inkscape:cy="485.08294"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -187,7 +211,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -195,6 +219,15 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       ry="20"
+       rx="20"
+       y="517.79077"
+       x="53.765041"
+       height="89.896141"
+       width="89.896141"
+       id="rect3284"
+       style="fill:#808080;fill-opacity:1" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Avenir;-inkscape-font-specification:Avenir Ultra-Bold"
@@ -207,82 +240,85 @@
          y="420.74182"
          id="tspan3800" /></text>
     <g
-       id="g4445"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <rect
+       id="g3028">
+      <g
          inkscape:export-ydpi="90"
          inkscape:export-xdpi="90"
-         ry="20"
-         rx="20"
-         y="320.36218"
-         x="123"
-         height="69"
-         width="69"
-         id="rect3956-9"
-         style="fill:#069b00;fill-opacity:1" />
-      <g
-         transform="translate(-13.358261,-32.180603)"
-         id="g4410">
+         id="g4445">
         <rect
-           style="fill:url(#linearGradient4424);fill-opacity:1"
-           id="rect3956"
+           style="fill:#069b00;fill-opacity:1"
+           id="rect3956-9"
            width="69"
            height="69"
-           x="133.35826"
-           y="355.54279"
+           x="123"
+           y="320.36218"
            rx="20"
            ry="20"
            inkscape:export-xdpi="90"
            inkscape:export-ydpi="90" />
         <g
-           transform="translate(40.824393,25.360622)"
-           id="g4322">
-          <text
-             xml:space="preserve"
-             style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter4186);font-family:Sans"
-             x="100.05472"
-             y="373.8024"
-             id="text3804-0"
-             sodipodi:linespacing="125%"><tspan
-               sodipodi:role="line"
-               x="100.05472"
-               y="373.8024"
-               id="tspan3808-1"
-               style="font-size:40px;font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;fill:#3c3c3c;fill-opacity:1;font-family:Avenir;-inkscape-font-specification:Avenir Ultra-Bold">Q</tspan></text>
+           id="g4410"
+           transform="translate(-13.358261,-32.180603)">
+          <rect
+             inkscape:export-ydpi="90"
+             inkscape:export-xdpi="90"
+             ry="20"
+             rx="20"
+             y="355.54279"
+             x="133.35826"
+             height="69"
+             width="69"
+             id="rect3956"
+             style="fill:url(#linearGradient4424);fill-opacity:1" />
           <g
-             transform="translate(-34.845065,-36.668601)"
-             id="g3824">
+             id="g4322"
+             transform="translate(40.824393,25.360622)">
             <text
-               xml:space="preserve"
-               style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-               x="133.53143"
-               y="409.27484"
-               id="text3804"
-               sodipodi:linespacing="125%"><tspan
-                 sodipodi:role="line"
-                 x="133.53143"
+               sodipodi:linespacing="125%"
+               id="text3804-0"
+               y="373.8024"
+               x="100.05472"
+               style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter4186);font-family:Sans"
+               xml:space="preserve"><tspan
+                 style="font-size:40px;font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;fill:#3c3c3c;fill-opacity:1;font-family:Avenir;-inkscape-font-specification:Avenir Ultra-Bold"
+                 id="tspan3808-1"
+                 y="373.8024"
+                 x="100.05472"
+                 sodipodi:role="line">Q</tspan></text>
+            <g
+               id="g3824"
+               transform="translate(-34.845065,-36.668601)">
+              <text
+                 sodipodi:linespacing="125%"
+                 id="text3804"
                  y="409.27484"
-                 id="tspan3808"
-                 style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Avenir;-inkscape-font-specification:Avenir"><tspan
-                   style="font-size:40px;font-weight:800;letter-spacing:3px;fill:#f9f9f9;fill-opacity:1;-inkscape-font-specification:Avenir Ultra-Bold"
-                   id="tspan3810">Q</tspan><tspan
-                   id="tspan3909"
-                   style="fill:#004f47;fill-opacity:1"><tspan
-   style="letter-spacing:-0.04px"
-   id="tspan4251">i</tspan>ita </tspan></tspan></text>
-            <text
-               xml:space="preserve"
-               style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-               x="150.26056"
-               y="425.27469"
-               id="text3820"
-               sodipodi:linespacing="125%"><tspan
-                 sodipodi:role="line"
-                 id="tspan3822"
-                 x="150.26056"
+                 x="133.53143"
+                 style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+                 xml:space="preserve"><tspan
+                   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Avenir;-inkscape-font-specification:Avenir"
+                   id="tspan3808"
+                   y="409.27484"
+                   x="133.53143"
+                   sodipodi:role="line"><tspan
+                     id="tspan3810"
+                     style="font-size:40px;font-weight:800;letter-spacing:3px;fill:#f9f9f9;fill-opacity:1;-inkscape-font-specification:Avenir Ultra-Bold">Q</tspan><tspan
+                     style="fill:#004f47;fill-opacity:1"
+                     id="tspan3909"><tspan
+   id="tspan4251"
+   style="letter-spacing:-0.04px">i</tspan>ita </tspan></tspan></text>
+              <text
+                 sodipodi:linespacing="125%"
+                 id="text3820"
                  y="425.27469"
-                 style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#004f47;fill-opacity:1;font-family:Avenir;-inkscape-font-specification:Avenir">rian</tspan></text>
+                 x="150.26056"
+                 style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+                 xml:space="preserve"><tspan
+                   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#004f47;fill-opacity:1;font-family:Avenir;-inkscape-font-specification:Avenir"
+                   y="425.27469"
+                   x="150.26056"
+                   id="tspan3822"
+                   sodipodi:role="line">rian</tspan></text>
+            </g>
           </g>
         </g>
       </g>
@@ -310,5 +346,119 @@
          x="235.0656"
          id="tspan4338"
          sodipodi:role="line">Q</tspan></text>
+    <rect
+       style="fill:#06b800;fill-opacity:1"
+       id="rect3093"
+       width="89.896141"
+       height="89.896141"
+       x="53.765041"
+       y="516.49042"
+       rx="20"
+       ry="20" />
+    <path
+       style="fill:#eeeeee;fill-opacity:1"
+       d="m 123.66624,606.38658 c 11.08,0 20,-6.64048 20,-14.88896 l 0,-4.93197 -89.90626,0 0,4.93197 c 0,8.24848 8.92,14.88896 20,14.88896 l 49.90626,0 z"
+       id="rect3207"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3286"
+       width="44.123341"
+       height="30.515205"
+       x="76.651436"
+       y="533.48004"
+       rx="8.2475224"
+       ry="7.6289706" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.4000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 78.300111,573.32067 40.825999,-0.0461"
+       id="path4056"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="64.266815"
+       y="600.20105"
+       id="text4060"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4062"
+         x="64.266815"
+         y="600.20105"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial Hebrew;-inkscape-font-specification:Arial Hebrew">QiiTARiAN</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#84ff81;fill-opacity:1;stroke:none;filter:url(#filter4239)"
+       id="path4064"
+       sodipodi:cx="113.60728"
+       sodipodi:cy="448.55289"
+       sodipodi:rx="37.525455"
+       sodipodi:ry="4.226768"
+       d="m 151.13273,448.55289 a 37.525455,4.226768 0 1 1 -75.050909,0 37.525455,4.226768 0 1 1 75.050909,0 z"
+       transform="translate(-14.845235,77.112747)" />
+    <rect
+       style="fill:#808080;fill-opacity:1"
+       id="rect4274"
+       width="89.896141"
+       height="89.896141"
+       x="202.62975"
+       y="514.07947"
+       rx="20"
+       ry="20" />
+    <rect
+       ry="20"
+       rx="20"
+       y="512.77911"
+       x="202.62975"
+       height="89.896141"
+       width="89.896141"
+       id="rect4276"
+       style="fill:#f4fefc;fill-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4278"
+       d="m 272.53095,602.67527 c 11.08,0 20,-6.64048 20,-14.88896 l 0,-4.93197 -89.90626,0 0,4.93197 c 0,8.24848 8.92,14.88896 20,14.88896 l 49.90626,0 z"
+       style="fill:#28f046;fill-opacity:1" />
+    <rect
+       ry="3.0929234"
+       rx="5.3609548"
+       y="531.76874"
+       x="225.51614"
+       height="30.515205"
+       width="44.123341"
+       id="rect4280"
+       style="fill:none;stroke:#28f046;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4282"
+       d="m 224.07207,569.60936 47.01151,-0.0461"
+       style="fill:none;stroke:#28f046;stroke-width:4.9000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4284"
+       y="596.48975"
+       x="213.13153"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#f7fefc;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial Hebrew;-inkscape-font-specification:Arial Hebrew;fill:#f7fefc;fill-opacity:1"
+         y="596.48975"
+         x="213.13153"
+         id="tspan4286"
+         sodipodi:role="line">QiiTARiAN</tspan></text>
+    <path
+       style="fill:none;stroke:#28f046;stroke-width:0.60000001999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 228.14757,537.20459 2.47421,-2.4742"
+       id="path4444"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4446"
+       d="m 228.47453,539.54549 4.84533,-4.84532"
+       style="fill:none;stroke:#28f046;stroke-width:0.59999996;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       style="fill:none;stroke:#28f046;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 228.5651,542.57783 7.9381,-7.93807"
+       id="path4448"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
