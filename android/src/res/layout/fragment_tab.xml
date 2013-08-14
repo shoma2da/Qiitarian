@@ -18,28 +18,32 @@
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="最新"
+            android:background="@drawable/tab_new"
+            android:button="@null"
             />
         <RadioButton
             android:id="@+id/radio_tags"
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="タグ"
+            android:background="@drawable/tab_tag"
+            android:button="@null"
             />
         <RadioButton
             android:id="@+id/radio_user"
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="ユーザ"
+            android:background="@drawable/tab_user"
+            android:button="@null"
             />
         <RadioButton
             android:id="@+id/radio_search"
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="検索"
+            android:background="@drawable/tab_search"
+            android:button="@null"
             />
     </RadioGroup>
     
