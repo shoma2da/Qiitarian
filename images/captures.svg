@@ -158,9 +158,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="-977.7637"
-     inkscape:cy="34.062305"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="-1520.6505"
+     inkscape:cy="461.7393"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -804,15 +804,6 @@
            x="-1360.3232"
            y="1892.1002" /></text>
     </g>
-    <rect
-       style="fill:#64c914;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect4320"
-       width="498.68561"
-       height="93.503555"
-       x="-1581.3701"
-       y="1825.2841"
-       rx="18.181246"
-       ry="15.583983" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -872,18 +863,30 @@
            id="tspan4332"
            sodipodi:role="line">パスワード</tspan></text>
     </g>
-    <text
-       xml:space="preserve"
-       style="font-size:86.77493286px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="-1445.5825"
-       y="1900.7583"
-       id="text4334"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4336"
-         x="-1445.5825"
+    <g
+       id="g6706">
+      <rect
+         ry="15.583983"
+         rx="18.181246"
+         y="1825.2841"
+         x="-1581.3701"
+         height="93.503555"
+         width="498.68561"
+         id="rect4320"
+         style="fill:#64c914;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4334"
          y="1900.7583"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:STHeiti;-inkscape-font-specification:STHeiti">Login</tspan></text>
+         x="-1445.5825"
+         style="font-size:86.77493286px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:STHeiti;-inkscape-font-specification:STHeiti"
+           y="1900.7583"
+           x="-1445.5825"
+           id="tspan4336"
+           sodipodi:role="line">Login</tspan></text>
+    </g>
     <image
        y="1372.0344"
        x="-1334.3516"
@@ -6491,6 +6494,53 @@ rkJggg==
          id="image6682"
          x="-1664.2283"
          y="583.71948" />
+    </g>
+    <rect
+       ry="15.583983"
+       rx="18.181246"
+       y="442.78763"
+       x="-1661.3702"
+       height="92"
+       width="500"
+       id="rect6713"
+       style="fill:#64c914;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text6715"
+       y="521.94269"
+       x="-1510.9221"
+       style="font-size:86.18778229px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       transform="scale(1.0094661,0.99062269)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:STHeiti;-inkscape-font-specification:STHeiti"
+         y="521.94269"
+         x="-1510.9221"
+         id="tspan6717"
+         sodipodi:role="line">Login</tspan></text>
+    <g
+       id="g6750">
+      <rect
+         ry="15.583983"
+         rx="18.181246"
+         y="336.78763"
+         x="-1661.3702"
+         height="92"
+         width="500"
+         id="rect6744"
+         style="fill:#fba514;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text6746"
+         y="414.9393"
+         x="-1510.9221"
+         style="font-size:86.18778229px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"
+         transform="scale(1.0094661,0.99062268)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:STHeiti;-inkscape-font-specification:STHeiti"
+           y="414.9393"
+           x="-1510.9221"
+           id="tspan6748"
+           sodipodi:role="line">Login</tspan></text>
     </g>
   </g>
 </svg>
