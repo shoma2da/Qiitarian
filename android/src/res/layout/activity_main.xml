@@ -3,15 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/white"
     >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Qiitaにログインしてください"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <LinearLayout
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -24,15 +20,19 @@
             android:checkedButton="@+id/radio_login_by_twitter"
             >
             <RadioButton
-                android:id="@+id/radio_login_by_twitter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Twitter" />
-            <RadioButton
                 android:id="@+id/radio_login_by_github"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/radio_github_current"
                 android:text="github" />
+            <RadioButton
+                android:id="@+id/radio_login_by_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/radio_twitter"
+                android:text="Twitter" />
         </RadioGroup>
     </LinearLayout>
 
