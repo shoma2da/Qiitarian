@@ -24,15 +24,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:background="@drawable/radio_github_current"
-                android:text="github" />
+                android:background="@drawable/selector_radio_github"
+                />
             <RadioButton
                 android:id="@+id/radio_login_by_twitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:background="@drawable/radio_twitter"
-                android:text="Twitter" />
+                android:background="@drawable/selector_radio_twitter"
+                />
         </RadioGroup>
     </LinearLayout>
 
