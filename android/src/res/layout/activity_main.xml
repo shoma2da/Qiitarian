@@ -54,6 +54,22 @@
         android:layout_gravity="center"
         android:background="@drawable/selector_button_login"
         />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_qiita"
+        android:textColor="@color/gray"
+        android:gravity="right"
+        android:layout_gravity="right"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goto_qiita"
+        android:textColor="@color/green"
+        android:layout_gravity="right"
+        />
 
 </LinearLayout>
 
