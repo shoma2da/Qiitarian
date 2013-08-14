@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="ユーザ名"
+        android:background="@drawable/shape_text_frame"
         android:singleLine="true" />
     
     <EditText
@@ -42,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:background="@drawable/shape_text_frame"
         android:hint="パスワード"
         android:singleLine="true" />
 
