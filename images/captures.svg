@@ -126,8 +126,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="518.58163"
-     inkscape:cy="-570.08263"
+     inkscape:cx="918.58163"
+     inkscape:cy="-800.60792"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2475,17 +2475,17 @@ rkJggg==
     <text
        sodipodi:linespacing="125%"
        id="text5051"
-       y="1696.4152"
+       y="1706.4152"
        x="452.08572"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="text-align:center;text-anchor:middle"
          id="tspan5055"
-         y="1696.4152"
+         y="1706.4152"
          x="452.08572"
          sodipodi:role="line">Stock</tspan><tspan
-         style="text-align:center;text-anchor:middle"
-         y="1746.4323"
+         style="font-size:24px;text-align:center;text-anchor:middle"
+         y="1740.4774"
          x="452.08572"
          sodipodi:role="line"
          id="tspan5141">している投稿を見る</tspan></text>
@@ -2659,5 +2659,262 @@ QqbpEqREVRXUhucaQ07hNnAXUsr/CbURUaJEifIL5P8C1delIQZ6ORUAAAAASUVORK5CYII=
 "
        height="50"
        width="204.86111" />
+    <g
+       id="g5149"
+       transform="translate(2,0)">
+      <rect
+         rx="0"
+         y="1258.3622"
+         x="728"
+         height="68"
+         width="720"
+         id="rect5143"
+         style="fill:#64c914;fill-opacity:1;stroke:#cccccc;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5145"
+         y="1308.1434"
+         x="886.50586"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="1308.1434"
+           x="886.50586"
+           id="tspan5147"
+           sodipodi:role="line">フォローしているタグ</tspan></text>
+    </g>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5154"
+       width="236"
+       height="202"
+       x="816.74915"
+       y="1392.3622" />
+    <rect
+       y="1392.3622"
+       x="1124.7491"
+       height="202"
+       width="236"
+       id="rect5156"
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5158"
+       width="236"
+       height="202"
+       x="816.74915"
+       y="1644.3622" />
+    <rect
+       y="1644.3622"
+       x="1124.7491"
+       height="202"
+       width="236"
+       id="rect5160"
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5162"
+       width="236"
+       height="202"
+       x="816.74915"
+       y="1896.3621" />
+    <rect
+       y="1896.3621"
+       x="1124.7491"
+       height="202"
+       width="236"
+       id="rect5164"
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5166"
+       width="236"
+       height="202"
+       x="816.74915"
+       y="2148.3621" />
+    <rect
+       y="2148.3621"
+       x="1124.7491"
+       height="202"
+       width="236"
+       id="rect5168"
+       style="fill:#ffffff;fill-opacity:1;stroke:#64c914;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       id="rect5180"
+       width="102"
+       height="104"
+       x="882"
+       y="1420.3622"
+       rx="0"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       x="892"
+       y="1574.3622"
+       id="text5190"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5192"
+         x="892"
+         y="1574.3622">Java</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="1420.3622"
+       x="1188"
+       height="104"
+       width="102"
+       id="rect5194"
+       style="fill:#cccccc;fill-opacity:1;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5196"
+       y="1574.3622"
+       x="1198"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="1574.3622"
+         x="1198"
+         id="tspan5198"
+         sodipodi:role="line">Java</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="1664.3622"
+       x="882"
+       height="104"
+       width="102"
+       id="rect5206"
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       inkscape:transform-center-y="-251.00391" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5208"
+       y="1818.3622"
+       x="892"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:transform-center-x="1.5957031"
+       inkscape:transform-center-y="-159.58008"><tspan
+         y="1818.3622"
+         x="892"
+         id="tspan5210"
+         sodipodi:role="line">Java</tspan></text>
+    <rect
+       inkscape:transform-center-y="-251.00391"
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       id="rect5212"
+       width="102"
+       height="104"
+       x="882"
+       y="1918.3622"
+       rx="0"
+       ry="0" />
+    <text
+       inkscape:transform-center-y="-159.58008"
+       inkscape:transform-center-x="1.5957031"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       x="892"
+       y="2072.3621"
+       id="text5214"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216"
+         x="892"
+         y="2072.3621">Java</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="2170.3621"
+       x="882"
+       height="104"
+       width="102"
+       id="rect5218"
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       inkscape:transform-center-y="-251.00391" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5220"
+       y="2324.3621"
+       x="892"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:transform-center-x="1.5957031"
+       inkscape:transform-center-y="-159.58008"><tspan
+         y="2324.3621"
+         x="892"
+         id="tspan5222"
+         sodipodi:role="line">Java</tspan></text>
+    <rect
+       inkscape:transform-center-y="-251.00391"
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       id="rect5224"
+       width="102"
+       height="104"
+       x="1194"
+       y="1664.3622"
+       rx="0"
+       ry="0" />
+    <text
+       inkscape:transform-center-y="-159.58008"
+       inkscape:transform-center-x="1.5957031"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1204"
+       y="1818.3622"
+       id="text5226"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5228"
+         x="1204"
+         y="1818.3622">Java</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="1920.3622"
+       x="1194"
+       height="104"
+       width="102"
+       id="rect5230"
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       inkscape:transform-center-y="-251.00391" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5232"
+       y="2074.3621"
+       x="1204"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:transform-center-x="1.5957031"
+       inkscape:transform-center-y="-159.58008"><tspan
+         y="2074.3621"
+         x="1204"
+         id="tspan5234"
+         sodipodi:role="line">Java</tspan></text>
+    <rect
+       inkscape:transform-center-y="-251.00391"
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       id="rect5236"
+       width="102"
+       height="104"
+       x="1194"
+       y="2174.3621"
+       rx="0"
+       ry="0" />
+    <text
+       inkscape:transform-center-y="-159.58008"
+       inkscape:transform-center-x="1.5957031"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#888888;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1204"
+       y="2328.3621"
+       id="text5238"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5240"
+         x="1204"
+         y="2328.3621">Java</tspan></text>
   </g>
 </svg>
