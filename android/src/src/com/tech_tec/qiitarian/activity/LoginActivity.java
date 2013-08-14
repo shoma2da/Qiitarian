@@ -1,6 +1,8 @@
 package com.tech_tec.qiitarian.activity;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -53,6 +55,14 @@ public class LoginActivity extends Activity {
             }
         });
         
+        findViewById(R.id.text_goto_qiita).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Uri uri = Uri.parse("https://qiita.com/settings/password");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
     }
 
 }
