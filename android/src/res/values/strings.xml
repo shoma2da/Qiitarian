@@ -19,5 +19,7 @@
     <string name="facebook_url">http://facebook.com/%1$s</string>
     <string name="twitter_url">http://twitter.com/%1$s</string>
     <string name="github_url">http://github.com/%1$s</string>
+    
+    <string name="your_tags">フォロー中のタグ</string>
 
 </resources>
