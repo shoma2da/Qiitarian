@@ -9,6 +9,7 @@
         android:id="@+id/image_item_user_profile"
         android:layout_width="50dip"
         android:layout_height="50dip"
+        android:contentDescription="@null"
         android:src="@drawable/no_image" />
     
     <LinearLayout
