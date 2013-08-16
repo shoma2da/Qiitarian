@@ -48,14 +48,15 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         titleText.setText(item.getArticleTitle());
         usernameText.setText(item.getUserName());
         createdAtText.setText(item.getCreatedAt());
+        //tagsLayout.setText(item.getTagsText());
         Iterator<Tag> tagsIterator = item.getTagIterator();
         while(tagsIterator.hasNext()) {
             TextView tagText = (TextView)mInflater.inflate(R.layout.text_tag, null);
             tagText.setText(tagsIterator.next().toString());
             tagsLayout.addView(tagText);
         }
-        stockCountText.setText("ストック数：" + item.getStockCount());
-        commentCountText.setText("コメント数：" + item.getCommentCount());
+        stockCountText.setText("" + item.getStockCount());
+        commentCountText.setText("" + item.getCommentCount());
         setIcon(iconImage, item);
         
         return view;
