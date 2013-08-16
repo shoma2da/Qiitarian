@@ -20,18 +20,24 @@
             android:id="@+id/text_item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:text="記事タイトル" />
 
         <TextView
             android:id="@+id/text_item_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
             android:text="投稿者" />
 
         <TextView
             android:id="@+id/text_item_created_at"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
             android:text="投稿日時" />
 
         <TextView
@@ -50,6 +56,8 @@
             android:id="@+id/text_item_comment_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
             android:text="コメント数" />
         
     </LinearLayout>
