@@ -11,15 +11,6 @@ public class Tags {
         mTagList.add(tag);
     }
     
-    public String getTagsText() {
-        StringBuilder builder = new StringBuilder();
-        for(Tag tag : mTagList) {
-            builder.append(tag.toString() + " ");
-        }
-        
-        return builder.toString();
-    }
-    
     public Iterator<Tag> getTagIterator() {
         return mTagList.iterator();
     }

@@ -1,6 +1,7 @@
 package com.tech_tec.qiitarian.model.items;
 
 import java.io.IOException;
+import java.util.Iterator;
 
 import com.tech_tec.qiitarian.model.common.User;
 import com.tech_tec.qiitarian.model.common.UserUrlName;
@@ -28,8 +29,8 @@ public class Item implements IconFechable {
         return mArticleInfo.getCreatedAt();
     }
     
-    public String getTagsText() {
-        return mArticleInfo.getTagsText();
+    public Iterator<Tag> getTagIterator() {
+        return mArticleInfo.getTagIterator();
     }
     
     public int getStockCount() {

@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.fragment.list;
 
+import java.util.Iterator;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.model.items.Item;
+import com.tech_tec.qiitarian.model.items.Tag;
 import com.tech_tec.qiitarian.task.icon.FetchIconTask;
 
 public class ItemArrayAdapter extends ArrayAdapter<Item> {
@@ -35,7 +38,8 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         TextView titleText = (TextView)view.findViewById(R.id.text_item_title);
         TextView usernameText = (TextView)view.findViewById(R.id.text_item_username);
         TextView createdAtText = (TextView)view.findViewById(R.id.text_item_created_at);
-        TextView tagsText = (TextView)view.findViewById(R.id.text_item_tags);
+        ViewGroup tagsLayout = (ViewGroup)view.findViewById(R.id.layout_item_tags);
+        tagsLayout.removeAllViews();
         TextView stockCountText = (TextView)view.findViewById(R.id.text_item_stock_count);
         TextView commentCountText = (TextView)view.findViewById(R.id.text_item_comment_count);
         ImageView iconImage = (ImageView)view.findViewById(R.id.image_item_user_profile);
@@ -44,7 +48,12 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
         titleText.setText(item.getArticleTitle());
         usernameText.setText(item.getUserName());
         createdAtText.setText(item.getCreatedAt());
-        tagsText.setText(item.getTagsText());
+        Iterator<Tag> tagsIterator = item.getTagIterator();
+        while(tagsIterator.hasNext()) {
+            TextView tagText = (TextView)mInflater.inflate(R.layout.text_tag, null);
+            tagText.setText(tagsIterator.next().toString());
+            tagsLayout.addView(tagText);
+        }
         stockCountText.setText("ストック数：" + item.getStockCount());
         commentCountText.setText("コメント数：" + item.getCommentCount());
         setIcon(iconImage, item);

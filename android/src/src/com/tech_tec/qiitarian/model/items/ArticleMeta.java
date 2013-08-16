@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.model.items;
 
+import java.util.Iterator;
+
 public class ArticleMeta {
     
     private CreatedAt mCreatedAt;
@@ -16,8 +18,8 @@ public class ArticleMeta {
         return mCreatedAt.toString();
     }
     
-    public String getTagsText() {
-        return mTags.getTagsText();
+    public Iterator<Tag> getTagIterator() {
+        return mTags.getTagIterator();
     }
     
     public int getCommentCount() {

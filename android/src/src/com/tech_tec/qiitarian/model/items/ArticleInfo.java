@@ -1,5 +1,7 @@
 package com.tech_tec.qiitarian.model.items;
 
+import java.util.Iterator;
+
 import com.tech_tec.qiitarian.model.common.ArticleTitle;
 
 public class ArticleInfo {
@@ -20,8 +22,8 @@ public class ArticleInfo {
         return mArticleMeta.getCreatedAt();
     }
     
-    public String getTagsText() {
-        return mArticleMeta.getTagsText();
+    public Iterator<Tag> getTagIterator() {
+        return mArticleMeta.getTagIterator();
     }
     
     public int getCommentCount() {
