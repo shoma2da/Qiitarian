@@ -36,8 +36,8 @@ public class DetailSetter {
     }
     
     public void view() {
-        TextView userNameText = (TextView)mView.findViewById(R.id.text_user_name);
-        TextView titleText = (TextView)mView.findViewById(R.id.text_article_title);
+        TextView userNameText = (TextView)mView.findViewById(R.id.text_username);
+        TextView titleText = (TextView)mView.findViewById(R.id.text_title);
         TextView createdAtText = (TextView)mView.findViewById(R.id.text_created_at);
         TextView stockCountText = (TextView)mView.findViewById(R.id.text_stock_count);
         WebView articleBodyWebView = (WebView)mView.findViewById(R.id.text_article_body);
@@ -46,7 +46,7 @@ public class DetailSetter {
         userNameText.setText(mDetail.getUserName());
         titleText.setText(mDetail.getArticleTitle());
         createdAtText.setText(mDetail.getDateStr());
-        stockCountText.setText("ストック数：" + mDetail.getStockCount());
+        stockCountText.setText("" + mDetail.getStockCount());
         articleBodyWebView.loadDataWithBaseURL("", mDetail.getArticleBodyStr(), "text/html", "UTF-8", "");
         
         //コメントの設定
@@ -76,16 +76,14 @@ public class DetailSetter {
         ViewGroup tagsLayout = (ViewGroup)mView.findViewById(R.id.layout_tags);
         Iterator<Tag> tagIterator = mDetail.getTagIterator();
         while (tagIterator.hasNext()) {
-            TextView view = (TextView)mInflater.inflate(R.layout.layout_detail_tag, null);
-            
             Tag tag = tagIterator.next();
+            TextView view = (TextView)mInflater.inflate(R.layout.text_tag, null);
             view.setText(tag.toString());
-            
             tagsLayout.addView(view);
         }
         
         //アイコンの設定
-        ImageView userIconImage = (ImageView)mView.findViewById(R.id.image_user_icon);
+        ImageView userIconImage = (ImageView)mView.findViewById(R.id.image_user_profile);
         new FetchIconTask(userIconImage, mDetail).execute();
         userIconImage.setOnClickListener(new GotoUserActivityListener(mContext, mDetail.getUserUrlName()));
         

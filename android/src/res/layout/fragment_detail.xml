@@ -1,64 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@android:color/white"
+    >
     
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical" >
         
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:padding="10dip"
+            android:orientation="horizontal" >
             
-            <!-- ユーザアイコン -->
             <ImageView
-                android:id="@+id/image_user_icon"
+                android:id="@+id/image_user_profile"
                 android:layout_width="50dip"
                 android:layout_height="50dip"
-                android:src="@drawable/ic_launcher"
                 android:contentDescription="@null"
-                />
+                android:src="@drawable/no_image" />
             
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginLeft="5dip"
                 >
-                
+            
                 <TextView
-                    android:id="@+id/text_article_title"
+                    android:id="@+id/text_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="タイトルタイトルタイトル"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
                     />
-                
+            
                 <TextView
-                    android:id="@+id/text_user_name"
+                    android:id="@+id/text_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="名前"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"
                     />
-                
+            
                 <TextView
                     android:id="@+id/text_created_at"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="日時"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"
                     />
                 
+                <LinearLayout
+                    android:id="@+id/layout_tags"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-2dip"
+                    android:layout_marginEnd="-2dip"
+                    >
+                </LinearLayout>
+                    
                 <TextView
                     android:id="@+id/text_stock_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ストック数 20"
+                    android:drawableLeft="@drawable/stock"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"
                     />
-                
+            
             </LinearLayout>
+            
         </LinearLayout>
         
         <LinearLayout
@@ -66,13 +82,6 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             >
-        
-            <LinearLayout
-                android:id="@+id/layout_tags"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                />
             
             <WebView
                 android:id="@+id/text_article_body"
