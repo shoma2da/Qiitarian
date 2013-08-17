@@ -6,10 +6,9 @@ import org.apache.http.client.ClientProtocolException;
 
 import android.content.Context;
 import android.widget.CompoundButton;
-import android.widget.Toast;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Toast;
 
-import com.tech_tec.qiitarian.QiitarianLog;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.detail.Detail;
 import com.tech_tec.qiitarian.model.http.stock.DeleteStockClient;
