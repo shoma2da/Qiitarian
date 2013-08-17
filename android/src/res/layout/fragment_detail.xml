@@ -88,13 +88,8 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:padding="10dip"
             >
-            
-            <WebView
-                android:id="@+id/text_article_body"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
             
             <ToggleButton
                 android:id="@+id/button_stock"
@@ -104,17 +99,26 @@
                 android:textOff="ストックする"
                 />
             
+            <WebView
+                android:id="@+id/text_article_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            
             <TextView
                 android:id="@+id/text_comments_label"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@android:color/white"
                 android:text="コメント"
                 android:visibility="gone"
                 />
         
             <LinearLayout
                 android:id="@+id/layout_comments"
+                android:layout_marginTop="10dip"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
