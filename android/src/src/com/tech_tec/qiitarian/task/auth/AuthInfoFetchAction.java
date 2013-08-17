@@ -23,7 +23,6 @@ public class AuthInfoFetchAction implements Callback {
     public void onSuccess(AuthInfo authInfo) {
         mPreferences.save(authInfo);
         
-        Toast.makeText(mActivity, "token : " + authInfo.getTokenStr(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(mActivity, HomeActivity.class);
         mActivity.startActivity(intent);
     }

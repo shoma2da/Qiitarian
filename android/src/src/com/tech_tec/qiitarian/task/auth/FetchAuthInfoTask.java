@@ -56,6 +56,7 @@ public class FetchAuthInfoTask extends AsyncTask<Void, Void, AuthInfo> {
     @Override
     protected void onPostExecute(AuthInfo result) {
         super.onPostExecute(result);
+        mProgressManager.dismiss();
         
         if (result == null) {
             mCallback.onError();
@@ -66,8 +67,6 @@ public class FetchAuthInfoTask extends AsyncTask<Void, Void, AuthInfo> {
             return;
         }
         mCallback.onSuccess(result);
-        
-        mProgressManager.dismiss();
     }
     
     public interface Callback {
