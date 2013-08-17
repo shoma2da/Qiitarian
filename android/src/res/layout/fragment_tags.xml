@@ -4,16 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-    <TextView
+    <com.tech_tec.qiitarian.wedget.GreenHeader
+        text="@string/your_tags"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/your_tags"
-        android:textSize="15sp"
-        android:paddingTop="2dip"
-        android:paddingBottom="2dip"
-        android:textColor="@android:color/white"
-        android:background="@color/green"
         />
     
     <GridView
