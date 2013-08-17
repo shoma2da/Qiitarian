@@ -47,7 +47,7 @@ public class DetailSetter {
         titleText.setText(mDetail.getArticleTitle());
         createdAtText.setText(mDetail.getDateStr());
         stockCountText.setText("" + mDetail.getStockCount());
-        articleBodyWebView.loadDataWithBaseURL("", mDetail.getArticleBodyStr(), "text/html", "UTF-8", "");
+        articleBodyWebView.loadDataWithBaseURL("file:///android_asset/", createCssAppliedHtml(mDetail.getArticleBodyStr()), "text/html", "UTF-8", "");
         
         //コメントの設定
         ViewGroup commentsLayout = (ViewGroup)mView.findViewById(R.id.layout_comments);
@@ -67,7 +67,7 @@ public class DetailSetter {
             
             new FetchIconTask(imageView, comment).execute();
             commentUserNameText.setText(comment.getUserName());
-            commentBodyWebView.loadDataWithBaseURL("", comment.getBodyStr(), "text/html", "UTF-8", "");
+            commentBodyWebView.loadDataWithBaseURL("file:///android_asset/", createCssAppliedHtml(comment.getBodyStr()), "text/html", "UTF-8", "");
             
             commentsLayout.addView(commentView);
         }
@@ -93,6 +93,20 @@ public class DetailSetter {
         AuthInfo authInfo = new AuthInfoPreferences(mView.getContext()).load();
         OnCheckedChangeListener listener = new PutStockOnClickListener(mContext, authInfo, mDetail);
         stockButton.setOnCheckedChangeListener(listener);
+    }
+    
+    private String createCssAppliedHtml(String raw) {
+        StringBuilder html = new StringBuilder();
+
+        html.append("<html>");
+        html.append("<head>");
+        html.append("<link rel=stylesheet href='css/bootstrap.css'>");
+        html.append("</head>");
+        html.append("<body>");
+        html.append(raw);
+        html.append("</body></html>");
+        
+        return html.toString();
     }
     
 }
