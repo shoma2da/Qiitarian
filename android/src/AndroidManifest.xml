@@ -19,6 +19,7 @@
         <activity
             android:name=".activity.LaunchActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,25 +30,32 @@
         <activity
             android:name="com.tech_tec.qiitarian.activity.LoginActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             >
         </activity>
         <activity
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             android:name="com.tech_tec.qiitarian.activity.home.HomeActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             android:name="com.tech_tec.qiitarian.activity.detail.DetailActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             android:name="com.tech_tec.qiitarian.activity.tagitems.TagItemsActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             android:name="com.tech_tec.qiitarian.activity.user.UserActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             android:name="com.tech_tec.qiitarian.activity.usersitem.UsersItemActivity"></activity>
         <activity
             android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
             android:name="com.tech_tec.qiitarian.activity.userstocks.UserStocksActivity"></activity>
     </application>
 
