@@ -2,8 +2,10 @@ package com.tech_tec.qiitarian.fragment.search;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
@@ -18,10 +20,20 @@ public class SearchFragment extends Fragment implements FactoryGettable {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search, null);
+        final View searchButton = view.findViewById(R.id.button_search);
+        final ShowListListener listener = new ShowListListener(getChildFragmentManager());
+        searchButton.setOnClickListener(listener);
         mEditText = (EditText)view.findViewById(R.id.edittext_search);
         
-        ShowListListener listener = new ShowListListener(getChildFragmentManager());
-        view.findViewById(R.id.button_search).setOnClickListener(listener);
+        mEditText.setOnKeyListener(new OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                    listener.onClick(searchButton);
+                }
+                return false;
+            }
+        });
         
         return view;
     }
