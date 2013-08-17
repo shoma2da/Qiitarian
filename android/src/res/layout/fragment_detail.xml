@@ -93,10 +93,13 @@
             
             <ToggleButton
                 android:id="@+id/button_stock"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textOn="ストックを解除する"
-                android:textOff="ストックする"
+                android:background="@drawable/selector_button_stock"
+                android:layout_gravity="center"
+                android:button="@null"
+                android:textOn="@null"
+                android:textOff="@null"
                 />
             
             <WebView
