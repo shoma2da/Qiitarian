@@ -169,9 +169,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.25"
-     inkscape:cx="1623.5359"
-     inkscape:cy="-1267.3347"
+     inkscape:zoom="1"
+     inkscape:cx="1482.2931"
+     inkscape:cy="-3026.3666"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -190,7 +190,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2817,27 +2817,21 @@
         </g>
       </g>
     </g>
-    <g
-       id="g3755"
+    <rect
+       style="fill:none;stroke:none"
+       id="rect3747"
+       width="108.89445"
+       height="108.89445"
+       x="811.49384"
+       y="3808.2219" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 865.94104,3814.3052 c -17.48913,0 -31.66688,14.1778 -31.66688,31.6669 0,9.3092 4.00453,17.6683 10.39969,23.4623 -5.47855,10.4305 -9.91843,24.7765 -12.81069,41.5987 l 68.15576,0 c -2.89226,-16.8222 -7.33214,-31.1682 -12.81069,-41.5987 6.39517,-5.794 10.39969,-14.1531 10.39969,-23.4623 0,-17.4891 -14.17775,-31.6669 -31.66688,-31.6669 z"
+       id="path6031"
+       inkscape:connector-curvature="0"
        inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_user.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <rect
-         y="3808.2219"
-         x="811.49384"
-         height="108.89445"
-         width="108.89445"
-         id="rect3747"
-         style="fill:none;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_user.png"
-         inkscape:connector-curvature="0"
-         id="path6031"
-         d="m 865.94104,3814.3052 c -17.48913,0 -31.66688,14.1778 -31.66688,31.6669 0,9.3092 4.00453,17.6683 10.39969,23.4623 -5.47855,10.4305 -9.91843,24.7765 -12.81069,41.5987 l 68.15576,0 c -2.89226,-16.8222 -7.33214,-31.1682 -12.81069,-41.5987 6.39517,-5.794 10.39969,-14.1531 10.39969,-23.4623 0,-17.4891 -14.17775,-31.6669 -31.66688,-31.6669 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
-    </g>
+       inkscape:export-ydpi="90" />
     <g
        id="g3751"
        inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_search.png"
@@ -4568,6 +4562,256 @@
            inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_search.png"
            inkscape:export-xdpi="90"
            inkscape:export-ydpi="90" />
+      </g>
+    </g>
+    <g
+       id="g3853"
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,917.24002)">
+      <rect
+         style="fill:#64c914;fill-opacity:1;stroke:none"
+         id="rect3788"
+         width="108.89445"
+         height="108.89445"
+         x="1225.3862"
+         y="4053.3206" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="path3792"
+         sodipodi:sides="10"
+         sodipodi:cx="512"
+         sodipodi:cy="3662.3623"
+         sodipodi:r1="172.69627"
+         sodipodi:r2="132.25111"
+         sodipodi:arg1="1.3370531"
+         sodipodi:arg2="1.6232683"
+         inkscape:flatsided="false"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 552.00001,3830.3623 -46.9363,-35.9309 -59.45095,27.3572 -16.8526,-56.6572 -64.17698,-12.812 19.66822,-55.7423 -44.38958,-48.0874 48.67644,-33.5358 -7.64687,-64.995 59.09192,1.4802 32.01668,-57.0768 46.9363,35.9309 59.45095,-27.3572 16.8526,56.6572 64.17698,12.812 -19.66822,55.7423 44.38958,48.0874 -48.67644,33.5358 7.64687,64.995 -59.09192,-1.4802 z"
+         transform="matrix(0.29166669,0,0,0.29166669,1130.5002,3039.5788)" />
+      <text
+         xml:space="preserve"
+         style="font-size:29.22704315px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#64c914;fill-opacity:1;stroke:none;font-family:Sans"
+         x="1246.5674"
+         y="4119.751"
+         id="text3794"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3796"
+           x="1246.5674"
+           y="4119.751"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#64c914;fill-opacity:1;font-family:STHeiti;-inkscape-font-specification:STHeiti">NEW</tspan></text>
+    </g>
+    <g
+       id="g3849"
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,921.21493)">
+      <rect
+         y="4048.2219"
+         x="1350.4299"
+         height="108.89445"
+         width="108.89445"
+         id="rect3806"
+         style="fill:#64c914;fill-opacity:1;stroke:none" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         d="m 1390.8415,4054.375 c -19.1084,0 -34.5988,15.4904 -34.5988,34.5988 0,19.1083 15.4904,34.5987 34.5988,34.5987 7.7428,0 14.8983,-2.5508 20.6631,-6.8477 l 34.2784,34.2384 7.7286,-7.7286 -34.3985,-34.3586 c 3.969,-5.6305 6.3271,-12.4898 6.3271,-19.9022 0,-19.1084 -15.4904,-34.5988 -34.5987,-34.5988 z m 0,10.2515 c 13.4466,0 24.3472,10.9006 24.3472,24.3473 0,13.4466 -10.9006,24.3472 -24.3472,24.3472 -13.4467,0 -24.3473,-10.9006 -24.3473,-24.3472 0,-13.4467 10.9006,-24.3473 24.3473,-24.3473 z"
+         id="path3812"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_search.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+    <g
+       id="g3845"
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,912.63929)">
+      <rect
+         style="fill:#64c914;fill-opacity:1;stroke:none"
+         id="rect3820"
+         width="108.89445"
+         height="108.89445"
+         x="1476.4938"
+         y="4059.2219" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         d="m 1530.941,4065.3052 c -17.4891,0 -31.6668,14.1778 -31.6668,31.6669 0,9.3092 4.0045,17.6683 10.3997,23.4623 -5.4786,10.4305 -9.9185,24.7765 -12.8107,41.5987 l 68.1557,0 c -2.8922,-16.8222 -7.3321,-31.1682 -12.8107,-41.5987 6.3952,-5.794 10.3997,-14.1531 10.3997,-23.4623 0,-17.4891 -14.1777,-31.6669 -31.6669,-31.6669 z"
+         id="path3818"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_user.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+    <g
+       id="g3836"
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,917.31691)">
+      <rect
+         y="4053.2219"
+         x="1610.5577"
+         height="108.89445"
+         width="108.89445"
+         id="rect3834"
+         style="fill:#64c914;fill-opacity:1;stroke:none" />
+      <g
+         transform="translate(985,245)"
+         id="g3822"
+         inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_tag.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
+        <rect
+           style="fill:none;stroke:none"
+           id="rect3824"
+           width="108.89445"
+           height="108.89445"
+           x="625.55774"
+           y="3808.2219" />
+        <g
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_tag.png"
+           style="fill:#ffffff;fill-opacity:1"
+           transform="translate(-10.43406,4.20332)"
+           id="g3826">
+          <g
+             style="fill:#ffffff;fill-opacity:1"
+             id="g3828"
+             transform="matrix(-1.1022757,-1.1022757,1.1022757,-1.1022757,1173.8952,8969.8883)">
+            <path
+               style="fill:#ffffff;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+               d="m 2508.6952,2086.6211 c -2.37,0 -4.288,1.8916 -4.288,4.2615 l 0,16.755 c 0,2.3701 1.918,4.2882 4.288,4.2882 l 60.0058,0 0,-25.3047 -60.0058,0 z"
+               id="path3830"
+               inkscape:connector-curvature="0" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path3832"
+               d="m 2568.0875,2086.6331 0,25.2811 c 0.4999,-0.036 1.0271,-0.2458 1.4375,-0.6561 l 10.4687,-10.5 c 0.8209,-0.8209 0.8989,-2.0388 0.1875,-2.75 l -10.875,-10.9064 c -0.324,-0.3241 -0.7663,-0.4701 -1.2187,-0.4686 z m 3.375,10.4999 c 1.1804,0 2.1562,0.9445 2.1562,2.125 0,1.1804 -0.9758,2.1563 -2.1562,2.1563 -1.1804,0 -2.125,-0.9759 -2.125,-2.1563 0,-1.1805 0.9446,-2.125 2.125,-2.125 z"
+               style="fill:#ffffff;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,1044.24)"
+       id="g3859">
+      <rect
+         y="4053.3206"
+         x="1225.3862"
+         height="108.89445"
+         width="108.89445"
+         id="rect3861"
+         style="fill:#fba514;fill-opacity:1;stroke:none" />
+      <path
+         transform="matrix(0.29166669,0,0,0.29166669,1130.5002,3039.5788)"
+         d="m 552.00001,3830.3623 -46.9363,-35.9309 -59.45095,27.3572 -16.8526,-56.6572 -64.17698,-12.812 19.66822,-55.7423 -44.38958,-48.0874 48.67644,-33.5358 -7.64687,-64.995 59.09192,1.4802 32.01668,-57.0768 46.9363,35.9309 59.45095,-27.3572 16.8526,56.6572 64.17698,12.812 -19.66822,55.7423 44.38958,48.0874 -48.67644,33.5358 7.64687,64.995 -59.09192,-1.4802 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.6232683"
+         sodipodi:arg1="1.3370531"
+         sodipodi:r2="132.25111"
+         sodipodi:r1="172.69627"
+         sodipodi:cy="3662.3623"
+         sodipodi:cx="512"
+         sodipodi:sides="10"
+         id="path3863"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3865"
+         y="4119.751"
+         x="1246.5674"
+         style="font-size:29.22704315000000008px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#fba514;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#fba514;fill-opacity:1;font-family:STHeiti;-inkscape-font-specification:STHeiti"
+           y="4119.751"
+           x="1246.5674"
+           id="tspan3867"
+           sodipodi:role="line">NEW</tspan></text>
+    </g>
+    <g
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,1048.2149)"
+       id="g3869">
+      <rect
+         style="fill:#fba514;fill-opacity:1;stroke:none"
+         id="rect3871"
+         width="108.89445"
+         height="108.89445"
+         x="1350.4299"
+         y="4048.2219" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_search.png"
+         inkscape:connector-curvature="0"
+         id="path3873"
+         d="m 1390.8415,4054.375 c -19.1084,0 -34.5988,15.4904 -34.5988,34.5988 0,19.1083 15.4904,34.5987 34.5988,34.5987 7.7428,0 14.8983,-2.5508 20.6631,-6.8477 l 34.2784,34.2384 7.7286,-7.7286 -34.3985,-34.3586 c 3.969,-5.6305 6.3271,-12.4898 6.3271,-19.9022 0,-19.1084 -15.4904,-34.5988 -34.5987,-34.5988 z m 0,10.2515 c 13.4466,0 24.3472,10.9006 24.3472,24.3473 0,13.4466 -10.9006,24.3472 -24.3472,24.3472 -13.4467,0 -24.3473,-10.9006 -24.3473,-24.3472 0,-13.4467 10.9006,-24.3473 24.3473,-24.3473 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,1039.6393)"
+       id="g3875">
+      <rect
+         y="4059.2219"
+         x="1476.4938"
+         height="108.89445"
+         width="108.89445"
+         id="rect3877"
+         style="fill:#fba514;fill-opacity:1;stroke:none" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_user.png"
+         inkscape:connector-curvature="0"
+         id="path3879"
+         d="m 1530.941,4065.3052 c -17.4891,0 -31.6668,14.1778 -31.6668,31.6669 0,9.3092 4.0045,17.6683 10.3997,23.4623 -5.4786,10.4305 -9.9185,24.7765 -12.8107,41.5987 l 68.1557,0 c -2.8922,-16.8222 -7.3321,-31.1682 -12.8107,-41.5987 6.3952,-5.794 10.3997,-14.1531 10.3997,-23.4623 0,-17.4891 -14.1777,-31.6669 -31.6669,-31.6669 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       transform="matrix(0.77960326,0,0,0.77960326,378.96167,1044.3169)"
+       id="g3881">
+      <rect
+         style="fill:#fba514;fill-opacity:1;stroke:none"
+         id="rect3883"
+         width="108.89445"
+         height="108.89445"
+         x="1610.5577"
+         y="4053.2219" />
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_tag.png"
+         id="g3885"
+         transform="translate(985,245)">
+        <rect
+           y="3808.2219"
+           x="625.55774"
+           height="108.89445"
+           width="108.89445"
+           id="rect3887"
+           style="fill:none;stroke:none" />
+        <g
+           id="g3889"
+           transform="translate(-10.43406,4.20332)"
+           style="fill:#ffffff;fill-opacity:1"
+           inkscape:export-filename="/Users/shoma2da/Desktop/Qiitarian/android/src/res/drawable-xhdpi/tab_tag.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90">
+          <g
+             transform="matrix(-1.1022757,-1.1022757,1.1022757,-1.1022757,1173.8952,8969.8883)"
+             id="g3891"
+             style="fill:#ffffff;fill-opacity:1">
+            <path
+               inkscape:connector-curvature="0"
+               id="path3893"
+               d="m 2508.6952,2086.6211 c -2.37,0 -4.288,1.8916 -4.288,4.2615 l 0,16.755 c 0,2.3701 1.918,4.2882 4.288,4.2882 l 60.0058,0 0,-25.3047 -60.0058,0 z"
+               style="fill:#ffffff;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;stroke:#00d900;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+               d="m 2568.0875,2086.6331 0,25.2811 c 0.4999,-0.036 1.0271,-0.2458 1.4375,-0.6561 l 10.4687,-10.5 c 0.8209,-0.8209 0.8989,-2.0388 0.1875,-2.75 l -10.875,-10.9064 c -0.324,-0.3241 -0.7663,-0.4701 -1.2187,-0.4686 z m 3.375,10.4999 c 1.1804,0 2.1562,0.9445 2.1562,2.125 0,1.1804 -0.9758,2.1563 -2.1562,2.1563 -1.1804,0 -2.125,-0.9759 -2.125,-2.1563 0,-1.1805 0.9446,-2.125 2.125,-2.125 z"
+               id="path3895"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
       </g>
     </g>
   </g>
