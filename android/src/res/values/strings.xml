@@ -21,5 +21,11 @@
     <string name="github_url">http://github.com/%1$s</string>
     
     <string name="your_tags">フォロー中のタグ</string>
+    
+    <string name="user_post">POST</string>
+    <string name="user_stock">STOCK</string>
+    <string name="user_view_stock">確認する</string>
+    <string name="user_follow">FOLLOW</string>
+    <string name="user_follower">FOLLOWER</string>
 
 </resources>

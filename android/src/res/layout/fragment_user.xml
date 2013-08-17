@@ -21,6 +21,7 @@
             android:layout_weight="2"
             android:src="@drawable/no_image"
             android:adjustViewBounds="true"
+            android:contentDescription="@null"
             />
         
         <!-- 隙間 -->
@@ -136,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="POST"
+                android:text="@string/user_post"
                 />
             <TextView
                 android:id="@+id/text_item_count"
@@ -163,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="Stock"
+                android:text="@string/user_stock"
                 />
             <TextView
                 android:id="@+id/text_stock"
@@ -171,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textColor="@color/green"
-                android:text="確認する"
+                android:text="@string/user_view_stock"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -202,7 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="FOLLOW"
+                android:text="@string/user_follow"
                 />
             <TextView
                 android:id="@+id/text_following"
@@ -228,7 +229,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="FOLLOWER"
+                android:text="@string/user_follower"
                 />
             <TextView
                 android:id="@+id/text_follower"
