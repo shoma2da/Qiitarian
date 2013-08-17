@@ -4,7 +4,9 @@ import java.io.IOException;
 
 import org.apache.http.client.ClientProtocolException;
 
+import android.content.Context;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.tech_tec.qiitarian.QiitarianLog;
@@ -17,10 +19,12 @@ class PutStockOnClickListener implements OnCheckedChangeListener {
     
     private AuthInfo mAuthInfo;
     private Detail mDetail;
+    private Context mContext;
     
-    public PutStockOnClickListener(AuthInfo authInfo, Detail detail) {
+    public PutStockOnClickListener(Context context, AuthInfo authInfo, Detail detail) {
         mAuthInfo = authInfo;
         mDetail = detail;
+        mContext = context;
     }
     
     void start(Runnable runnable) {
@@ -29,11 +33,13 @@ class PutStockOnClickListener implements OnCheckedChangeListener {
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        QiitarianLog.d("click button");
         start(createPutStockRunnable(isChecked));
     }
     
     private Runnable createPutStockRunnable(final boolean isChecked) {
+        String messege = isChecked ? "ストックします" : "ストックを解除します";
+        Toast.makeText(mContext, messege, Toast.LENGTH_SHORT).show();
+        
         return new Runnable() {
             @Override
             public void run() {
