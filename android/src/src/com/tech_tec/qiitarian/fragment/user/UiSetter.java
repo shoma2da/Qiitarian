@@ -55,34 +55,30 @@ public class UiSetter {
     }
     
     private void setToFacebookName(User user) {
-        TextView facebookText = (TextView)mView.findViewById(R.id.text_facebook);
+        View facebookView = mView.findViewById(R.id.image_facebook);
         if (user.hasFacebookNmae() == false) {
-            facebookText.setVisibility(View.GONE);
+            facebookView.setVisibility(View.GONE);
             return;
         }
-        facebookText.setText("FACEBOOK:" + user.getFacebookName());
-        facebookText.setOnClickListener(new GotoFacebookPageListener(user, mView.getContext()));
+        facebookView.setOnClickListener(new GotoFacebookPageListener(user, mView.getContext()));
     }
     
     private void setToTwitterName(User user) {
-        TextView twitterText = (TextView)mView.findViewById(R.id.text_twitter);
+        View twitterView = mView.findViewById(R.id.image_twitter);
         if (user.hasTwitterName() == false) {
-            twitterText.setVisibility(View.GONE);
+            twitterView.setVisibility(View.GONE);
             return;
         }
-        twitterText.setText("TWITTER:" + user.getTwitterName());
-        twitterText.setOnClickListener(new GotoTwitterPageListener(user, mView.getContext()));
+        twitterView.setOnClickListener(new GotoTwitterPageListener(user, mView.getContext()));
     }
     
     private void setToGithubName(User user) {
-        TextView githubText = (TextView)mView.findViewById(R.id.text_github);
+        View githubView = mView.findViewById(R.id.image_github);
         if (user.hasGithubName() == false) {
-            githubText.setVisibility(View.GONE);
+            githubView.setVisibility(View.GONE);
             return;
         }
-        
-        githubText.setText("GITHUB:" + user.getGithubName());
-        githubText.setOnClickListener(new GotoGithubPageListener(user, mView.getContext()));
+        githubView.setOnClickListener(new GotoGithubPageListener(user, mView.getContext()));
     }
     
     private void setToFollowingCount(User user) {

@@ -2,76 +2,308 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="30dip"
+    android:paddingBottom="30dip"
     android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.2"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        >
+        <!-- ユーザアイコン -->
+        <ImageView
+            android:id="@+id/image_user_icon"
+            android:layout_height="match_parent"
+            android:layout_width="0dip"
+            android:layout_weight="2"
+            android:src="@drawable/no_image"
+            android:adjustViewBounds="true"
+            />
+        
+        <!-- 隙間 -->
+        <View
+            android:layout_width="0dip"
+            android:layout_weight="0.2"
+            android:layout_height="match_parent"
+            />
+        
+        <!-- 右側 -->
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <!-- 名前 -->
+            <TextView
+	            android:id="@+id/text_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <!-- 説明 -->
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/text_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                />
+            </ScrollView>
 
-    <TextView
-        android:id="@+id/text_user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="名前"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    
-    <ImageView
-        android:id="@+id/image_user_icon"
-        android:src="@drawable/ic_launcher"
-        android:layout_width="50dip"
-        android:layout_height="50dip"
-        />
-    
-    <TextView
-        android:id="@+id/text_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="デスクリプション"
-        />
-    
-    <TextView
-        android:id="@+id/text_facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="facebook:shoma2da"
-        />
+        </LinearLayout>
         
-    <TextView
-        android:id="@+id/text_twitter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="twitter:shoma2da"
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.05"
         />
 
-    <TextView
-        android:id="@+id/text_github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="github:shoma2da"
+    <!-- ソーシャルアイコン -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/shape_simple_rect_frame"
+        >
+        <ImageView
+            android:id="@+id/image_facebook"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:src="@drawable/facebook"
+            android:contentDescription="@null"
+            />
+        <ImageView
+            android:id="@+id/image_github"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:src="@drawable/github"
+            android:contentDescription="@null"
+            />
+        <ImageView
+            android:id="@+id/image_twitter"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:src="@drawable/twitter"
+            android:contentDescription="@null"
+            />
+    </LinearLayout>
+    
+    <!-- 区切り線 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.1"
+        android:background="@color/gray_light"
+        android:layout_marginTop="10dip"
         />
-        
-    <TextView
-        android:id="@+id/text_following"
-        android:layout_width="wrap_content"
+    
+    <LinearLayout
         android:layout_height="wrap_content"
-        android:text="フォローしている：100人"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dip"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="POST"
+                />
+            <TextView
+                android:id="@+id/text_item_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/green"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light"
+            />
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dip"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Stock"
+                />
+            <TextView
+                android:id="@+id/text_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/green"
+                android:text="確認する"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    
+    
+    <!-- 区切り線 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.1"
+        android:background="@color/gray_light"
         />
-        
-    <TextView
-        android:id="@+id/text_follower"
-        android:layout_width="wrap_content"
+    
+    <LinearLayout
         android:layout_height="wrap_content"
-        android:text="フォローされている：100人"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dip"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="FOLLOW"
+                />
+            <TextView
+                android:id="@+id/text_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light"
+            />
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dip"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="FOLLOWER"
+                />
+            <TextView
+                android:id="@+id/text_follower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 区切り線 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.1"
+        android:background="@color/gray_light"
         />
+
+    <!--
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    
         
-    <TextView
-        android:id="@+id/text_item_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="投稿数：100(リンク)"
-        />
-        
-    <TextView
-        android:id="@+id/text_stock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ストックしている投稿"
-        />
-        
+        <TextView
+            android:id="@+id/text_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="facebook:shoma2da"
+            />
+            
+        <TextView
+            android:id="@+id/text_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="twitter:shoma2da"
+            />
+    
+        <TextView
+            android:id="@+id/text_github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="github:shoma2da"
+            />
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="フォローしている：100人"
+            />
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="フォローされている：100人"
+            />
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:id="@+id/text_item_count"
+            android:text="投稿数：100(リンク)"
+            />
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ストックしている投稿"
+            />
+            
+    </LinearLayout>
+    -->
+    
+
 </LinearLayout>
