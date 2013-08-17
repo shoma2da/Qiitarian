@@ -20,7 +20,7 @@
 
         <ImageView
             android:id="@+id/image_icon"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/no_image"
             android:layout_width="40dip"
             android:layout_height="40dip"
             android:adjustViewBounds="true"
