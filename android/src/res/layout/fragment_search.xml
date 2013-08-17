@@ -15,12 +15,19 @@
             android:layout_width="0dip"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:background="@drawable/shape_text_frame"
+            android:layout_marginRight="2dip"
+            android:padding="5dip"
             />
         <Button
             android:id="@+id/button_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="検索"
+            android:layout_gravity="center"
+            android:minHeight="0dip"
+            android:minWidth="0dip"
+            android:background="@drawable/selector_button_search"
             />
     </LinearLayout>
     
