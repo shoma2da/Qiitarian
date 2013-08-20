@@ -25,6 +25,8 @@ public class AuthInfoFetchAction implements Callback {
         
         Intent intent = new Intent(mActivity, HomeActivity.class);
         mActivity.startActivity(intent);
+        
+        mActivity.finish();
     }
 
     @Override
