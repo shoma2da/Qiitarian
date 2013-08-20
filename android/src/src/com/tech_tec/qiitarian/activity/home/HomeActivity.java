@@ -2,12 +2,12 @@ package com.tech_tec.qiitarian.activity.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.activity.QiitarianFragmentActivity;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 import com.tech_tec.qiitarian.fragment.list.ItemsFragment;
@@ -19,7 +19,7 @@ import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 import com.tech_tec.qiitarian.model.common.UserUrlName;
 
-public class HomeActivity extends FragmentActivity implements FactoryGettable, UserUrlNameGettable {
+public class HomeActivity extends QiitarianFragmentActivity implements FactoryGettable, UserUrlNameGettable {
     
     private FactoryGettable mFactoryGettable;
     

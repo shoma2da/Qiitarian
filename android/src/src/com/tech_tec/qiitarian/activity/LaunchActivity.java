@@ -1,6 +1,5 @@
 package com.tech_tec.qiitarian.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,7 +9,7 @@ import com.tech_tec.qiitarian.activity.home.HomeActivity;
 import com.tech_tec.qiitarian.model.auth.AuthInfo;
 import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 
-public class LaunchActivity extends Activity {
+public class LaunchActivity extends QiitarianActivity {
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
