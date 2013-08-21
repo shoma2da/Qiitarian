@@ -1,17 +1,17 @@
 package com.tech_tec.qiitarian.activity.tagitems;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.activity.QiitarianFragmentActivity;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 import com.tech_tec.qiitarian.model.tags.Name;
 import com.tech_tec.qiitarian.model.tags.UrlName;
 
-public class TagItemsActivity extends FragmentActivity implements FactoryGettable {
+public class TagItemsActivity extends QiitarianFragmentActivity implements FactoryGettable {
     
     public static final String KEY_TAG_URLNAME = "tag_urlname";
     public static final String KEY_TAG_NAME = "tag_name";

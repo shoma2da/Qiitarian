@@ -1,6 +1,5 @@
 package com.tech_tec.qiitarian.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 import com.tech_tec.qiitarian.task.auth.AuthInfoFetchAction;
 import com.tech_tec.qiitarian.task.auth.FetchAuthInfoTask;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends QiitarianActivity {
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {

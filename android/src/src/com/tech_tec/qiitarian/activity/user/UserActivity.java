@@ -2,14 +2,14 @@ package com.tech_tec.qiitarian.activity.user;
 
 import java.io.Serializable;
 
+import android.os.Bundle;
+
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.activity.QiitarianFragmentActivity;
 import com.tech_tec.qiitarian.fragment.user.UserUrlNameGettable;
 import com.tech_tec.qiitarian.model.common.UserUrlName;
 
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-
-public class UserActivity extends FragmentActivity implements UserUrlNameGettable {
+public class UserActivity extends QiitarianFragmentActivity implements UserUrlNameGettable {
     
     public static final String KEY_USER_URLNAME = "user_urlname";
     

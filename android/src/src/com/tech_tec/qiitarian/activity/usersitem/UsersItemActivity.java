@@ -1,15 +1,15 @@
 package com.tech_tec.qiitarian.activity.usersitem;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.activity.QiitarianFragmentActivity;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 import com.tech_tec.qiitarian.model.common.UserUrlName;
 
-public class UsersItemActivity extends FragmentActivity implements FactoryGettable {
+public class UsersItemActivity extends QiitarianFragmentActivity implements FactoryGettable {
     
     public static final String KEY_USER_URLNAME = "user_uslname";
     
