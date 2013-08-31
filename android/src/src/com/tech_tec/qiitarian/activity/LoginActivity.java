@@ -34,7 +34,7 @@ public class LoginActivity extends QiitarianActivity {
         loginButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String username = usernameEditText.getText().toString();
+                final String username = usernameEditText.getText().toString().trim();
                 final String password = passwordEditText.getText().toString();
                 final LoginService service  = getService();
                 
