@@ -20,6 +20,7 @@ public class FetchTagsCallback implements Callback {
     public FetchTagsCallback(ArrayAdapter<Tag> adapter, Context context) {
         mAdapter = adapter;
         mProgressManager = new ProgressManager(context);
+        mContext = context;
     }
     
     @Override
