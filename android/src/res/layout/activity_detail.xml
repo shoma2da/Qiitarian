@@ -12,11 +12,4 @@
         android:name="com.tech_tec.qiitarian.fragment.detail.DetailFragment"
         />
     
-    <include
-        layout="@layout/layout_ad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        />
-    
 </LinearLayout>
