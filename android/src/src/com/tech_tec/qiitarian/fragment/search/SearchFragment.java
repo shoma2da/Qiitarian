@@ -32,7 +32,7 @@ public class SearchFragment extends Fragment implements FactoryGettable {
         
         mView = inflater.inflate(R.layout.fragment_search, null);
         final View searchButton = mView.findViewById(R.id.button_search);
-        final ShowListListener listener = new ShowListListener(getActivity());
+        final ShowListListener listener = new ShowListListener(getActivity().getSupportFragmentManager());
         searchButton.setOnClickListener(listener);
         EditText editText = (EditText)mView.findViewById(R.id.edittext_search);
         

@@ -1,6 +1,6 @@
 package com.tech_tec.qiitarian.fragment.search;
 
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,15 +10,15 @@ import com.tech_tec.qiitarian.fragment.list.ItemsFragment;
 
 public class ShowListListener implements OnClickListener {
     
-    private FragmentActivity mFragmentActivity;
+    private FragmentManager mFragmentManager;
     
-    public ShowListListener(FragmentActivity fragmentActivity) {
-        mFragmentActivity = fragmentActivity;
+    public ShowListListener(FragmentManager fragmentManager) {
+        mFragmentManager = fragmentManager;
     }
     
     @Override
     public void onClick(View v) {
-        FragmentTransaction transaction = mFragmentActivity.getSupportFragmentManager().beginTransaction();
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
         transaction.replace(R.id.list_space, new ItemsFragment()).commit();
     }
     
