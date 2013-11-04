@@ -48,8 +48,10 @@ public class HomeActivity extends QiitarianFragmentActivity implements FactoryGe
         });
     }
     
+    private ItemsFragment mItemsFragment = new ItemsFragment();
+    
     private void showLatestFragment() {
-        ItemsFragment itemsFragment = new ItemsFragment();
+        ItemsFragment itemsFragment = mItemsFragment;
         mFactoryGettable = itemsFragment;
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
