@@ -9,7 +9,10 @@ class SearchFragmentCache {
     SearchFragment get() {
         if (mSearchFragment == null) {
             mSearchFragment = new SearchFragment();
+            mSearchFragment.setIsCached(false);
+            return mSearchFragment;
         }
+        mSearchFragment.setIsCached(true);
         return mSearchFragment;
     }
     

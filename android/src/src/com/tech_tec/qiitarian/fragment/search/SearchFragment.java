@@ -17,9 +17,16 @@ public class SearchFragment extends Fragment implements FactoryGettable {
     
     private View mView;
     
+    private boolean mIsCached = false;
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+        
+        if (mIsCached) {
+            ((ViewGroup)mView.getParent()).removeView(mView);
+            return mView;
+        }
         
         mView = inflater.inflate(R.layout.fragment_search, null);
         final View searchButton = mView.findViewById(R.id.button_search);
@@ -44,6 +51,10 @@ public class SearchFragment extends Fragment implements FactoryGettable {
     public CommandsAbstractFactory getFactory() {
         String word = ((EditText)mView.findViewById(R.id.edittext_search)).getText().toString();
         return new SearchFactory(new SearchWord(word));
+    }
+    
+    public void setIsCached(boolean isCached) {
+        mIsCached = isCached;
     }
     
 }
