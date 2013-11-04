@@ -17,6 +17,7 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
     
     private Activity mActivity;
     private PullToRefreshListView mListView;
+    private boolean mIsCached = false;
     
     @Override
     public void onAttach(Activity activity) {
@@ -30,6 +31,10 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (mIsCached) {
+            ((ViewGroup)mListView.getParent()).removeView(mListView);
+            return mListView;
+        }
         View view = inflater.inflate(R.layout.fragment_list, null);
         mListView = (PullToRefreshListView)view.findViewById(R.id.list);
         return view;
@@ -38,6 +43,9 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        if (mIsCached) {
+            return;
+        }
         
         CommandsAbstractFactory mCommandsAbstractFactory = ((FactoryGettable)mActivity).getFactory();
         LayoutInflater inflater = LayoutInflater.from(mActivity.getApplicationContext());
@@ -50,6 +58,10 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
         
         mListView.prepareForRefresh();
         mListView.onRefresh();
+    }
+    
+    public void setIsCached(boolean isCached) {
+        mIsCached = isCached;
     }
     
     @Override
