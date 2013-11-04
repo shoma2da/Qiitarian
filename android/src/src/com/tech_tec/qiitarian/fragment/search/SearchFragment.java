@@ -15,17 +15,18 @@ import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 
 public class SearchFragment extends Fragment implements FactoryGettable {
     
+    private View mView;
     private EditText mEditText;
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         
-        View view = inflater.inflate(R.layout.fragment_search, null);
-        final View searchButton = view.findViewById(R.id.button_search);
+        mView = inflater.inflate(R.layout.fragment_search, null);
+        final View searchButton = mView.findViewById(R.id.button_search);
         final ShowListListener listener = new ShowListListener(getActivity().getSupportFragmentManager());
         searchButton.setOnClickListener(listener);
-        mEditText = (EditText)view.findViewById(R.id.edittext_search);
+        mEditText = (EditText)mView.findViewById(R.id.edittext_search);
         
         mEditText.setOnKeyListener(new OnKeyListener() {
             @Override
@@ -37,7 +38,7 @@ public class SearchFragment extends Fragment implements FactoryGettable {
             }
         });
         
-        return view;
+        return mView;
     }
 
     @Override
