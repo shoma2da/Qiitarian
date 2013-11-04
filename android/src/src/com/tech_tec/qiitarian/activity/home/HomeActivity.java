@@ -69,8 +69,11 @@ public class HomeActivity extends QiitarianFragmentActivity implements FactoryGe
         transaction.replace(R.id.content_container, new UserFragment());
         transaction.commit();
     }
+    
+    private SearchFragment mSearchFragment = new SearchFragment();
+    
     private void showSearchFragment() {
-        SearchFragment searchFragment = new SearchFragment();
+        SearchFragment searchFragment = mSearchFragment;
         mFactoryGettable = searchFragment;
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

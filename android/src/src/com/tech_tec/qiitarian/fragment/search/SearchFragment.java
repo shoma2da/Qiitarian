@@ -19,9 +19,11 @@ public class SearchFragment extends Fragment implements FactoryGettable {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+        
         View view = inflater.inflate(R.layout.fragment_search, null);
         final View searchButton = view.findViewById(R.id.button_search);
-        final ShowListListener listener = new ShowListListener(getChildFragmentManager());
+        final ShowListListener listener = new ShowListListener(getActivity().getSupportFragmentManager());
         searchButton.setOnClickListener(listener);
         mEditText = (EditText)view.findViewById(R.id.edittext_search);
         
