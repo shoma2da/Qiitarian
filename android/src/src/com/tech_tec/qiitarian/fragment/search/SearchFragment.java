@@ -15,17 +15,26 @@ import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
 
 public class SearchFragment extends Fragment implements FactoryGettable {
     
-    private EditText mEditText;
+    private View mView;
+    
+    private boolean mIsCached = false;
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_search, null);
-        final View searchButton = view.findViewById(R.id.button_search);
-        final ShowListListener listener = new ShowListListener(getChildFragmentManager());
-        searchButton.setOnClickListener(listener);
-        mEditText = (EditText)view.findViewById(R.id.edittext_search);
+        super.onCreateView(inflater, container, savedInstanceState);
         
-        mEditText.setOnKeyListener(new OnKeyListener() {
+        if (mIsCached) {
+            ((ViewGroup)mView.getParent()).removeView(mView);
+            return mView;
+        }
+        
+        mView = inflater.inflate(R.layout.fragment_search, null);
+        final View searchButton = mView.findViewById(R.id.button_search);
+        final ShowListListener listener = new ShowListListener(getActivity().getSupportFragmentManager());
+        searchButton.setOnClickListener(listener);
+        EditText editText = (EditText)mView.findViewById(R.id.edittext_search);
+        
+        editText.setOnKeyListener(new OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
@@ -35,13 +44,17 @@ public class SearchFragment extends Fragment implements FactoryGettable {
             }
         });
         
-        return view;
+        return mView;
     }
 
     @Override
     public CommandsAbstractFactory getFactory() {
-        String word = mEditText.getText().toString();
+        String word = ((EditText)mView.findViewById(R.id.edittext_search)).getText().toString();
         return new SearchFactory(new SearchWord(word));
+    }
+    
+    public void setIsCached(boolean isCached) {
+        mIsCached = isCached;
     }
     
 }
