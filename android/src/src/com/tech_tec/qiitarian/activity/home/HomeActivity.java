@@ -22,6 +22,7 @@ import com.tech_tec.qiitarian.model.common.UserUrlName;
 public class HomeActivity extends QiitarianFragmentActivity implements FactoryGettable, UserUrlNameGettable {
     
     private FactoryGettable mFactoryGettable;
+    private ItemsFragmentCache mItemsFragmentCache = new ItemsFragmentCache();
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +49,8 @@ public class HomeActivity extends QiitarianFragmentActivity implements FactoryGe
         });
     }
     
-    private ItemsFragment mItemsFragment = new ItemsFragment();
-    
     private void showLatestFragment() {
-        ItemsFragment itemsFragment = mItemsFragment;
+        ItemsFragment itemsFragment = mItemsFragmentCache.get();
         mFactoryGettable = itemsFragment;
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

@@ -17,8 +17,7 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
     
     private Activity mActivity;
     private PullToRefreshListView mListView;
-    
-    private boolean isInitial = true;
+    private boolean mIsCached = false;
     
     @Override
     public void onAttach(Activity activity) {
@@ -32,7 +31,7 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (isInitial == false) {
+        if (mIsCached) {
             ((ViewGroup)mListView.getParent()).removeView(mListView);
             return mListView;
         }
@@ -44,7 +43,7 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (isInitial == false) {
+        if (mIsCached) {
             return;
         }
         
@@ -59,8 +58,10 @@ public class ItemsFragment extends Fragment implements FactoryGettable {
         
         mListView.prepareForRefresh();
         mListView.onRefresh();
-        
-        isInitial = false;
+    }
+    
+    public void setIsCached(boolean isCached) {
+        mIsCached = isCached;
     }
     
     @Override
