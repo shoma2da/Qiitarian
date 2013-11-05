@@ -9,6 +9,8 @@ import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.MapBuilder;
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.list.CommandsAbstractFactory;
 import com.tech_tec.qiitarian.fragment.list.FactoryGettable;
@@ -50,7 +52,17 @@ public class SearchFragment extends Fragment implements FactoryGettable {
     @Override
     public CommandsAbstractFactory getFactory() {
         String word = ((EditText)mView.findViewById(R.id.edittext_search)).getText().toString();
+        
+        sendGoogleAnalyticsLog(word);
+        
         return new SearchFactory(new SearchWord(word));
+    }
+    
+    private void sendGoogleAnalyticsLog(String word) {
+        EasyTracker easyTracker = EasyTracker.getInstance(getActivity());
+        easyTracker.send(MapBuilder.createEvent(
+            "ui_action", "button_click", "<search>" + word, null 
+        ).build());
     }
     
     public void setIsCached(boolean isCached) {
