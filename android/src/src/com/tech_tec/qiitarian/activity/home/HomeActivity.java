@@ -23,6 +23,7 @@ public class HomeActivity extends QiitarianFragmentActivity implements FactoryGe
     
     private FactoryGettable mFactoryGettable;
     private ItemsFragmentCache mItemsFragmentCache = new ItemsFragmentCache();
+    private SearchFragmentCache mSearchFragmentCache = new SearchFragmentCache();
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +71,7 @@ public class HomeActivity extends QiitarianFragmentActivity implements FactoryGe
         transaction.commit();
     }
     private void showSearchFragment() {
-        SearchFragment searchFragment = new SearchFragment();
+        SearchFragment searchFragment = mSearchFragmentCache.get();
         mFactoryGettable = searchFragment;
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
