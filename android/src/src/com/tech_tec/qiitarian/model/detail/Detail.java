@@ -1,6 +1,7 @@
 package com.tech_tec.qiitarian.model.detail;
 
 import java.io.IOException;
+import java.net.URI;
 import java.util.Iterator;
 
 import android.graphics.Bitmap;
@@ -26,8 +27,9 @@ public class Detail implements IconFechable {
     private Comments mComments;
     private Tags mTags;
     private IsStocked mIsStocked;
+    private URI mUri;
     
-    public Detail(Uuid uuid, User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags, IsStocked stocked) {
+    public Detail(Uuid uuid, User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags, IsStocked stocked, URI uri) {
         mUuid = uuid;
         mUser = user;
         mArticleTitle = articleTitle;
@@ -37,6 +39,7 @@ public class Detail implements IconFechable {
         mComments = comments;
         mTags = tags;
         mIsStocked = stocked;
+        mUri = uri;
     }
     
     public String getUserName() {
@@ -86,5 +89,9 @@ public class Detail implements IconFechable {
     
     public UserUrlName getUserUrlName() {
         return mUser.getUserUrlName();
+    }
+    
+    public URI getUri() {
+        return mUri;
     }
 }

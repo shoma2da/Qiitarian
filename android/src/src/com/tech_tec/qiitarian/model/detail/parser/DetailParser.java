@@ -38,7 +38,7 @@ public class DetailParser {
         IsStocked isStocked = new IsStockedParser().parse(object);
         URI uri = URI.create(object.getString("url"));
         
-        return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags, isStocked);
+        return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags, isStocked, uri);
     }
     
 }
