@@ -97,7 +97,7 @@ public class DetailSetter {
         stockButton.setOnCheckedChangeListener(listener);
         
         //Webへの遷移用ボタン
-        GotoWebOnClickListener gotoWebOnClickListener = new GotoWebOnClickListener();
+        GotoWebOnClickListener gotoWebOnClickListener = new GotoWebOnClickListener(mContext, mDetail.getUri());
         gotoWebButton.setOnClickListener(gotoWebOnClickListener);
     }
     
