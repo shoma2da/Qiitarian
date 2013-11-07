@@ -1,6 +1,7 @@
 package com.tech_tec.qiitarian.model.detail.parser;
 
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.text.ParseException;
 
 import org.json.JSONException;
@@ -35,6 +36,7 @@ public class DetailParser {
         Comments comments = new CommentsParser().parse(object.getJSONArray("comments"));
         Tags tags = new TagsParser().parse(object.getJSONArray("tags"));
         IsStocked isStocked = new IsStockedParser().parse(object);
+        URI uri = URI.create(object.getString("url"));
         
         return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags, isStocked);
     }
