@@ -109,6 +109,14 @@
                 android:layout_height="wrap_content"
                 />
             
+            <Button
+                android:id="@+id/button_goto_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Webへ"
+                />
+            
             <TextView
                 android:id="@+id/text_comments_label"
                 android:gravity="center"
