@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Webへ"
+                android:text="@string/goto_web"
                 />
             
             <TextView
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/gray"
                 android:textColor="@android:color/white"
-                android:text="コメント"
+                android:text="@string/comment"
                 android:visibility="gone"
                 />
         
