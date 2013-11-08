@@ -6,6 +6,8 @@ import java.text.ParseException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.net.Uri;
+
 import com.tech_tec.qiitarian.model.common.ArticleTitle;
 import com.tech_tec.qiitarian.model.common.StockCount;
 import com.tech_tec.qiitarian.model.common.User;
@@ -35,8 +37,9 @@ public class DetailParser {
         Comments comments = new CommentsParser().parse(object.getJSONArray("comments"));
         Tags tags = new TagsParser().parse(object.getJSONArray("tags"));
         IsStocked isStocked = new IsStockedParser().parse(object);
+        Uri uri = Uri.parse(object.getString("url"));
         
-        return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags, isStocked);
+        return new Detail(uuid, user, articleTitle, createdAt, stockCount, articleBody, comments, tags, isStocked, uri);
     }
     
 }

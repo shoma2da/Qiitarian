@@ -108,6 +108,29 @@
                 android:layout_height="wrap_content"
                 />
             
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                />
+            
+            <Button
+                android:id="@+id/button_goto_web"
+                android:layout_width="248dip"
+                android:textSize="30sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/goto_web"
+                android:background="@drawable/selector_default_button"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip"
+                />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                />
+            
             <TextView
                 android:id="@+id/text_comments_label"
                 android:gravity="center"
@@ -115,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/gray"
                 android:textColor="@android:color/white"
-                android:text="コメント"
+                android:text="@string/comment"
                 android:visibility="gone"
                 />
         

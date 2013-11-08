@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Iterator;
 
 import android.graphics.Bitmap;
+import android.net.Uri;
 
 import com.tech_tec.qiitarian.model.common.ArticleTitle;
 import com.tech_tec.qiitarian.model.common.StockCount;
@@ -26,8 +27,9 @@ public class Detail implements IconFechable {
     private Comments mComments;
     private Tags mTags;
     private IsStocked mIsStocked;
+    private Uri mUri;
     
-    public Detail(Uuid uuid, User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags, IsStocked stocked) {
+    public Detail(Uuid uuid, User user, ArticleTitle articleTitle, CreatedAt createdAt, StockCount stockCount, ArticleBody articleBody, Comments comments, Tags tags, IsStocked stocked, Uri uri) {
         mUuid = uuid;
         mUser = user;
         mArticleTitle = articleTitle;
@@ -37,6 +39,7 @@ public class Detail implements IconFechable {
         mComments = comments;
         mTags = tags;
         mIsStocked = stocked;
+        mUri = uri;
     }
     
     public String getUserName() {
@@ -86,5 +89,9 @@ public class Detail implements IconFechable {
     
     public UserUrlName getUserUrlName() {
         return mUser.getUserUrlName();
+    }
+    
+    public Uri getUri() {
+        return mUri;
     }
 }

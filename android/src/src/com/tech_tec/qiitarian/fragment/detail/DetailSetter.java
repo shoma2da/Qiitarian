@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -41,6 +42,7 @@ public class DetailSetter {
         TextView createdAtText = (TextView)mView.findViewById(R.id.text_created_at);
         TextView stockCountText = (TextView)mView.findViewById(R.id.text_stock_count);
         WebView articleBodyWebView = (WebView)mView.findViewById(R.id.text_article_body);
+        Button gotoWebButton = (Button)mView.findViewById(R.id.button_goto_web);
         
         //各テキストの設定
         userNameText.setText(mDetail.getUserName());
@@ -93,6 +95,10 @@ public class DetailSetter {
         AuthInfo authInfo = new AuthInfoPreferences(mView.getContext()).load();
         OnCheckedChangeListener listener = new PutStockOnClickListener(mContext, authInfo, mDetail);
         stockButton.setOnCheckedChangeListener(listener);
+        
+        //Webへの遷移用ボタン
+        GotoWebOnClickListener gotoWebOnClickListener = new GotoWebOnClickListener(mContext, mDetail.getUri());
+        gotoWebButton.setOnClickListener(gotoWebOnClickListener);
     }
     
     private String createCssAppliedHtml(String raw) {

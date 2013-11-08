@@ -27,5 +27,8 @@
     <string name="user_view_stock" translatable="false">確認する</string>
     <string name="user_follow" translatable="false">FOLLOW</string>
     <string name="user_follower" translatable="false">FOLLOWER</string>
+    <string name="comment" translatable="false">コメント</string>
+    
+    <string name="goto_web">Qiitaで見る</string>
 
 </resources>
