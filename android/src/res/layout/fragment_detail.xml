@@ -116,10 +116,14 @@
             
             <Button
                 android:id="@+id/button_goto_web"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/goto_web"
+                android:background="@drawable/selector_default_button"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
                 />
             
             <View
