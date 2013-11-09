@@ -102,6 +102,11 @@
                 android:textOff="@null"
                 />
             
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                />
+            
             <WebView
                 android:id="@+id/text_article_body"
                 android:layout_width="match_parent"
