@@ -9,7 +9,7 @@ public class IsStockedParser {
     
     public IsStocked parse(JSONObject object) throws JSONException {
         String isStockedStr = object.getString("stocked");
-        if (isStockedStr.equals("null")) {
+        if (isStockedStr.equals("null") || isStockedStr.equals("false")) {
             return new IsStocked(false);
         }
         
