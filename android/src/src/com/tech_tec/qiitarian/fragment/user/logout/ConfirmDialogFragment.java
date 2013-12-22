@@ -8,16 +8,19 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
 import com.tech_tec.qiitarian.R;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 
 public class ConfirmDialogFragment extends DialogFragment {
     
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AuthInfoPreferences preferences = new AuthInfoPreferences(getActivity());
         
+        //ダイアログの作成
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(R.string.logout);
         builder.setMessage(R.string.logout_confirm);
-        builder.setPositiveButton(R.string.yes, new OnClickLogoutListener(getActivity()));
+        builder.setPositiveButton(R.string.yes, new OnClickLogoutListener(getActivity(), preferences));
         builder.setNegativeButton(R.string.no, new OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
