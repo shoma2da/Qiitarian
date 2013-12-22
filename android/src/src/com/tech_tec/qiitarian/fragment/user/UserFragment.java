@@ -40,7 +40,7 @@ public class UserFragment extends Fragment {
         //ログアウトボタンは使用者本人の場合のみ表示する
         View logoutButton = view.findViewById(R.id.button_logout);
         if (loginUserName.equals(paramUserName)) {//ユーザ本人の場合
-            logoutButton.setOnClickListener(new LogoutViewClickListener());
+            logoutButton.setOnClickListener(new LogoutViewClickListener(getFragmentManager()));
         } else {//ユーザ本人でない場合
             logoutButton.setVisibility(View.GONE);
         }
