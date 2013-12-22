@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 
 import com.tech_tec.qiitarian.R;
 import com.tech_tec.qiitarian.fragment.user.FetchUserAsyncTask.Callback;
+import com.tech_tec.qiitarian.fragment.user.logout.LogoutViewClickListener;
+import com.tech_tec.qiitarian.model.auth.AuthInfo;
+import com.tech_tec.qiitarian.model.auth.pref.AuthInfoPreferences;
 
 public class UserFragment extends Fragment {
     
@@ -28,6 +31,19 @@ public class UserFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user, null);
+        
+        //認証情報とパラメータの情報を取得
+        AuthInfo authInfo = new AuthInfoPreferences(getActivity()).load();
+        String loginUserName = authInfo.getUrlNameStr();
+        String paramUserName = mUserUrlNameGettable.getUserUrlName().toString();
+        
+        //ログアウトボタンは使用者本人の場合のみ表示する
+        View logoutButton = view.findViewById(R.id.button_logout);
+        if (loginUserName.equals(paramUserName)) {//ユーザ本人の場合
+            logoutButton.setOnClickListener(new LogoutViewClickListener(getFragmentManager()));
+        } else {//ユーザ本人でない場合
+            logoutButton.setVisibility(View.GONE);
+        }
         
         Callback callback = new FetchUserCallback(getActivity(), view);
         FetchUserAsyncTask task = new FetchUserAsyncTask(mUserUrlNameGettable.getUserUrlName(), callback);

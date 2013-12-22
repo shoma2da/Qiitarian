@@ -36,4 +36,8 @@ public class AuthInfoPreferences {
         
         return new AuthInfo(new UrlName(urlName), new Token(token));
     }
+    
+    public void clear() {
+        mPreferences.edit().clear().commit();
+    }
 }

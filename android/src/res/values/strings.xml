@@ -30,5 +30,12 @@
     <string name="comment" translatable="false">コメント</string>
     
     <string name="goto_web">Qiitaで見る</string>
+    
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    
+    <!-- ログアウト -->
+    <string name="logout">ログアウト</string>
+    <string name="logout_confirm">本当にログアウトしますか？</string>
 
 </resources>
