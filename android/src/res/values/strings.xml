@@ -30,5 +30,7 @@
     <string name="comment" translatable="false">コメント</string>
     
     <string name="goto_web">Qiitaで見る</string>
+    
+    <string name="logout">ログアウト</string>
 
 </resources>
